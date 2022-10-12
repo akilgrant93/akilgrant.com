@@ -1,0 +1,114 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+ .top {
+	 width: 100%;
+   display: flex;
+   padding-bottom: 10px;
+	 flex-direction: column;
+	 align-items: center;
+}
+ .profile-pic {
+	 padding-bottom: 15px;
+	 position: relative;
+}
+ .profile-pic img {
+	 display: block;
+	 height: 85px;
+	 border-radius: 50%;
+}
+ .profile-pic .circle-1, .profile-pic .circle-2 {
+	 position: absolute;
+	 box-sizing: border-box;
+	 width: 90px;
+	 height: 90px;
+	 top: -3px;
+	 left: -3px;
+	 border-width: 1px;
+	 border-style: solid;
+	 border-color: #428221 #428221 #428221 transparent;
+	 border-radius: 50%;
+	 transition: all 1.5s ease-in-out;
+}
+ .profile-pic .circle-2 {
+	 width: 95px;
+	 height: 95px;
+	 top: -6px;
+	 left: -6px;
+	 border-color: #428221 transparent #428221 #428221;
+}
+ .profile-pic:hover {
+	 cursor: pointer;
+}
+ .profile-pic:hover .circle-1, .profile-pic:hover .profile-pic .circle-2, .profile-pic .profile-pic:hover .circle-2 {
+	 transform: rotate(360deg);
+}
+ .profile-pic:hover .circle-2 {
+	 transform: rotate(-360deg);
+}
+ .name {
+	 padding-bottom: 1px;
+	 font-weight: 700;
+	 color: #428221;
+}
+ .smallText {
+	 font-size: 12px;
+	 color: #428221;
+}
+ .career {
+	 padding-bottom: 20px;
+}
+ .bottom {
+   width: 75%;
+   margin: 0 auto;
+   border-radius: 10px;
+	 height: 100px;
+   display: flex;
+   overflow: hidden;
+   background-color: white;
+   flex-direction: row;
+   align-items: center;
+	 justify-content: space-evenly;
+}
+ .block {
+	 display: flex;
+	 flex-direction: column;
+	 align-items: center;
+	 justify-content: center;
+   height: 100%;
+   width: calc(100%/3);
+	 background: #c2ebad;
+	 transition: 1s;
+}
+ .block:hover {
+	 cursor: pointer;
+	 background: #9ddf7c;
+}
+ .line {
+	 height: 1px;
+	 background: #fff;
+}
+ .links {
+	 display: flex;
+	 flex-direction: column;
+	 align-items: center;
+}
+ .links div {
+	 border: #428221 solid 1px;
+	 border-radius: 17.5px;
+	 text-align: center;
+	 font-size: 12px;
+	 line-height: 1.75;
+   color: #428221;
+   background: #9ddf7c;
+	 font-weight: 700;
+	 width: 100px;
+	 height: 25px;
+	 margin-bottom: 10px;
+	 padding-top: 1px;
+	 transition: 0.3s;
+}
+ .links div:hover {
+	 cursor: pointer;
+	 color: #fff;
+	 background-color: #428221;
+}
