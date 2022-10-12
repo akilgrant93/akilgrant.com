@@ -36,7 +36,7 @@ for (let i in tabs) {
         <div className="flex flex-wrap -m-4">
         <div className="tabs">
 		<ul className="header">
-			<li id="dashboard" className="tab-active"><i className=""></i></li>
+			<li className="tab-active"><img src="https://images.squarespace-cdn.com/content/v1/5363e3d1e4b0b6dbd37bcdd6/1584439666648-WC21M3H2FTNH0GSFAVSH/growr-01.png?format=1000w"/></li>
 			<li id="comments"><i className=""></i></li>
 			<li id="notifications"><i className=""></i></li>
 			<li id="settings"><i className=""></i></li>
@@ -78,9 +78,6 @@ for (let i in tabs) {
 		</div>
 	</div>
         </div>
-        <p className="lg:w-2/3 mx-auto leading-relaxed pt-6 text-base">
-            More projects available on request.
-          </p>
       </div>
     </section>
   );
