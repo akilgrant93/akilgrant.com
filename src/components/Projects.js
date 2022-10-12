@@ -57,8 +57,9 @@ for (let i in tabs) {
 
 			<div className="box" id="box-4">
 				<h1>Terra-2042</h1>
-				<p style={{display:'flex', alignItems:'center', justifyContent:'space-evenly', width:'30%'}}>MongoDB<span className="dot"> </span>Express<span className="dot"> </span>React<span className="dot"> </span>Socket.io</p>
+				<p style={{display:'flex', alignItems:'center', justifyContent:'space-evenly', width:'60%'}}>MongoDB<span className="dot"></span>Express<span className="dot"></span>React<span className="dot"></span>Socket.io</p>
 				<p>Terra 2042 is a web-based tabletop card game. It features live multiplayer games, custom deck building, and a shop to spend your spoils. Terra 2042 takes place in a post-apocalyptic world where players must battle each other to protect their settlements.</p>
+
 			</div>
 		</div>
 	</div>
