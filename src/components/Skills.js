@@ -5,7 +5,7 @@ import './skills.css'
 export default function Skills() {
   return (
     <section id="skills">
-      <div className="container px-5 py-10 mx-auto">
+      <div className="container  px-5 py-10 mx-auto">
         <div className="flex flex-wrap lg:w-4/5 sm:mx-auto sm:mb-2 -mx-2">
         <div className="list">
 		<div className="head">

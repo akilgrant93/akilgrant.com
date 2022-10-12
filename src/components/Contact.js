@@ -37,30 +37,26 @@ export default function Contact() {
 				<div className="circle-2"></div>
 					<img src="https://i.ibb.co/jhRfh0t/IMG-2301.png" alt="IMG-2301" border="0"/>
 				</div>
-				<span className="name">Akil Grant</span>
-				<span className="career smallText">Visual Artist</span>
-				<div className="links">
-					<div>Home</div>
-					<div>Message</div>
-				</div>
+				<span className="pb-1 color-forest-green font-bold">Akil Grant</span>
+				<span className="career  text-forest-green text-xs">UI/UX Designer & Art Director</span>
 			</div>
 
     <div className="bottom">
 				<div className="block">
 					<span className="name">523</span>
-					<span className="smallText">Email</span>
+					<span className="text-xs">Email</span>
 				</div>
 				<div className="line">
 				</div>
 				<div className="block">
 					<span className="name">1387</span>
-					<span className="smallText">Resume</span>
+					<span className="text-xs">Resume</span>
 				</div>
 				<div className="line">
 				</div>
 				<div className="block">
 					<span className="name">146</span>
-					<span className="smallText">Github</span>
+					<span className="text-xs">Github</span>
 				</div>
 			</div>
                   </div>

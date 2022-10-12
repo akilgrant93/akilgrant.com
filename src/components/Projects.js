@@ -1,6 +1,8 @@
 import { CodeIcon } from "@heroicons/react/solid";
 import React, {useEffect} from "react";
+import Project from "./Project";
 import './projects.css'
+import { ProjectData } from './ProjectData'
 
 export default function Projects() {
 
@@ -22,8 +24,8 @@ for (let i in tabs) {
   }, []);
 
   return (
-    <section id="projects" className="text-gray-400 bg-gray-900 body-font">
-      <div className="container px-5 py-10 mx-auto text-center lg:px-40">
+    <section id="projects" className="text-gray-400 container bg-gray-900 body-font">
+      <div className="px-5 py-10 mx-auto text-center lg:px-40">
         <div className="flex flex-col w-full mb-20">
           <CodeIcon className="mx-auto inline-block w-10 mb-4" />
           <h1 className="sm:text-4xl text-3xl font-medium title-font mb-4 text-white">
@@ -36,44 +38,31 @@ for (let i in tabs) {
         <div className="flex flex-wrap -m-4">
         <div className="tabs">
 		<ul className="header">
-			<li className="tab-active"><img src="https://images.squarespace-cdn.com/content/v1/5363e3d1e4b0b6dbd37bcdd6/1584439666648-WC21M3H2FTNH0GSFAVSH/growr-01.png?format=1000w"/></li>
-			<li id="comments"><i className=""></i></li>
-			<li id="notifications"><i className=""></i></li>
-			<li id="settings"><i className=""></i></li>
+			<li className="tab-active"><img alt="Colorful green logo reading Growr." className="icon" src="https://images.squarespace-cdn.com/content/v1/5363e3d1e4b0b6dbd37bcdd6/1584439666648-WC21M3H2FTNH0GSFAVSH/growr-01.png?format=1000w"/></li>
+			<li><img alt="A book titled Water Your Plants Medicinal Herbs Coloring Book lies on a bed of green grass."  className="icon" src="https://images.squarespace-cdn.com/content/v1/5363e3d1e4b0b6dbd37bcdd6/1f3c779c-23bc-4bba-927d-7982cc66a105/IMG_4330.png?format=500w"/></li>
+			<li><img alt="A Golden lettered logo reading Durian overlaid atop a bed of flower petals." className="icon" src="https://images.squarespace-cdn.com/content/v1/5363e3d1e4b0b6dbd37bcdd6/be225f8f-fdba-4e60-a62f-3ee93c5dce66/durianlogo.png?format=500w"/></li>
+			<li><img alt="A devasated post apocalyptic city with a blood red setting sun in the background." className="icon" src="https://images.squarespace-cdn.com/content/v1/5363e3d1e4b0b6dbd37bcdd6/704dc755-1e62-4447-a717-7c26c5f346a5/made-bg2.png?format=2500w"/></li>
 			<li><i className=""></i></li>
 		</ul>
 		<div className="content">
 			<div className="box box-active" id="box-1">
-				<h1>Growr</h1>
-				<p style={{display:'flex', alignItems:'center', justifyContent:'space-evenly', width:'100%', margin: '0 auto'}}>Firebase<span className="dot"></span>React Native<span className="dot"></span>Lottie<span className="dot"></span>Illustrator<span className="dot"></span>After Effects</p>
-				<div>
-				<p className="bulletText">What started off as a simple ToDo app that became a behemoth of a passion project. Once the minimum viable product of an app that gave the user reminders to water their plants was created, layer after layer upon functionality that was needed to make it really practical just called out for me to build them. You could, no joke, manage a nice farm with this app. I know I have!</p>				</div>
+			<Project name={ProjectData[0].name}
+				image={ProjectData[0].image} skills={ProjectData[0].skills} bulletPoints={ProjectData[0].bulletPoints}/>
 			</div>
 
 			<div className="box" id="box-2">
-			<h1>Water Your Plants Medicinal Coloring Book</h1>
-				<p style={{display:'flex', alignItems:'center', justifyContent:'space-evenly', width:'45%', margin: '0 auto'}}>Illustrator<span className="dot"></span>Photography</p>
-				<div>
-				<p className="bulletText">As the pandemic began to ramp up it seemed like the whole world was learning about gardening foraging or something to do with returning to a simple life. To that end, I did my part by helping a farmer publish a series medicinal herb coloring books to help folks with wild plant identification as a nice way to relax during quarantine downtime.</p>
-				<p className="bulletText">Armed with a list of rare herbs I began a journey to document this little selection of natures bounty. Although the client supplied some of the photos used for herbs in the book, in many cases I had to photograph and recreate the images of the plants.</p>
-				</div>
+				<Project name={ProjectData[1].name}
+				image={ProjectData[1].image} skills={ProjectData[1].skills} bulletPoints={ProjectData[1].bulletPoints}/>
 			</div>
 
 			<div className="box" id="box-3">
-			<h1>Durian</h1>
-				<p style={{display:'flex', alignItems:'center', justifyContent:'space-evenly', width:'80%', margin: '0 auto'}}>Illustrator<span className="dot"></span>Premiere<span className="dot"></span>After Effects<span className="dot"></span>Cinema4D</p>
-				<p className="bulletText">After years of working for other people I decided to pull the plug and launch my own production company — Northcide Productions. For our first offering I produced a short film named “Durian.” Completed in 2020, the byline reads as follows: <br/> <i>A young anxious woman tries to depict the perfect life on social media and is forced to re-evaluate her life trajectory when her boyfriend introduced a strange fruit called durian.</i></p>
-				<p className="bulletText">My contributions as producer were wide ranging – funding, location scouting, production design, craft services, transportation and more but my most critical contributions were in the realm of (award winning) motion graphics. From the visual effects used in-scene, simulated screens, to both starting and ending credits my hands were all over this piece.</p>
-
+			<Project name={ProjectData[2].name}
+				image={ProjectData[2].image} skills={ProjectData[2].skills} bulletPoints={ProjectData[2].bulletPoints}/>
 			</div>
 
 			<div className="box" id="box-4">
-				<h1>Terra-2042</h1>
-				<p style={{display:'flex', alignItems:'center', justifyContent:'space-evenly', width:'70%', margin: '0 auto'}}>MongoDB<span className="dot"></span>Express<span className="dot"></span>React<span className="dot"></span>Socket.io</p>
-				<p className="bulletText"><span className="dot2"></span>Terra 2042 is a web-based post-apocalyptic tabletop card game. It features live multiplayer games, custom deck building, and a shop to spend your spoils.</p>
-				<p className="bulletText"><span className="dot2"></span>If you are the first player in the lobby, click on "CREATE GAME" to generate a room code. Send the code to your friend!</p>
-				<p className="bulletText"><span className="dot2"></span>Terra 2042 is a two-player game. Create a game and share the room code with a friend to battle it out.</p>
-				<p className="bulletText"><span className="dot2"></span>Socket.io provides realtime updates, and save-states as well as in-game chat functions!</p>
+			<Project name={ProjectData[3].name}
+				image={ProjectData[3].image} skills={ProjectData[3].skills} bulletPoints={ProjectData[3].bulletPoints}/>
 			</div>
 		</div>
 	</div>

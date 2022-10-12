@@ -1,5 +1,4 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
-
  .top {
 	 width: 100%;
    display: flex;
@@ -44,15 +43,6 @@
 }
  .profile-pic:hover .circle-2 {
 	 transform: rotate(-360deg);
-}
- .name {
-	 padding-bottom: 1px;
-	 font-weight: 700;
-	 color: #428221;
-}
- .smallText {
-	 font-size: 12px;
-	 color: #428221;
 }
  .career {
 	 padding-bottom: 20px;
