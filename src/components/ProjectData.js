@@ -3,18 +3,24 @@ export const ProjectData = [
     image: 'https://images.squarespace-cdn.com/content/v1/5363e3d1e4b0b6dbd37bcdd6/336faf2a-b6bd-4f37-a6a8-8481083f0226/01.jpg?format=2500w',
     name: 'Growr',
     skills: ['Firebase', 'React Native', 'Lottie', 'Illustrator','After Effects'],
+    thumbs: ['','',''],
+    style: 1,
     bulletPoints: ['What started off as a simple ToDo app that became a behemoth of a passion project. Once the minimum viable product of an app that gave the user reminders to water their plants was created, layer after layer upon functionality that was needed to make it really practical just called out for me to build them. You could, no joke, manage a nice farm with this app. I know I have!']
   },
   {
-    image: 'https://images.squarespace-cdn.com/content/v1/5363e3d1e4b0b6dbd37bcdd6/5a5c18b3-416d-4b11-a689-66a11db0ac0a/convertedDSC00004_13.jpg?format=750w',
+    image: 'https://images.squarespace-cdn.com/content/v1/5363e3d1e4b0b6dbd37bcdd6/39a4c4f0-0e89-49b0-8228-25ab156b3b02/convertedDSC00004_13.jpg?format=2500w',
     name: 'Water Your Plants Medicinal Coloring Book',
     skills: ['Illustrator','Photography'],
+    thumbs: ['https://images.squarespace-cdn.com/content/v1/5363e3d1e4b0b6dbd37bcdd6/715cd955-5738-4de2-bd9a-ff550810d054/convertedDSC00005_14.jpg?format=2500w', 'https://images.squarespace-cdn.com/content/v1/5363e3d1e4b0b6dbd37bcdd6/9c0dd625-ae83-46dd-b8a1-5f717db3d9dd/convertedDSC00011_20.jpg?format=2500w','https://images.squarespace-cdn.com/content/v1/5363e3d1e4b0b6dbd37bcdd6/bb71650f-91e5-4bf3-b544-8b806e8722e3/IMG_4880.png?format=1500w',],
+    style: 1,
     bulletPoints: ['A coloring books focused on medicinal herbs to help folks with wild plant identification as a nice way to relax during quarantine downtime.','Armed with a list of rare herbs I began a journey to document this little selection of natures bounty. Although the client supplied some of the photos used for herbs in the book, in many cases I had to photograph and recreate the images of the plants.']
   },
   {
-    image: 'https://images.squarespace-cdn.com/content/v1/5363e3d1e4b0b6dbd37bcdd6/6c91b27f-a30c-4298-b3a9-512581ad4a9a/03.jpeg?format=2500w',
+    image: 'https://images.squarespace-cdn.com/content/v1/5363e3d1e4b0b6dbd37bcdd6/be225f8f-fdba-4e60-a62f-3ee93c5dce66/durianlogo.png?format=750w',
     name: 'Durian',
     skills: ['Illustrator','Premiere', 'After Effects', 'Cinema4D'],
+    thumbs: ['https://images.squarespace-cdn.com/content/v1/5363e3d1e4b0b6dbd37bcdd6/1644885090269-CU6NW493GCF65TYWWOGD/ezgif-3-eec0b2ee43.gif?format=1500w'],
+    style: 1,
     bulletPoints: ['After years of working for other people I decided to pull the plug and launch my own production company — Northcide Productions. For our first offering I produced a short film named “Durian.” Completed in 2020, the byline reads as follows: \n A young anxious woman tries to depict the perfect life on social media and is forced to re-evaluate her life trajectory when her boyfriend introduced a strange fruit called durian.','My contributions as producer were wide ranging – funding, location scouting, production design, craft services, transportation and more but my most critical contributions were in the realm of (award winning) motion graphics. From the visual effects used in-scene, simulated screens, to both starting and ending credits my hands were all over this piece.']
   },
   {

@@ -52,17 +52,17 @@ for (let i in tabs) {
 
 			<div className="box" id="box-2">
 				<Project name={ProjectData[1].name}
-				image={ProjectData[1].image} skills={ProjectData[1].skills} bulletPoints={ProjectData[1].bulletPoints}/>
+				image={ProjectData[1].image} skills={ProjectData[1].skills} bulletPoints={ProjectData[1].bulletPoints} thumbs={ProjectData[1].thumbs}/>
 			</div>
 
 			<div className="box" id="box-3">
 			<Project name={ProjectData[2].name}
-				image={ProjectData[2].image} skills={ProjectData[2].skills} bulletPoints={ProjectData[2].bulletPoints}/>
+				image={ProjectData[2].image} skills={ProjectData[2].skills} video={ProjectData[2].video} bulletPoints={ProjectData[2].bulletPoints} thumbs={ProjectData[2].thumbs}/>
 			</div>
 
 			<div className="box" id="box-4">
 			<Project name={ProjectData[3].name}
-				image={ProjectData[3].image} skills={ProjectData[3].skills} bulletPoints={ProjectData[3].bulletPoints}/>
+				image={ProjectData[3].image} skills={ProjectData[3].skills} bulletPoints={ProjectData[3].bulletPoints} thumbs={ProjectData[3].thumbs}/>
 			</div>
 		</div>
 	</div>
