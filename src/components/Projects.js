@@ -1,24 +1,24 @@
-import React, {useEffect} from "react";
+import React, {useState, useEffect} from "react";
 import Project from "./Project";
 import './projects.css'
 import { ProjectData } from './ProjectData'
-export default function Projects() {
+
+export default function Projects(props) {
 
   useEffect(() => {
     const header = document.querySelector(".header");
-const content = document.querySelector(".content");
-const boxes = [...content.children];
-const tabs = [...header.children];
-tabs.pop();
+		const content = document.querySelector(".content");
+		const boxes = [...content.children];
+		const tabs = [...header.children];
+		tabs.pop();
 
-for (let i in tabs) {
-	tabs[i].addEventListener("click", () => {
-		for (let i in tabs) tabs[i].removeAttribute("class");
-		tabs[i].classList.add("tab-active");
-		console.log(content.children)
-		for (let box of boxes) box.classList.remove("box-active");
-		boxes[i].classList.add("box-active");
-	});
+		for (let i in tabs) {
+			tabs[i].addEventListener("click", () => {
+				for (let i in tabs) tabs[i].removeAttribute("class");
+				tabs[i].classList.add("tab-active");
+				for (let box of boxes) box.classList.remove("box-active");
+				boxes[i].classList.add("box-active");
+		});
 }
   }, []);
 
@@ -36,11 +36,12 @@ for (let i in tabs) {
 		</ul>
 		<div className="content">
 			{ProjectData.map((project, index) => {
-				return (<div className={index === 0 ? "box box-active" : "box"} id={`box-${index+1}`}>
+				return (<div key={index} className={index === 0 ? "box box-active" : "box"} id={`box-${index+1}`}>
 					<Project name={project.name}
 					images={project.images}
 					skills={project.skills}
 					alt={project.alt}
+					handleClick={props.handleClick}
 					bulletPoints={project.bulletPoints}/>
 				</div>)
 			})}

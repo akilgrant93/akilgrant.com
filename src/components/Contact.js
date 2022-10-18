@@ -20,9 +20,9 @@ export default function Contact() {
 			</div>
 
     <div className="bottom pt-3">
-    <button className="button-style mr-5" role="button">Email</button>
-    <button className="button-style mr-5" role="button">Resume</button>
-    <button className="button-style mr-g" role="button">Github</button>
+    <button className="button-style mr-5" >Email</button>
+    <button className="button-style mr-5" >Resume</button>
+    <button className="button-style mr-g" >Github</button>
 			</div>
                   </div>
       </div>
