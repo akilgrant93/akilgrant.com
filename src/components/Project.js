@@ -11,30 +11,33 @@ export default function Project(props) {
 
     <div className="flex mx-40">
       <div className="mr-5 flex w-1/2">
-        {props.image
-    ? <div >
-      <button onClick={handleClick}>
-    <img className="rounded-md w-[14rem] h-auto" src={props.image}/>
-    </button>
-    </div>
-    : ''}
-    <div className="flex flex-col w-full">
-        {props.thumbs
-          ? props.thumbs.map((image, index)=>{
-      return (
-      <button key={index} onClick={handleClick}>
-      <img
-        className={
-          index > 0
-            ? "rounded-md ml-2 mt-2"
-            : "rounded-md ml-2"
+
+        <div >
+          <button onClick={handleClick}>
+            <img
+              className="rounded-md w-[14rem] h-auto"
+              src={props.images[0]}
+              alt={props.alt}/>
+          </button>
+        </div>
+
+      <div className="flex flex-col w-full">
+        {props.images.map((image, index)=>{
+          if(index > 0){
+            return (
+              <button key={index} onClick={handleClick}>
+                <img
+                  className={
+                  index === 1
+                    ? "rounded-md ml-2 mt-2"
+                    : "rounded-md ml-2"
+                  }
+                  src={image}/>
+              </button>
+            )
+          }
+        })
         }
-        src={props.thumbs[index]}/>
-        </button>
-        )
-    })
-    : <div/>
-    }
     </div>
     </div>
 

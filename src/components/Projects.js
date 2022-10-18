@@ -1,9 +1,7 @@
-import { CodeIcon } from "@heroicons/react/solid";
 import React, {useEffect} from "react";
 import Project from "./Project";
 import './projects.css'
 import { ProjectData } from './ProjectData'
-
 export default function Projects() {
 
   useEffect(() => {
@@ -17,6 +15,7 @@ for (let i in tabs) {
 	tabs[i].addEventListener("click", () => {
 		for (let i in tabs) tabs[i].removeAttribute("class");
 		tabs[i].classList.add("tab-active");
+		console.log(content.children)
 		for (let box of boxes) box.classList.remove("box-active");
 		boxes[i].classList.add("box-active");
 	});
@@ -36,25 +35,15 @@ for (let i in tabs) {
 			<li><i className=""></i></li>
 		</ul>
 		<div className="content">
-			<div className="box box-active" id="box-1">
-			<Project name={ProjectData[0].name}
-				image={ProjectData[0].image} skills={ProjectData[0].skills} bulletPoints={ProjectData[0].bulletPoints}/>
-			</div>
-
-			<div className="box" id="box-2">
-				<Project name={ProjectData[1].name}
-				image={ProjectData[1].image} skills={ProjectData[1].skills} bulletPoints={ProjectData[1].bulletPoints} thumbs={ProjectData[1].thumbs}/>
-			</div>
-
-			<div className="box" id="box-3">
-			<Project name={ProjectData[2].name}
-				image={ProjectData[2].image} skills={ProjectData[2].skills} video={ProjectData[2].video} bulletPoints={ProjectData[2].bulletPoints} thumbs={ProjectData[2].thumbs}/>
-			</div>
-
-			<div className="box" id="box-4">
-			<Project name={ProjectData[3].name}
-				image={ProjectData[3].image} skills={ProjectData[3].skills} bulletPoints={ProjectData[3].bulletPoints} thumbs={ProjectData[3].thumbs}/>
-			</div>
+			{ProjectData.map((project, index) => {
+				return (<div className={index === 0 ? "box box-active" : "box"} id={`box-${index+1}`}>
+					<Project name={project.name}
+					images={project.images}
+					skills={project.skills}
+					alt={project.alt}
+					bulletPoints={project.bulletPoints}/>
+				</div>)
+			})}
 		</div>
 	</div>
         </div>
