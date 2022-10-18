@@ -1,26 +1,23 @@
-#skills {
-  background-color: white;
-}
-
 .list {
   width: 240px;
   height: 280px;
   top: 60px;
   left: 80px;
   box-shadow: 4px 8px 12px 0px rgba(0, 0, 0, 0.1);
-  border: 2px solid white;
-  background: rgba(255, 255, 255, .2);
+  border: 2px solid  rgba(39, 174, 96, 1);
+  background: rgba(39, 174, 96, .35);
   border-radius: 10px;
 }
 .list .head {
   padding: 20px 0;
   margin-left: 30px;
   margin-right: 30px;
-  border-bottom: 1px solid #d4dce0;
+  border-bottom: 2px solid  rgba(39, 174, 96, 1);
 }
 .list .title {
   font-weight: 600;
-  font-size: 20px;
+  font-size: 26px;
+  color: rgba(39, 174, 96, 1);
   line-height: 30px;
   text-align: center;
 }
@@ -61,31 +58,20 @@
   opacity: 0;
   width: 8%;
   height: 15px;
-  border: 1px solid #fff;
+  background: #14532D;
+  border: 1px solid #14532D;
   border-radius: 50%;
   cursor: pointer;
   transition: all 0.4s ease-out 0.5s;
-}
-.list ul .checkmark {
-  position: absolute;
-  top: 2px;
-  right: 0;
-  stroke: green;
-  fill: none;
-  stroke-width: 1.5;
-  stroke-dasharray: 30 30;
-  stroke-dashoffset: 30;
-  transition: all 0.5s ease-out;
 }
 .list ul input {
   display: none;
 }
 .list ul input:checked ~ .text {
-  color: white;
+  color: #14532D;
 }
 .list ul input:checked ~ .button {
   transition: all 0.4s ease-in;
-  /* transform: scale(0.8); */
   opacity: 1;
 }
 .list ul input:checked ~ .checkmark {
@@ -94,5 +80,5 @@
 }
 
 label:hover {
-  color: white;
+  color: #14532D;
 }

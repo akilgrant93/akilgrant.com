@@ -9,12 +9,12 @@ import { SliderData } from './components/SliderData';
 
 export default function App() {
   return (
-    <main className="text-gray-400 bg-laurel-green-100 body-font">
+    <main className="text-gray-400 bg-green-50 body-font">
       <Navbar />
       <ImageSlider slides={SliderData} />
       <About />
-      <Skills />
       <Projects />
+      <Skills />
       <Contact />
     </main>
   );

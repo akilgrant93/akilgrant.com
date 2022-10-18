@@ -1,23 +1,18 @@
 .tabs {
   width: 100%;
-  height: 440px;
+  height: 520px;
 
-}
-
-#projects {
-  background: white;
 }
 
 .header {
   display: flex;
   list-style: none;
-  margin: 0 auto;
   padding: 0;
   justify-content: center;
 }
 .header li {
-  width: 200px;
-  height: 200px;
+  width: 100px;
+  height: 100px;
   place-content: center;
   color: #c1ccd6;
   transition: background 0.5s ease-in-out;
@@ -61,7 +56,7 @@
 .content .box {
   position: absolute;
   opacity: 0;
-  width: 70%;
+  width: 90%;
   transform: translateY(3px);
   pointer-events: none;
   transition: all 0.3s ease-in;

@@ -3,10 +3,10 @@ import React from "react";
 
 export default function Navbar() {
   return (
-    <header className="bg-black-coral md:sticky top-0 z-10">
+    <header className="bg-forest-green md:sticky top-0 z-10">
       <div className="container mx-auto flex flex-wrap p-7 flex-col md:flex-row items-center">
         <span className="title-font font-medium text-white mb-4 md:mb-0">
-          <a href="#about" className="ml-3 text-xl">
+          <a href="#about" className="ml-3 text-lg">
             Akil Grant
           </a>
         </span>
@@ -16,6 +16,12 @@ export default function Navbar() {
           </a>
           <a href="#skills" className="mr-5 hover:text-white">
             Skills
+          </a>
+          <a href="" className="mr-5 hover:text-white">
+            Resume
+          </a>
+          <a href="" className="mr-5 hover:text-white">
+            Github
           </a>
         </nav>
         <a

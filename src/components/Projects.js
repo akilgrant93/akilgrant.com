@@ -25,19 +25,10 @@ for (let i in tabs) {
 
   return (
     <section id="projects" className="text-gray-400 container bg-gray-900 body-font">
-      <div className="px-5 py-10 mx-auto text-center lg:px-40">
-        <div className="flex flex-col w-full mb-20">
-          <CodeIcon className="mx-auto inline-block w-10 mb-4" />
-          <h1 className="sm:text-4xl text-3xl font-medium title-font mb-4 text-white">
-            Past Projects
-          </h1>
-          <p className="lg:w-2/3 mx-auto leading-relaxed text-base">
-            As a multi-hyphenate designer my portfolio has to represent a range of skills! Here's a selection of some of my favorite projects.
-          </p>
-        </div>
+      <div className="px-5 pb-10 mx-auto text-center lg:px-40">
         <div className="flex flex-wrap -m-4">
         <div className="tabs">
-		<ul className="header">
+		<ul className="header mb-10">
 			<li className="tab-active"><img alt="Colorful green logo reading Growr." className="icon" src="https://images.squarespace-cdn.com/content/v1/5363e3d1e4b0b6dbd37bcdd6/1584439666648-WC21M3H2FTNH0GSFAVSH/growr-01.png?format=1000w"/></li>
 			<li><img alt="A book titled Water Your Plants Medicinal Herbs Coloring Book lies on a bed of green grass."  className="icon" src="https://images.squarespace-cdn.com/content/v1/5363e3d1e4b0b6dbd37bcdd6/1f3c779c-23bc-4bba-927d-7982cc66a105/IMG_4330.png?format=500w"/></li>
 			<li><img alt="A Golden lettered logo reading Durian overlaid atop a bed of flower petals." className="icon" src="https://images.squarespace-cdn.com/content/v1/5363e3d1e4b0b6dbd37bcdd6/be225f8f-fdba-4e60-a62f-3ee93c5dce66/durianlogo.png?format=500w"/></li>

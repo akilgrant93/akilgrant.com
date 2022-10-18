@@ -14,6 +14,11 @@ module.exports = {
       'silver': '#ecebff',
       'bubble-gum': '#ff77e9',
       'bermuda': '#78dcca',
+      'green':{
+        50: '#EFFBF4',
+        100: '#DEF7E9',
+        200: '#BDEFD3',
+      },
       'forest-green': '#14532d',
       'laurel-green': {
         100: '#bec5ad',
@@ -21,6 +26,13 @@ module.exports = {
       },
       'black-coral': '#696d7d',
       'auburn': '#9e2a2b',
+    },
+    fontSize: {
+      sm: '0.8rem',
+      base: '1rem',
+      lg: '1.25rem',
+      xl: '2.25rem',
+
     }
   },
   variants: {
