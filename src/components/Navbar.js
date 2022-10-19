@@ -17,10 +17,12 @@ export default function Navbar() {
           <a href="#skills" className="mr-5 hover:text-white">
             Skills
           </a>
-          <a href="" className="mr-5 hover:text-white">
+          <a href="https://akilgrant.com/s/akilgrantresume-ds2x.pdf"
+          target="_blank"
+          className="mr-5 hover:text-white">
             Resume
           </a>
-          <a href="" className="mr-5 hover:text-white">
+          <a href="https://github.com/akilgrant93" className="mr-5 hover:text-white">
             Github
           </a>
         </nav>

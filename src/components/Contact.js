@@ -20,9 +20,9 @@ export default function Contact() {
 			</div>
 
     <div className="bottom pt-3">
-    <button className="button-style mr-5" >Email</button>
-    <button className="button-style mr-5" >Resume</button>
-    <button className="button-style mr-g" >Github</button>
+    <a href="mailto:akil.grant.93@gmail.com?subject=Hi%20Akil!" className="button-style mr-5" >Email</a>
+    <a className="button-style mr-5" href="https://akilgrant.com/s/akilgrantresume-ds2x.pdf" target="_blank">Resume</a>
+    <a href="https://github.com/akilgrant93" className="button-style mr-g" >Github</a>
 			</div>
                   </div>
       </div>

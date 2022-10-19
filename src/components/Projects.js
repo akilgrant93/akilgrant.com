@@ -49,6 +49,7 @@ export default function Projects(props) {
 	</div>
         </div>
       </div>
+			<div id="skills"></div>
     </section>
   );
 }
