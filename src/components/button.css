@@ -3,10 +3,10 @@
   backface-visibility: hidden;
   background-color:  rgba(39, 174, 96, .35);
   border-radius: 8px;
-  border: 2px solid  rgba(39, 174, 96, 1);
+  border: 2px solid rgba(20, 83, 45, .5);
   box-shadow: rgba(39, 174, 96, .15) 0 4px 9px;
   box-sizing: border-box;
-  color: rgba(39, 174, 96, 1);
+  color:#14532D;
   cursor: pointer;
   display: inline-block;
   font-family: Inter,-apple-system,system-ui,"Segoe UI",Helvetica,Arial,sans-serif;

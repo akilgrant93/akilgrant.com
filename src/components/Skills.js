@@ -2,36 +2,25 @@ import React from "react";
 import './skills.css'
 
 export default function Skills() {
-
+	const skillsArr = ['User Experience', 'Illustration', 'Motion Graphics', 'Art Direction']
   return (
     <section id="skills">
-      <div className="container  px-5 py-10 mx-auto">
+      <div className="container  px-5 mt-32 mb-32 mx-auto">
         <div className="flex flex-wrap lg:w-4/5 sm:mx-auto sm:mb-2 -mx-2">
         <div className="list">
 		<div className="head">
 			<div id="day" className="title">Skills & Tech</div>
 		</div>
 		<ul>
-			<div>
-				<input  type="radio" id="item-1" value="item-1" name="items" />
-				<label htmlFor="item-1" className="text">User Experience</label>
-				<label htmlFor="item-1"  className="button"></label>
-			</div>
-			<div>
-				<input  type="radio" id="item-2" value="item-2" name="items" />
-				<label htmlFor="item-2" className="text">Illustration</label>
-				<label htmlFor="item-2" className="button"></label>
-			</div>
-			<div>
-				<input  type="radio" id="item-3" value="item-3" name="items" />
-				<label htmlFor="item-3" className="text">Motion Graphics</label>
-				<label htmlFor="item-3" className="button"></label>
-			</div>
-			<div>
-				<input  type="radio" id="item-4" value="item-4" name="items" />
-				<label htmlFor="item-4" className="text">Art Direction</label>
-				<label htmlFor="item-4" className="button"></label>
-			</div>
+			{skillsArr.map((skill, index) => {
+				return (
+					<div>
+						<input type="radio" id={`item-${index+1}`} value={`item-${index+1}`} name="items"/>
+						<label htmlFor={`item-${index+1}`} className="text font-medium">{skill}</label>
+						<label htmflFor={`item-${index+1}`} className="button"></label>
+					</div>
+				)
+			})}
 
 		</ul>
 	</div>

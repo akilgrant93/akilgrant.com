@@ -58,8 +58,8 @@
   opacity: 0;
   width: 8%;
   height: 15px;
-  background: #14532D;
-  border: 1px solid #14532D;
+  background: rgba(39, 174, 96, 1);
+  border: 1px solid rgba(39, 174, 96, 1);
   border-radius: 50%;
   cursor: pointer;
   transition: all 0.4s ease-out 0.5s;
@@ -68,7 +68,7 @@
   display: none;
 }
 .list ul input:checked ~ .text {
-  color: #14532D;
+  color:rgba(39, 174, 96, 1);
 }
 .list ul input:checked ~ .button {
   transition: all 0.4s ease-in;
@@ -80,5 +80,5 @@
 }
 
 label:hover {
-  color: #14532D;
+  color:rgba(39, 174, 96, 1);
 }
