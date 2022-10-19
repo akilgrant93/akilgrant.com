@@ -28,6 +28,9 @@ class ImageSlider extends Component {
   render() {
     return (
         <div className="min-w-screen flex relative">
+            <div className="frame">
+              <span className="absolute z-10 mt-[25vh] left-1/4 text-white w-1/2 top-1/3 text-center font-extrabold text-twoxl uppercase select-none cursor-pointer">Akil Grant</span>
+            </div>
             {this.props.slides.map((slide, index) => {
               return (
                 <img

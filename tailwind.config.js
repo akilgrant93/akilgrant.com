@@ -7,6 +7,7 @@ module.exports = {
       transparent: 'transparent',
       current: 'currentColor',
       'white': '#ffffff',
+      'black': '#000000',
       'purple': '#3f3cbb',
       'midnight': '#121063',
       'metal': '#565584',
@@ -29,9 +30,10 @@ module.exports = {
     },
     fontSize: {
       sm: '0.8rem',
-      base: '1rem',
+      base: '0.9rem',
       lg: '1.25rem',
       xl: '2.25rem',
+      twoxl: '6.5rem',
 
     }
   },

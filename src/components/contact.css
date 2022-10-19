@@ -1,11 +1,11 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
 
  .top {
-	 width: 100%;
    display: flex;
    padding-bottom: 10px;
 	 flex-direction: column;
 	 align-items: center;
+	 justify-content: center;
 }
  .profile-pic {
 	 padding-bottom: 15px;
@@ -47,7 +47,6 @@
 }
 
  .bottom {
-   width: 75%;
    margin: 0 auto;
    border-radius: 10px;
    display: flex;

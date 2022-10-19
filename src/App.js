@@ -22,7 +22,7 @@ export default function App() {
   };
 
   return (
-    <main className="text-gray-400 bg-green-50 body-font">
+    <main className="text-gray-400 bg-green-50 body-font" id="home">
       <Navbar />
       <ImageSlider slides={SliderData} />
       <About />
