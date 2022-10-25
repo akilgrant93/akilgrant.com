@@ -2,8 +2,13 @@ import React, {useState} from "react";
 import './contact.css'
 import './button.css'
 import { MailIcon, DocumentTextIcon } from "@heroicons/react/outline"
+import Switch from "react-switch";
+
 export default function Contact() {
-  const [verbose, setVerbose] = useState(null);
+  const [checked, setChecked] = useState(false);
+  const handleChange = nextChecked => {
+    setChecked(nextChecked);
+  };
 
   return (
     <section id="contact" className="relative">
@@ -20,26 +25,46 @@ export default function Contact() {
 				</div>
 				<span className="pb-1 color-forest-green text-xl font-black">Akil Grant</span>
 				<span className="text-forest-green text-base font-semibold">UI/UX Designer & Art Director</span>
+        <div className="flex justify-center ">
+      <label>
+      <span className="text-forest-green text-base font-bold">Short</span>
+        <Switch
+          onChange={handleChange}
+          checked={checked}
+          height={14}
+          width={28}
+          className="align-middle items-center mx-2"
+          activeBoxShadow="0px 0px 1px 10px rgba(0, 0, 0, 0.2)"
+          uncheckedIcon={false}
+          checkedIcon={false}
+        />
+        <span className="text-forest-green text-base font-bold">Long</span>
+      </label>
+      </div>
 			</div>
-      {verbose
-      ? <p className="w-1/3 px-5 py-20 text-base">
+      <div className="w-1/3 px-5 mb-10 py-20 text-base">
+      {checked
+      ? <p>
         I'm a UX Designer, and full stack developer with extensive experience in motion graphics and front end
 development. My customer focused creativity aids in my efforts to make simple yet elegant problem solving designs
 that delight users; and makes use of my wide ranging technical background in the visual arts to work in styles applicable to almost any project.
 </p>
-      : <p className="w-1/3 px-5 py-20 text-base">
+      : <p>
       I'm a UX Designer, and full stack developer with extensive experience in motion graphics and front end
 development. My skill and experience help me strive in a range of creative environments. <br/><br/>
-But I'm looking for a place to expand my knowledge and continue to grow as a developer. If you think my work is cool feel free to <a href="mailto:akil.grant.93@gmail.com?subject=Hi%20Akil!" className="hover:text-laurel-green-200"target="_blank"><u>drop a line</u></a>. We'd work great together!
+But I'm looking for a place to expand my knowledge and continue to grow as a developer. If you think my work is cool feel free to <a href="mailto:akil.grant.93@gmail.com?subject=Hi%20Akil!" className="hover:text-laurel-green-200"target="_blank"rel="noopener noreferrer"><u>drop a line</u></a>. We'd work great together!
 </p>
       }
       </div>
+      </div>
 
     <div className="bottom w-1/2 pt-3">
-    <a href="mailto:akil.grant.93@gmail.com?subject=Hi%20Akil!" target="_blank "className="button-style mr-5" >Email
+    <a href="mailto:akil.grant.93@gmail.com?subject=Hi%20Akil!" target="_blank "className="button-style mr-5"
+    rel="noopener noreferrer" >Email
     <MailIcon className="w-6 h-6 ml-1 inline-block -mt-1" />
     </a>
-    <a className="button-style mr-5" href="https://akilgrant.com/s/akilgrantresume-ds2x.pdf" target="_blank">Resume
+    <a className="button-style mr-5" href="https://akilgrant.com/s/akilgrantresume-ds2x.pdf" target="_blank"
+    rel="noopener noreferrer">Resume
     <DocumentTextIcon className="w-6 h-6 ml-1 inline-block -mt-1" />
     </a>
     <a href="https://github.com/akilgrant93" className="button-style mr-g" >Github

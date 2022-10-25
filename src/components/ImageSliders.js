@@ -9,20 +9,6 @@ class ImageSlider extends Component {
     };
   }
 
-
-
-  /**
- * letteranimation.js
- * https://www.cssanimatio.io
- * Created and maintained by: Pavel
- * Find me at: https://www.linkedin.com/in/yesiamrocks/
- * Email: hello@cssanimation.io
- * Github: https://github.com/yesiamrocks/cssanimation.io
- * Title: CSS Animation Library for Developers and Ninjas
- * Copyright (c) 2017 Pavel
- * License: cssanimattion is licensed under the MIT license
- **/
-
 animateSequence() {
   var a = document.getElementsByClassName('sequence');
   for (var i = 0; i < a.length; i++) {
@@ -32,7 +18,7 @@ animateSequence() {
       var str = '';
       var delay = 100;
       for (let l = 0; l < letter.length; l++) {
-          if (letter[l] != ' ') {
+          if (letter[l] !== ' ') {
               str += '<span style="animation-delay:' + delay + 'ms; -moz-animation-delay:' + delay + 'ms; -webkit-animation-delay:' + delay + 'ms; ">' + letter[l] + '</span>';
               delay += 150;
           } else

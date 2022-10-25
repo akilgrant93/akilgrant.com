@@ -23,6 +23,7 @@ export default function Navbar() {
           </a>
           <a href="https://akilgrant.com/s/akilgrantresume-ds2x.pdf"
           target="_blank"
+          rel="noopener noreferrer"
           className="mr-5 font-semibold hover:text-laurel-green-200">
             Resume
             <DocumentTextIcon className="w-4 h-4 ml-1 inline-block -mt-1" />
