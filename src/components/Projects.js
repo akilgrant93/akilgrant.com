@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from "react";
+import React, {useEffect} from "react";
 import Project from "./Project";
 import './projects.css'
 import { ProjectData } from './ProjectData'
@@ -41,6 +41,8 @@ export default function Projects(props) {
 					images={project.images}
 					skills={project.skills}
 					alt={project.alt}
+					type={project.type}
+					links={project.links}
 					handleClick={props.handleClick}
 					bulletPoints={project.bulletPoints}/>
 				</div>)
