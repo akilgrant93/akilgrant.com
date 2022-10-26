@@ -1,10 +1,14 @@
-import React from "react";
+import React, {useEffect} from "react";
 import './modal.css'
 export default function Modal(props){
-
+  useEffect(() => {
+    console.log('modal props',props)
+  }, []);
   return (
       <div className="overlay dismiss" onClick={props.handleClick}>
-        <img src={props.clickedImg} alt="bigger pic" />
+        {typeof props.clickedImg === "text" ?
+        <img src={props.clickedImg} alt="bigger pic" /> : ''}
+
         <span className="dismiss" onClick={props.handleClick}>
           X
         </span>

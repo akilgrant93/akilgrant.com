@@ -3,6 +3,9 @@ import Button from "./Button";
 
 export default function Project(props) {
 
+  // useEffect(() => {
+  //   console.log(props)
+  // }, []);
   return (
     <div>
 
@@ -75,7 +78,7 @@ export default function Project(props) {
         : ''}
         {props.type === "book"
         ? <div className="flex mt-5 justify-center items-center">
-        <Button type={'Read'} />
+        <Button type={'Read'} onClick={props.handleClick}/>
         <Button type={'Buy'} link={props.links[0]}/>
         </div>
         : ''}

@@ -13,10 +13,20 @@ export default function App() {
   const [currentIndex, setCurrentIndex] = useState(null);
 
   const handleClick = (item, index) => {
+    // console.log('clicked')
+    // console.log(item)
     if(typeof item === 'string'){
       setClickedImg(item);
-    } else if(typeof item === 'object'){
+    } else if(typeof item === 'object' && item.target.localName === "img"){
+      console.log('test')
+      console.log(item)
       setClickedImg(item.target.currentSrc);
+    } else if(typeof item === 'object' && item.target.localName === "button"){
+      console.log('test')
+      console.log(item)
+      setClickedImg(item.target);
+    } else {
+      setClickedImg(item.target.currentSrc)
     }
     setCurrentIndex(index);
   };
