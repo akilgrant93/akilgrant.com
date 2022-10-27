@@ -1,14 +1,21 @@
 import React, {useEffect} from "react";
 import './modal.css'
+import Flipbook from './Flipbook'
+
+
 export default function Modal(props){
   useEffect(() => {
-    console.log('modal props',props)
+    // console.log('modal props',props.clickedImg.className)
+
   }, []);
   return (
       <div className="overlay dismiss" onClick={props.handleClick}>
-        {typeof props.clickedImg === "text" ?
+        {typeof props.clickedImg === "string" ?
         <img src={props.clickedImg} alt="bigger pic" /> : ''}
-
+        {typeof props.clickedImg === 'object'
+        ?
+        <Flipbook title={props.clickedImg.id}/>
+        : ''}
         <span className="dismiss" onClick={props.handleClick}>
           X
         </span>

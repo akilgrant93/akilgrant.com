@@ -78,7 +78,7 @@ export default function Project(props) {
         : ''}
         {props.type === "book"
         ? <div className="flex mt-5 justify-center items-center">
-        <Button type={'Read'} onClick={props.handleClick}/>
+        <Button type={'Read'} onClick={props.handleClick} pages={props.pages} title={props.name}/>
         <Button type={'Buy'} link={props.links[0]}/>
         </div>
         : ''}

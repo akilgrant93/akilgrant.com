@@ -13,12 +13,9 @@ export default function App() {
   const [currentIndex, setCurrentIndex] = useState(null);
 
   const handleClick = (item, index) => {
-    // console.log('clicked')
-    // console.log(item)
     if(typeof item === 'string'){
       setClickedImg(item);
     } else if(typeof item === 'object' && item.target.localName === "img"){
-      console.log('test')
       console.log(item)
       setClickedImg(item.target.currentSrc);
     } else if(typeof item === 'object' && item.target.localName === "button"){
@@ -45,6 +42,7 @@ export default function App() {
           <Modal
             clickedImg={clickedImg}
             // handelRotationRight={handelRotationRight}
+
             handleClick={handleClick}
             // handelRotationLeft={handelRotationLeft}
           />

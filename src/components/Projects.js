@@ -43,6 +43,7 @@ export default function Projects(props) {
 					alt={project.alt}
 					type={project.type}
 					links={project.links}
+					pages={project.pages}
 					handleClick={props.handleClick}
 					bulletPoints={project.bulletPoints}/>
 				</div>)
