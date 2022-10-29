@@ -12,10 +12,6 @@ export default function Modal(props){
       <div className="overlay dismiss" onClick={props.handleClick}>
         {typeof props.clickedImg === "string" ?
         <img src={props.clickedImg} alt="bigger pic" /> : ''}
-        {typeof props.clickedImg === 'object'
-        ?
-        <Flipbook title={props.clickedImg.id}/>
-        : ''}
         <span className="dismiss" onClick={props.handleClick}>
           X
         </span>

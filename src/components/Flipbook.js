@@ -3,7 +3,7 @@ import HTMLFlipBook from 'react-pageflip';
 import { ProjectData } from './ProjectData'
 
 const Page = React.forwardRef((props, ref) => {
-  console.log(props)
+  // console.log(props)
   return (
       <div className="demoPage" ref={ref}>
           <img src={`./${props.src}`}/>
@@ -13,9 +13,9 @@ const Page = React.forwardRef((props, ref) => {
 
 export default function Flipbook(props) {
 
-  // useEffect(() => {
-  //   console.log('flipbook props', props)
-  // }, []);
+  useEffect(() => {
+    console.log('flipbook props', props)
+  }, []);
 
   if(props.title === 'Water Your Plants Medicinal Coloring Book'){
     return (
@@ -28,11 +28,14 @@ export default function Flipbook(props) {
       size={'stretch'}>
       {ProjectData[1].pages.map((page, index) => {
         return (
-        <div classNamekey={index}>
+        <div key={index}>
           <Page number={index+1} src={page}/>
         </div>)
       })}
       </HTMLFlipBook>
     )
+  }
+  else {
+    return (<div></div>)
   }
 }

@@ -1,23 +1,13 @@
 import React, { useState, useEffect } from 'react'
 import Button from "./Button";
 import Flipbook from './Flipbook'
-import HTMLFlipBook from 'react-pageflip';
 
 
 export default function Project(props) {
-  const [isVisible, setIsVisible] = useState(false);
+  useEffect(() => {
+    console.log('project props', props)
+  }, []);
 
-  const handleClick = () => {
-    if(isVisible){
-      setIsVisible(false)
-    } else {
-      setIsVisible(true)
-    }
-  }
-
-  // useEffect(() => {
-  //   console.log(props)
-  // }, []);
   return (
     <div>
 
@@ -91,7 +81,7 @@ export default function Project(props) {
         {props.type === "book"
         ? <div className="flex mt-5 justify-center items-center">
         <Button type={'Read'}
-        onClick={handleClick}
+        onClick={props.handleVisible}
         pages={props.pages}
         title={props.name}/>
         <Button type={'Buy'} link={props.links[0]}/>
@@ -100,14 +90,14 @@ export default function Project(props) {
     </div>
 
     </div>
-        {isVisible
+        {props.isVisible
         ? <div className="w-8/12 mx-auto mt-10">
             <div className="flex -ml-30">
-            <span className="text-xl text-forest-green dismiss" onClick={handleClick}>
+            <span className="text-xl text-forest-green dismiss" onClick={props.handleVisible}>
               X
           </span>
           </div>
-          <Flipbook title={props.name}/>
+          {props.isVisible ? <Flipbook title={props.name}/> : ''}
         </div>
         : ''}
 
