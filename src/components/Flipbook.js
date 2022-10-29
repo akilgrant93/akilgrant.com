@@ -13,21 +13,26 @@ const Page = React.forwardRef((props, ref) => {
 
 export default function Flipbook(props) {
 
-  useEffect(() => {
-    console.log('flipbook props', props)
-  }, []);
+  // useEffect(() => {
+  //   console.log('flipbook props', props)
+  // }, []);
 
-  if(props.title === 'Water Your Plants Medicinal Coloring Book' ){
+  if(props.title === 'Water Your Plants Medicinal Coloring Book'){
     return (
-      <HTMLFlipBook className="bg-white mx-auto" width={300} height={500}>
-          {ProjectData[1].pages.map((page, index) => {
-
-            return (
-            <div key={index}>
-              <Page number={index+1} src={page}/>
-            </div>)
-          })}
-          </HTMLFlipBook>
+      <HTMLFlipBook
+      // className="bg-white"
+      className="shadow-2xl"
+      maxShadowOpacity={0.25}
+      width={306}
+      height={396}
+      size={'stretch'}>
+      {ProjectData[1].pages.map((page, index) => {
+        return (
+        <div classNamekey={index}>
+          <Page number={index+1} src={page}/>
+        </div>)
+      })}
+      </HTMLFlipBook>
     )
   }
 }
