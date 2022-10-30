@@ -16,11 +16,8 @@ export default function App() {
     if(typeof item === 'string'){
       setClickedImg(item);
     } else if(typeof item === 'object' && item.target.localName === "img"){
-      console.log(item)
       setClickedImg(item.target.currentSrc);
     } else if(typeof item === 'object' && item.target.localName === "button"){
-      console.log('test')
-      console.log(item)
       setClickedImg(item.target);
     } else {
       setClickedImg(item.target.currentSrc)

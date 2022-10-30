@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import HTMLFlipBook from 'react-pageflip';
 import { ProjectData } from './ProjectData'
-
+import './anim.css'
 const Page = React.forwardRef((props, ref) => {
   // console.log(props)
   return (
@@ -13,14 +13,17 @@ const Page = React.forwardRef((props, ref) => {
 
 export default function Flipbook(props) {
 
-  useEffect(() => {
-    console.log('flipbook props', props)
-  }, []);
-
   if(props.title === 'Water Your Plants Medicinal Coloring Book'){
     return (
+      <div id='book'
+      className='bookAnimation'
+      >
+      <div className="flex">
+            <span className="text-xl text-forest-green dismiss" onClick={props.handleVisible}>
+              X
+          </span>
+          </div>
       <HTMLFlipBook
-      // className="bg-white"
       className="shadow-2xl"
       maxShadowOpacity={0.25}
       width={306}
@@ -33,6 +36,7 @@ export default function Flipbook(props) {
         </div>)
       })}
       </HTMLFlipBook>
+      </div>
     )
   }
   else {

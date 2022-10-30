@@ -5,7 +5,6 @@ import Flipbook from './Flipbook'
 
 export default function Project(props) {
   useEffect(() => {
-    console.log('project props', props)
   }, []);
 
   return (
@@ -90,14 +89,9 @@ export default function Project(props) {
     </div>
 
     </div>
-        {props.isVisible
+        {props.isVisible && props.type === "book"
         ? <div className="w-8/12 mx-auto mt-10">
-            <div className="flex -ml-30">
-            <span className="text-xl text-forest-green dismiss" onClick={props.handleVisible}>
-              X
-          </span>
-          </div>
-          {props.isVisible ? <Flipbook title={props.name}/> : ''}
+          {props.isVisible ? <Flipbook handleVisible={props.handleVisible} isVisible={props.isVisible} title={props.name}/> : ''}
         </div>
         : ''}
 

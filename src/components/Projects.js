@@ -4,10 +4,9 @@ import './projects.css'
 import { ProjectData } from './ProjectData'
 
 export default function Projects(props) {
-	const [isVisible, setIsVisible] = useState(false);
+	const [isVisible, setIsVisible] = useState(true);
 
-  const handleVisible = () => {
-
+  const handleVisible = (data) => {
 		const tabs = document.querySelector(".content");
 
     if(isVisible){
@@ -19,9 +18,6 @@ export default function Projects(props) {
 			tabs.classList.add("maxHeight");
       setIsVisible(true)
     }
-
-		console.log(isVisible)
-
   }
 
 
@@ -34,7 +30,6 @@ export default function Projects(props) {
 
 		for (let i in tabs) {
 			tabs[i].addEventListener("click", () => {
-				console.log(isVisible)
 				if(!isVisible){
 					content.classList.remove("maxHeight");
 					content.classList.add("minHeight");
