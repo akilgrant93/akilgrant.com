@@ -2,26 +2,29 @@ import React, {useState, useEffect} from "react";
 import Project from "./Project";
 import './projects.css'
 import { ProjectData } from './ProjectData'
+import { Motion, spring} from 'react-motion'
 
 export default function Projects(props) {
-	const [isVisible, setIsVisible] = useState(true);
+	const [isVisible, setIsVisible] = useState(false);
 
   const handleVisible = (data) => {
 		const tabs = document.querySelector(".content");
-
+		console.log(data)
+		console.log(isVisible)
     if(isVisible){
-			tabs.classList.remove("maxHeight");
-			tabs.classList.add("minHeight");
+			// tabs.classList.remove("maxHeight");
+			// tabs.classList.add("minHeight");
       setIsVisible(false)
     } else {
-			tabs.classList.remove("minHeight");
-			tabs.classList.add("maxHeight");
+			// tabs.classList.remove("minHeight");
+			// tabs.classList.add("maxHeight");
       setIsVisible(true)
     }
   }
 
 
   useEffect(() => {
+		console.log(isVisible)
     const header = document.querySelector(".header");
 		const content = document.querySelector(".content");
 		const boxes = [...content.children];
@@ -30,12 +33,6 @@ export default function Projects(props) {
 
 		for (let i in tabs) {
 			tabs[i].addEventListener("click", () => {
-				if(!isVisible){
-					content.classList.remove("maxHeight");
-					content.classList.add("minHeight");
-				}
-				content.classList
-				setIsVisible(false)
 				for (let i in tabs) tabs[i].removeAttribute("class");
 				tabs[i].classList.add("tab-active");
 				for (let box of boxes) box.classList.remove("box-active");
@@ -56,7 +53,12 @@ export default function Projects(props) {
 			<li><img alt="A devasated post apocalyptic city with a blood red setting sun in the background." className="icon" src="https://images.squarespace-cdn.com/content/v1/5363e3d1e4b0b6dbd37bcdd6/704dc755-1e62-4447-a717-7c26c5f346a5/made-bg2.png?format=2500w"/></li>
 			<li><i className=""></i></li>
 		</ul>
-		<div className="content minHeight">
+		<Motion
+		defaultStyle={{height: 350}}
+		style={{height: spring(!isVisible ? 350 : 900)}}
+		>
+			{(style) => (
+		<div style={{height: style.height}}className="content">
 			{ProjectData.map((project, index) => {
 				return (<div key={index} className={index === 0 ? "box box-active" : "box"} id={`box-${index+1}`}>
 					<Project name={project.name}
@@ -73,6 +75,9 @@ export default function Projects(props) {
 				</div>)
 			})}
 		</div>
+			)}
+
+		</Motion>
 	</div>
         </div>
       </div>

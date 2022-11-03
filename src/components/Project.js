@@ -7,9 +7,12 @@ export default function Project(props) {
   useEffect(() => {
   }, []);
 
+  const projectHandleVisible = () => {
+    props.handleVisible()
+  }
+
   return (
     <div>
-
     <div className="flex mx-40">
       <div className="mr-5 flex w-1/2">
         <div >
@@ -80,7 +83,7 @@ export default function Project(props) {
         {props.type === "book"
         ? <div className="flex mt-5 justify-center items-center">
         <Button type={'Read'}
-        onClick={props.handleVisible}
+        onClick={projectHandleVisible}
         pages={props.pages}
         title={props.name}/>
         <Button type={'Buy'} link={props.links[0]}/>
@@ -91,7 +94,7 @@ export default function Project(props) {
     </div>
         {props.isVisible && props.type === "book"
         ? <div className="w-8/12 mx-auto mt-10">
-          {props.isVisible ? <Flipbook handleVisible={props.handleVisible} isVisible={props.isVisible} title={props.name}/> : ''}
+          {props.isVisible ? <Flipbook handleVisible={projectHandleVisible} isVisible={props.isVisible} title={props.name}/> : ''}
         </div>
         : ''}
 

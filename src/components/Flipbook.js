@@ -2,6 +2,8 @@ import React, {useState, useEffect} from 'react'
 import HTMLFlipBook from 'react-pageflip';
 import { ProjectData } from './ProjectData'
 import './anim.css'
+import { Motion, spring} from 'react-motion'
+
 const Page = React.forwardRef((props, ref) => {
   // console.log(props)
   return (
@@ -16,8 +18,12 @@ export default function Flipbook(props) {
   if(props.title === 'Water Your Plants Medicinal Coloring Book'){
     return (
       <div id='book'
-      className='bookAnimation'
       >
+        <Motion
+		defaultStyle={{opacity: 0}}
+		style={{opacity: spring(!props.isVisible ? 0 : 1)}}>
+      {(style) => (
+      <div style={{opacity: style.opacity}}>
       <div className="flex">
             <span className="text-xl text-forest-green dismiss" onClick={props.handleVisible}>
               X
@@ -36,6 +42,9 @@ export default function Flipbook(props) {
         </div>)
       })}
       </HTMLFlipBook>
+      </div>
+      )}
+      </Motion>
       </div>
     )
   }
