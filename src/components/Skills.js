@@ -22,7 +22,7 @@ export default function Skills() {
 
   return (
     <section id="">
-      <div className="container mt-32 mx-auto">
+      <div className="container mt-24 mx-auto">
         <div className="flex items-center lg:w-4/5 sm:mx-auto justify-evenly sm:mb-2 -mx-2">
         <div className="list w-64">
 		<div className="head">

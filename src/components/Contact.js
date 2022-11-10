@@ -17,7 +17,7 @@ export default function Contact() {
           className="min-w-full md:w-1/2 flex flex-col md:ml-auto w-full pb-24">
 
       <div className="flex justify-center">
-			<div className="top px-10">
+			<div className="top">
 				<div className="profile-pic">
 				<div className="circle-1"></div>
 				<div className="circle-2"></div>
