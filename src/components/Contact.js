@@ -12,9 +12,9 @@ export default function Contact() {
 
   return (
     <section id="contact" className="relative">
-      <div className="container px-5 py-5 mx-auto flex sm:flex-nowrap flex-wrap w-full">
+      <div className="container px-5 mx-auto flex sm:flex-nowrap flex-wrap w-full">
         <div
-          className="min-w-full md:w-1/2 flex flex-col md:ml-auto w-full md:py-8 mt-8 md:mt-0">
+          className="min-w-full md:w-1/2 flex flex-col md:ml-auto w-full pb-24">
 
       <div className="flex justify-center">
 			<div className="top px-10">
