@@ -42,15 +42,22 @@ export default function Projects(props) {
   }, []);
 
   return (
-    <section id="projects" className="text-gray-400 container bg-gray-900 body-font">
-      <div className="px-5 pb-10 mx-auto text-center lg:px-40">
-        <div className="flex flex-wrap -m-4">
+    <section id="projects" className="text-gray-400 w-full bg-gray-900 body-font">
+      <div className="mx-auto text-center">
+        <div className="flex flex-wrap">
         <div className="w-full">
-		<ul className="header mb-10">
+		<ul className="header mb-20">
 			<li className="tab-active"><img alt="Colorful green logo reading Growr." className="icon" src="https://images.squarespace-cdn.com/content/v1/5363e3d1e4b0b6dbd37bcdd6/1584439666648-WC21M3H2FTNH0GSFAVSH/growr-01.png?format=1000w"/></li>
 			<li><img alt="A book titled Water Your Plants Medicinal Herbs Coloring Book lies on a bed of green grass."  className="icon" src="https://images.squarespace-cdn.com/content/v1/5363e3d1e4b0b6dbd37bcdd6/1f3c779c-23bc-4bba-927d-7982cc66a105/IMG_4330.png?format=500w"/></li>
 			<li><img alt="A Golden lettered logo reading Durian overlaid atop a bed of flower petals." className="icon" src="https://images.squarespace-cdn.com/content/v1/5363e3d1e4b0b6dbd37bcdd6/be225f8f-fdba-4e60-a62f-3ee93c5dce66/durianlogo.png?format=500w"/></li>
 			<li><img alt="A devasated post apocalyptic city with a blood red setting sun in the background." className="icon" src="https://images.squarespace-cdn.com/content/v1/5363e3d1e4b0b6dbd37bcdd6/704dc755-1e62-4447-a717-7c26c5f346a5/made-bg2.png?format=2500w"/></li>
+			<li><img alt="A devasated post apocalyptic city with a blood red setting sun in the background." className="icon" src="engraving.gif"/></li>
+			<li>
+				<div className="greenCover"></div>
+				<img alt="A devasated post apocalyptic city with a blood red setting sun in the background." className="icon absolute topAnim" src="Silenced-sq.png"/><img alt="A devasated post apocalyptic city with a blood red setting sun in the background." className="icon" src="lion-sq.png"/></li>
+				<li>
+				<div id="slideShow"></div>
+				</li>
 			<li><i className=""></i></li>
 		</ul>
 		<Motion

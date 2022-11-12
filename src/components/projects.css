@@ -10,6 +10,8 @@
   display: flex;
   list-style: none;
   padding: 0;
+  height: 100px;
+  background: rgba(20, 83, 45, 0.5);
   justify-content: center;
 }
 .header li {
@@ -17,11 +19,15 @@
   height: 100px;
   place-content: center;
   color: #c1ccd6;
-  transition: background 0.5s ease-in-out;
   cursor: pointer;
   font-size: smaller;
   margin-bottom: 5vh;
 }
+.header li img {
+  width: 100px;
+  height: 100px;
+}
+
 .icon{
   margin: 0px;
   padding: 0px;
@@ -95,4 +101,82 @@
 
 .bulletText i {
   font-size: smaller;
+}
+
+.greenCover {
+  background: rgba(98, 171, 73, .25);
+  position: absolute;
+  opacity: 0;
+  z-index: 10;
+  width: 100px;
+  height: 100px;
+}
+
+.greenCover:hover {
+  animation-name: fadeOut;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 1;
+  animation-duration: .5s;
+  animation-direction: forwards;
+  animation-fill-mode: forwards;
+}
+
+#slideShow {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  opacity: 1;
+  background-size: contain;
+  animation-name: bgSlides;
+  animation-duration: 8s;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.topAnim {
+animation-name: FadeInOut;
+animation-timing-function: ease-in-out;
+animation-iteration-count: infinite;
+animation-duration: 5s;
+animation-direction: alternate;
+}
+
+@keyframes FadeInOut {
+  0% {
+  opacity:1;
+}
+35% {
+opacity:1;
+}
+65% {
+opacity:0;
+}
+100% {
+opacity:0;
+}
+}
+
+@keyframes fadeOut {
+  0% {
+  opacity:0;
+}
+100% {
+opacity:1;
+}
+}
+
+@keyframes bgSlides {
+  0% {
+    background-image: url(../media/wineinvestmentcellars-logo.png);
+  }
+  33% {
+    background-image: url(../media/creativesportsconcepts-logo.png);
+  }
+  66% {
+    background-image: url(../media/biggz-bando-logo.png);
+  }
+  100% {
+    background-image: url(../media/queen-of-sheba.png);
+  }
 }

@@ -48,12 +48,7 @@
 
  .bottom {
    margin: 0 auto;
-   border-radius: 10px;
-   display: flex;
-   overflow: hidden;
-   flex-direction: row;
-   align-items: center;
-	 justify-content: space-evenly;
+	 background: rgba(20, 83, 45, 0.5);
 }
  .block {
 	 display: flex;

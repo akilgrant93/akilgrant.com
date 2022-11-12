@@ -45,7 +45,7 @@ export default function Skills() {
 				? <div>
 						<img className='max-w-2xl' src='standard-01.png'/>
 					</div>
-					: <Lottie className="max-w-2xl" animationData={lottieArr[parseInt(selected)-1]} /> }
+					: <Lottie className="max-w-2xl" loop={false} animationData={lottieArr[parseInt(selected)-1]} />}
         </div>
       </div>
     </section>

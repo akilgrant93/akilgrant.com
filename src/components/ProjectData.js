@@ -13,7 +13,7 @@ export const ProjectData = [
     skills: ['Illustrator','Photography'],
     images: ['https://images.squarespace-cdn.com/content/v1/5363e3d1e4b0b6dbd37bcdd6/39a4c4f0-0e89-49b0-8228-25ab156b3b02/convertedDSC00004_13.jpg?format=750w','https://images.squarespace-cdn.com/content/v1/5363e3d1e4b0b6dbd37bcdd6/715cd955-5738-4de2-bd9a-ff550810d054/convertedDSC00005_14.jpg?format=2500w', 'https://images.squarespace-cdn.com/content/v1/5363e3d1e4b0b6dbd37bcdd6/9c0dd625-ae83-46dd-b8a1-5f717db3d9dd/convertedDSC00011_20.jpg?format=2500w','https://images.squarespace-cdn.com/content/v1/5363e3d1e4b0b6dbd37bcdd6/bb71650f-91e5-4bf3-b544-8b806e8722e3/IMG_4880.png?format=1500w',],
     type: 'book',
-    pages: ['coloringbook-01.png','coloringbook-02.png','coloringbook-03.png','coloringbook-04.png','coloringbook-05.png','coloringbook-06.png','coloringbook-07.png','coloringbook-08.png','coloringbook-09.png','coloringbook-10.png','coloringbook-11.png','coloringbook-12.png','coloringbook-13.png','coloringbook-14.png','coloringbook-15.png','coloringbook-16.png','coloringbook-17.png','coloringbook-18.png','coloringbook-19.png','coloringbook-20.png','coloringbook-21.png','coloringbook-22.png','coloringbook-23.png','coloringbook-24.png','coloringbook-25.png','coloringbook-26.png','coloringbook-27.png','coloringbook-28.png','coloringbook-29.png','coloringbook-30.png','coloringbook-31.png','coloringbook-32.png',],
+    pages: ['coloringbook-01.png','coloringbook-02.png','coloringbook-03.png','coloringbook-04.png','coloringbook-05.png','coloringbook-06.png','coloringbook-07.png','coloringbook-08.png','coloringbook-09.png','coloringbook-10.png','coloringbook-11.png','coloringbook-12.png'],
     links: ['https://www.amazon.com/Water-Plants-Medicinal-Herbs-Coloring/dp/B08KJP5H6K'],
     alt:`A white coloring book with a drawing of a herb on its cover lies upon a bed of fresh green grass. The title reads "Water Your Plants Medicinal Coloring Book."`,
     bulletPoints: ['A coloring book focused on medicinal herbs to help folks with wild plant identification as a nice way to spend quarantine downtime.','Contains 30 illustrations along with along with a daily prompt for relaxation techniques.']
@@ -21,7 +21,7 @@ export const ProjectData = [
   {
     name: 'Durian',
     skills: ['Illustrator','Premiere', 'After Effects', 'Cinema4D'],
-    images: ['https://images.squarespace-cdn.com/content/v1/5363e3d1e4b0b6dbd37bcdd6/be225f8f-fdba-4e60-a62f-3ee93c5dce66/durianlogo.png?format=750w','https://images.squarespace-cdn.com/content/v1/5363e3d1e4b0b6dbd37bcdd6/1644885090269-CU6NW493GCF65TYWWOGD/ezgif-3-eec0b2ee43.gif?format=1500w'],
+    images: ['https://images.squarespace-cdn.com/content/v1/5363e3d1e4b0b6dbd37bcdd6/be225f8f-fdba-4e60-a62f-3ee93c5dce66/durianlogo.png?format=750w','ezgif-4-3127c9cfea.gif','ezgif-3-eec0b2ee43.gif','ezgif-3-9d1bfc30e0.gif'],
     type: "video",
     alt:"",
     links:['https://www.youtube.com/watch?v=ITZBvUMfjbQ&t=17s'],
@@ -36,4 +36,31 @@ export const ProjectData = [
     links:["https://terra-2042.herokuapp.com/","https://github.com/MADE-Game/TERRA2042"],
     bulletPoints: ['Terra 2042 is a web-based post-apocalyptic tabletop card game. It features live multiplayer games, custom deck building, and a shop to spend your spoils.','If you are the first player in the lobby, click on "CREATE GAME" to generate a room code. Send the code to your friend!', 'Terra 2042 is a two-player game. Create a game and share the room code with a friend to battle it out.', 'Socket.io provides realtime updates, and save-states as well as in-game chat functions!']
   },
+  {
+    images: ['engraving.gif',],
+    name: 'Digital Engraving',
+    skills: ['Illustrator','CorelDraw', 'Epilog Fusion Maker'],
+    type: 'galleryOne',
+    gallery: true,
+    alt:"",
+    bulletPoints: ['Terra 2042 is a web-based post-apocalyptic tabletop card game. It features live multiplayer games, custom deck building, and a shop to spend your spoils.','If you are the first player in the lobby, click on "CREATE GAME" to generate a room code. Send the code to your friend!', 'Terra 2042 is a two-player game. Create a game and share the room code with a friend to battle it out.', 'Socket.io provides realtime updates, and save-states as well as in-game chat functions!']
+  },
+  {
+    images: ['engraving.gif',],
+    name: 'Logos and Branding',
+    skills: ['Illustrator','Photoshop'],
+    type: 'galleryOne',
+    gallery: true,
+    alt:"",
+    bulletPoints: ['Terra 2042 is a web-based post-apocalyptic tabletop card game. It features live multiplayer games, custom deck building, and a shop to spend your spoils.','If you are the first player in the lobby, click on "CREATE GAME" to generate a room code. Send the code to your friend!', 'Terra 2042 is a two-player game. Create a game and share the room code with a friend to battle it out.', 'Socket.io provides realtime updates, and save-states as well as in-game chat functions!']
+  },
+  {
+    images: ['engraving.gif',],
+    name: 'Illustration',
+    skills: ['Illustrator','CorelDraw', 'Pen & Pencil'],
+    type: 'galleryOne',
+    gallery: true,
+    alt:"",
+    bulletPoints: ['Terra 2042 is a web-based post-apocalyptic tabletop card game. It features live multiplayer games, custom deck building, and a shop to spend your spoils.','If you are the first player in the lobby, click on "CREATE GAME" to generate a room code. Send the code to your friend!', 'Terra 2042 is a two-player game. Create a game and share the room code with a friend to battle it out.', 'Socket.io provides realtime updates, and save-states as well as in-game chat functions!']
+  }
 ]

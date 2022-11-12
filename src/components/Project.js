@@ -14,6 +14,7 @@ export default function Project(props) {
   return (
     <div>
     <div className="flex mx-40">
+        {props.gallery ?
       <div className="mr-5 flex w-1/2">
         <div >
             <img
@@ -22,6 +23,7 @@ export default function Project(props) {
               onClick={() => props.handleClick(props.images[0], props.images.index)}
               alt={props.alt}/>
         </div>
+
       <div className="flex flex-col w-full">
         {props.images.map((image, index)=>{
           if(index > 0){
@@ -44,6 +46,7 @@ export default function Project(props) {
         }
     </div>
     </div>
+        : ''}
 
     <div className="w-1/2">
       <h1 className="text-left">{props.name}</h1>
