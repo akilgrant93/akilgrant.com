@@ -14,7 +14,7 @@ export default function Project(props) {
   return (
     <div>
     <div className="flex mx-40">
-        {props.gallery ?
+        {!props.gallery ?
       <div className="mr-5 flex w-1/2">
         <div >
             <img
