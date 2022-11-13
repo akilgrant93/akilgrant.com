@@ -37,10 +37,18 @@ export const ProjectData = [
     bulletPoints: ['Terra 2042 is a web-based post-apocalyptic tabletop card game. It features live multiplayer games, custom deck building, and a shop to spend your spoils.','If you are the first player in the lobby, click on "CREATE GAME" to generate a room code. Send the code to your friend!', 'Terra 2042 is a two-player game. Create a game and share the room code with a friend to battle it out.', 'Socket.io provides realtime updates, and save-states as well as in-game chat functions!']
   },
   {
-    images: ['engraving.gif',],
-    name: 'Digital Engraving',
+    images: ['image-asset01.png','image-asset02.png','image-asset03.png','image-asset05.png','image-asset06.png','image-asset07.png','image-asset11.png', 'image-asset12.png','image-asset08.png','image-asset09.png','image-asset10.png','image-asset04.png', 'image-asset13.png', 'image-asset14.png', 'image-asset15.png', 'image-asset16.png'],
+    name: 'Laser Engraving',
     skills: ['Illustrator','CorelDraw', 'Epilog Fusion Maker'],
     type: 'galleryOne',
+    gallery: true,
+    alt:"",
+    bulletPoints: ['A few years ago I landed a job that gave me access to a CNC router and an laser engraver. The job itself wasn’t the most ‘creative’ but after while I came to realize the capabilities of the equipment. These things can print on almost any material - wood, metal, plastic, stone, fabric, and paper. This is the result.']
+  },
+  {
+    images: ['engraving.gif',],
+    name: 'Illustration',
+    skills: ['Illustrator','CorelDraw', 'Pen & Pencil'],
     gallery: true,
     alt:"",
     bulletPoints: ['Terra 2042 is a web-based post-apocalyptic tabletop card game. It features live multiplayer games, custom deck building, and a shop to spend your spoils.','If you are the first player in the lobby, click on "CREATE GAME" to generate a room code. Send the code to your friend!', 'Terra 2042 is a two-player game. Create a game and share the room code with a friend to battle it out.', 'Socket.io provides realtime updates, and save-states as well as in-game chat functions!']
@@ -56,8 +64,8 @@ export const ProjectData = [
   },
   {
     images: ['engraving.gif',],
-    name: 'Illustration',
-    skills: ['Illustrator','CorelDraw', 'Pen & Pencil'],
+    name: 'Animation',
+    skills: ['Illustrator','After Effects', 'Cinema 4D', 'Pen & Pencil'],
     type: 'galleryOne',
     gallery: true,
     alt:"",

@@ -81,3 +81,23 @@
 label:hover {
   color:rgba(39, 174, 96, 1);
 }
+
+.skillsAnim {
+  animation-name: fadeSlide;
+  animation-timing-function: ease-in-out;
+  /* animation-iteration-count: 1; */
+  animation-duration: 1s;
+  animation-direction: forwards;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeSlide {
+  0% {
+  left: 220%;
+  opacity:0;
+}
+100% {
+left: 0;
+opacity:1;
+}
+}

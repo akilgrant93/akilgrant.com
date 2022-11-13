@@ -48,6 +48,16 @@ export default function Contact() {
         I'm a UX Designer, and full stack developer with extensive experience in motion graphics and front end
 development. My customer focused creativity aids in my efforts to make simple yet elegant problem solving designs
 that delight users; and makes use of my wide ranging technical background in the visual arts to work in styles applicable to almost any project.
+<br/>
+<br/>
+For a decade I’ve worked with a range of clients - from other artists and small firms to multinational corporations. Dozens of branded logos, printed material, web-pages, illustrations, videos and film are all within the realm of what I’ve been lucky enough to work on over the years.
+<br/>
+<br/>
+That wide range of roles and products led me to have a mind for how the user interacts with them. This user centered framing in time proved truly useful in guiding the process of design itself. In time I developed a framework:
+<br/><br/>
+<b>Inquiry</b> about current state. <b>Development</b> of basic desired form and content. <b>Production</b>, evaluation, and tracking of metrics by which one can understand client or user satisfaction.
+<br/><br/>
+With this approach to the process, success tends to follow. If you think my work is cool feel free to <a href="mailto:akil.grant.93@gmail.com?subject=Hi%20Akil!" className="hover:text-laurel-green-200"target="_blank"rel="noopener noreferrer"><u>drop a line</u></a>. We'd work great together!
 </p>
       : <p>
       I'm a UX Designer, and full stack developer with extensive experience in motion graphics and front end

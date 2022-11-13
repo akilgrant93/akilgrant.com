@@ -17,6 +17,7 @@
 .header li {
   width: 100px;
   height: 100px;
+  overflow: hidden;
   place-content: center;
   color: #c1ccd6;
   cursor: pointer;
@@ -24,6 +25,7 @@
   margin-bottom: 5vh;
 }
 .header li img {
+  overflow: hidden;
   width: 100px;
   height: 100px;
 }
@@ -170,13 +172,47 @@ opacity:1;
   0% {
     background-image: url(../media/wineinvestmentcellars-logo.png);
   }
-  33% {
+  25% {
     background-image: url(../media/creativesportsconcepts-logo.png);
   }
-  66% {
-    background-image: url(../media/biggz-bando-logo.png);
+  50% {
+    background-image: url(../media/blackcatles.png);
+  }
+  75% {
+    background-image: url(../media/eic_logo.png);
   }
   100% {
     background-image: url(../media/queen-of-sheba.png);
+  }
+}
+
+#slideShow2 {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  opacity: 1;
+  margin-left: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  animation-name: bgSlides2;
+  animation-duration: 8s;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes bgSlides2 {
+  0% {
+    background-image: url(../media/clip_1.gif);
+  }
+  33% {
+    background-image: url(../media/clip_2.gif);
+  }
+  66% {
+    background-image: url(../media/clip_3.gif);
+  }
+  100% {
+    background-image: url(../media/clip_4.gif);
   }
 }

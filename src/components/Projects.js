@@ -12,16 +12,11 @@ export default function Projects(props) {
 		console.log(data)
 		console.log(isVisible)
     if(isVisible){
-			// tabs.classList.remove("maxHeight");
-			// tabs.classList.add("minHeight");
       setIsVisible(false)
     } else {
-			// tabs.classList.remove("minHeight");
-			// tabs.classList.add("maxHeight");
       setIsVisible(true)
     }
   }
-
 
   useEffect(() => {
 		console.log(isVisible)
@@ -58,6 +53,10 @@ export default function Projects(props) {
 				<li>
 				<div id="slideShow"></div>
 				</li>
+				<li>
+				<div className="greenCover"></div>
+				<div id="slideShow2"></div>
+				</li>
 			<li><i className=""></i></li>
 		</ul>
 		<Motion
@@ -75,6 +74,7 @@ export default function Projects(props) {
 					type={project.type}
 					links={project.links}
 					pages={project.pages}
+					gallery={project.gallery}
 					isVisible={isVisible}
 					handleVisible={handleVisible}
 					handleClick={props.handleClick}

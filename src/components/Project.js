@@ -11,6 +11,7 @@ export default function Project(props) {
     props.handleVisible()
   }
 
+  const numArr = [0,4,8,12]
   return (
     <div>
     <div className="flex mx-40">
@@ -42,6 +43,30 @@ export default function Project(props) {
           } else {
             return ''
           }
+        })
+        }
+    </div>
+    </div>
+        : ''}
+
+        {props.type === 'galleryOne' ?
+      <div className="flex w-1/2">
+
+      <div className="flex flex-wrap w-full">
+        {props.images.map((image, index)=>{
+            return (
+                <img
+                  key={index}
+                  onClick={props.handleClick}
+                  alt = {props.alt}
+                  className={
+                    numArr.includes(index)
+                    ? "rounded-sm mb-2 w-20 h-20"
+                    : "rounded-sm mb-2 ml-2 w-20 h-20"
+                  }
+                  src={image}
+                  />
+            )
         })
         }
     </div>
