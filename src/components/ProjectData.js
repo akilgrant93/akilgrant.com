@@ -55,7 +55,7 @@ export const ProjectData = [
     bulletPoints: ['Terra 2042 is a web-based post-apocalyptic tabletop card game. It features live multiplayer games, custom deck building, and a shop to spend your spoils.','If you are the first player in the lobby, click on "CREATE GAME" to generate a room code. Send the code to your friend!', 'Terra 2042 is a two-player game. Create a game and share the room code with a friend to battle it out.', 'Socket.io provides realtime updates, and save-states as well as in-game chat functions!']
   },
   {
-    images: ['engraving.gif',],
+    images: ['logo01.png', 'logo02.png', 'logo03.png', 'logo04.png', 'logo05.png', 'logo06.png', 'logo07.png', 'logo08.png', 'logo09.png', 'logo10.png', 'logo11.png', 'logo12.png','logo13.png','logo14.png','logo15.png','logo16.png',],
     name: 'Logos and Branding',
     skills: ['Illustrator','Photoshop'],
     type: 'galleryOne',
