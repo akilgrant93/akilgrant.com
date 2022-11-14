@@ -43,12 +43,13 @@ export const ProjectData = [
     type: 'galleryOne',
     gallery: true,
     alt:"",
-    bulletPoints: ['A few years ago I landed a job that gave me access to a CNC router and an laser engraver. The job itself wasn’t the most ‘creative’ but after while I came to realize the capabilities of the equipment. These things can print on almost any material - wood, metal, plastic, stone, fabric, and paper. This is the result.']
+    bulletPoints: ['A few years ago I landed a job that gave me access to a CNC router and an laser engraver. The job itself wasn’t the most ‘creative’ but after while I came to realize the capabilities of the equipment. These things can print on almost any material - wood, metal, plastic, stone, fabric, and paper. These are the results.']
   },
   {
-    images: ['engraving.gif',],
+    images: ['illustration01.png','illustration02.png','illustration03.png','illustration04.jpg','illustration05.png','illustration06.jpg','illustration07.png','illustration08.png','illustration09.png','illustration10.jpg','illustration11.png','illustration12.png','illustration13.jpg','illustration14.jpg','illustration15.JPG','illustration16.JPG'],
     name: 'Illustration',
     skills: ['Illustrator','CorelDraw', 'Pen & Pencil'],
+    type: 'galleryOne',
     gallery: true,
     alt:"",
     bulletPoints: ['Terra 2042 is a web-based post-apocalyptic tabletop card game. It features live multiplayer games, custom deck building, and a shop to spend your spoils.','If you are the first player in the lobby, click on "CREATE GAME" to generate a room code. Send the code to your friend!', 'Terra 2042 is a two-player game. Create a game and share the room code with a friend to battle it out.', 'Socket.io provides realtime updates, and save-states as well as in-game chat functions!']
@@ -63,12 +64,12 @@ export const ProjectData = [
     bulletPoints: ['Terra 2042 is a web-based post-apocalyptic tabletop card game. It features live multiplayer games, custom deck building, and a shop to spend your spoils.','If you are the first player in the lobby, click on "CREATE GAME" to generate a room code. Send the code to your friend!', 'Terra 2042 is a two-player game. Create a game and share the room code with a friend to battle it out.', 'Socket.io provides realtime updates, and save-states as well as in-game chat functions!']
   },
   {
-    images: ['engraving.gif',],
+    images: ['clip_1.gif','clip_2.gif','clip_3.gif','clip_4.gif'],
     name: 'Animation',
     skills: ['Illustrator','After Effects', 'Cinema 4D', 'Pen & Pencil'],
-    type: 'galleryOne',
+    type: 'galleryTwo',
     gallery: true,
     alt:"",
-    bulletPoints: ['Terra 2042 is a web-based post-apocalyptic tabletop card game. It features live multiplayer games, custom deck building, and a shop to spend your spoils.','If you are the first player in the lobby, click on "CREATE GAME" to generate a room code. Send the code to your friend!', 'Terra 2042 is a two-player game. Create a game and share the room code with a friend to battle it out.', 'Socket.io provides realtime updates, and save-states as well as in-game chat functions!']
+    bulletPoints: ['This is a piece I did while in college, my client was a film-maker who had created a love story featuring a french main character. To fit that tone I animated this title sequence for the film. The film takes place in NYC and features a millennial cast and so we wanted the title sequence reflecting both a burning passion reminiscent of your favorite french romance with New York City nightlife vibes. Gotta love that rotoscope.', 'For this piece my client was a production company partnered with a non-profit specializing in showcasing diverse voices from marginalized communities. They created a pilot for a show taking place in a near-distant future where hate and xenophobia are normalized. I was tasked with the creation of a logo and title sequence for the series. Being that it was to be a drama with a dark tone where a murder mystery featured prominently in the plot I created a sequence featuring an evidence board and vanishing lettering. This was also the first time that I produced the sound for a title sequence!','This piece is another student piece. The task was to do an animation of a logo, I chose Google Earth. I picked this style because I found the multiple stages to be a little analogous to the different colored overlays present within the Google Earth interface.  This is another great example of my favorite animation technique, rotoscoping.','So I’ve always wanted a monogram. My first name has some tough letters and I struggled for a long time with resolving what to do with the "g" typographically. So you can imagine my excitement when I finally found a monogram that actually looked good and read well! So excited I made not one animation, but three...']
   }
 ]

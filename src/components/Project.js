@@ -12,6 +12,7 @@ export default function Project(props) {
   }
 
   const numArr = [0,4,8,12]
+  const numArr2 = [0,2]
   return (
     <div>
     <div className="flex mx-40">
@@ -61,8 +62,32 @@ export default function Project(props) {
                   alt = {props.alt}
                   className={
                     numArr.includes(index)
-                    ? "rounded-sm mb-2 w-20 h-20"
-                    : "rounded-sm mb-2 ml-2 w-20 h-20"
+                    ? "rounded-sm mb-2 object-center object-cover w-20 h-20"
+                    : "rounded-sm mb-2 object-center object-cover ml-2 w-20 h-20"
+                  }
+                  src={image}
+                  />
+            )
+        })
+        }
+    </div>
+    </div>
+        : ''}
+
+        {props.type === 'galleryTwo' ?
+      <div className="flex w-1/2">
+
+      <div className="flex flex-wrap w-full">
+        {props.images.map((image, index)=>{
+            return (
+                <img
+                  key={index}
+                  onClick={props.handleClick}
+                  alt = {props.alt}
+                  className={
+                    numArr2.includes(index)
+                    ? "rounded-sm object-center object-cover mb-2 w-36 h-36"
+                    : "rounded-sm object-center object-cover mb-2 ml-2 w-36 h-36"
                   }
                   src={image}
                   />
@@ -97,6 +122,7 @@ export default function Project(props) {
             <span className="h-1 w-1 mx-1 self-center inline-block bg-forest-green rounded-full"></span>{bulletpoint}</p>
           );
         })}
+
         {props.type === "code"
         ? <div className="flex mt-5 justify-center items-center">
         <Button type={'Link'} link={props.links[0]}/>
