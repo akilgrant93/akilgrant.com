@@ -9,8 +9,8 @@ export default function Projects(props) {
 
   const handleVisible = (data) => {
 		const tabs = document.querySelector(".content");
-		console.log(data)
-		console.log(isVisible)
+		// console.log(data)
+		// console.log(isVisible)
     if(isVisible){
       setIsVisible(false)
     } else {
@@ -19,7 +19,6 @@ export default function Projects(props) {
   }
 
   useEffect(() => {
-		console.log(isVisible)
     const header = document.querySelector(".header");
 		const content = document.querySelector(".content");
 		const boxes = [...content.children];
