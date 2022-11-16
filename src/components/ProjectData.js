@@ -52,7 +52,7 @@ export const ProjectData = [
     type: 'galleryOne',
     gallery: true,
     alt:"",
-    bulletPoints: ['Illustration was my initial gateways into creative work. As a kid I started off making my own trading card games, and worked my way up from there to adding my own skins, maps, and mods to my favorite video games. But never lost that grounding in the foundation that working with pen and paper gave me. This collection spans the breath of my creative past from high school, through college and up to the present, including some preliminary sketches for storyboards, animations, and conceptual art.']
+    bulletPoints: ['Illustration was my initial gateways into creative work. As a kid I started off making my own trading card games, and worked my way up from there to adding my own skins, maps, and mods to my favorite video games. But never lost that grounding in the foundation that working with pen and paper gave me. This collection spans the breath of my creative past from high school, through college and up to the present, including some preliminary sketches for storyboards, animations, and conceptual art.`']
   },
   {
     images: ['logo01.png', 'logo02.png', 'logo03.png', 'logo04.png', 'logo05.png', 'logo06.png', 'logo07.png', 'logo08.png', 'logo09.png', 'logo10.png'],
