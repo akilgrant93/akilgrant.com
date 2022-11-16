@@ -52,7 +52,7 @@ export const ProjectData = [
     type: 'galleryOne',
     gallery: true,
     alt:"",
-    bulletPoints: ['Terra 2042 is a web-based post-apocalyptic tabletop card game. It features live multiplayer games, custom deck building, and a shop to spend your spoils.','If you are the first player in the lobby, click on "CREATE GAME" to generate a room code. Send the code to your friend!', 'Terra 2042 is a two-player game. Create a game and share the room code with a friend to battle it out.', 'Socket.io provides realtime updates, and save-states as well as in-game chat functions!']
+    bulletPoints: ['Illustration was my initial gateways into creative work. As a kid I started off making my own trading card games, and worked my way up from there to adding my own skins, maps, and mods to my favorite video games. But never lost that grounding in the foundation that working with pen and paper gave me. This collection spans the breath of my creative past from high school, through college and up to the present, including some preliminary sketches for storyboards, animations, and conceptual art.']
   },
   {
     images: ['logo01.png', 'logo02.png', 'logo03.png', 'logo04.png', 'logo05.png', 'logo06.png', 'logo07.png', 'logo08.png', 'logo09.png', 'logo10.png'],
