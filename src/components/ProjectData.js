@@ -28,7 +28,7 @@ export const ProjectData = [
     bulletPoints: ['The first short film under my production companies Umbrella - “Durian.” Completed in 2020, the byline reads as follows: \n A young anxious woman tries to depict the perfect life on social media and is forced to re-evaluate her life trajectory when her boyfriend introduced a strange fruit called durian.','My wide ranging contributions as producer but were most critical in the realm of (award winning) motion graphics. From the visual effects used in-scene, simulated screens, editing, to both starting and ending credits my hands were all over this piece.']
   },
   {
-    images: ['https://images.squarespace-cdn.com/content/v1/5363e3d1e4b0b6dbd37bcdd6/dd864302-2414-4436-8ec9-fa9a5e75addc/04.png?format=2500w',],
+    images: ['terra_00.png','terra_01.gif','terra_02.gif','terra_03.gif',],
     name: 'Terra 2042',
     skills: ['MongoDB','Express', 'React', 'Socket.io'],
     type: 'code',
