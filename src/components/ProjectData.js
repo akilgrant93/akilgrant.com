@@ -1,13 +1,13 @@
 export const ProjectData = [
-  {
-    images: ['https://images.squarespace-cdn.com/content/v1/5363e3d1e4b0b6dbd37bcdd6/336faf2a-b6bd-4f37-a6a8-8481083f0226/01.jpg?format=2500w',],
-    name: 'Growr',
-    skills: ['Firebase', 'React Native', 'Lottie', 'Illustrator','After Effects'],
-    type: "code",
-    alt:"",
-    links:["","https://github.com/akilgrant93/Growr"],
-    bulletPoints: ['What started off as a simple ToDo app that became a behemoth of a passion project. Once the minimum viable product of an app that gave the user reminders to water their plants was created, layer after layer upon functionality that was needed to make it really practical just called out for me to build them. You could, no joke, manage a nice farm with this app. I know I have!']
-  },
+  // {
+  //   images: ['https://images.squarespace-cdn.com/content/v1/5363e3d1e4b0b6dbd37bcdd6/336faf2a-b6bd-4f37-a6a8-8481083f0226/01.jpg?format=2500w',],
+  //   name: 'Growr',
+  //   skills: ['Firebase', 'React Native', 'Lottie', 'Illustrator','After Effects'],
+  //   type: "code",
+  //   alt:"",
+  //   links:["","https://github.com/akilgrant93/Growr"],
+  //   bulletPoints: ['What started off as a simple ToDo app that became a behemoth of a passion project. Once the minimum viable product of an app that gave the user reminders to water their plants was created, layer after layer upon functionality that was needed to make it really practical just called out for me to build them. You could, no joke, manage a nice farm with this app. I know I have!']
+  // },
   {
     name: 'Water Your Plants Medicinal Coloring Book',
     skills: ['Illustrator','Photography'],
@@ -55,19 +55,32 @@ export const ProjectData = [
     bulletPoints: ['Terra 2042 is a web-based post-apocalyptic tabletop card game. It features live multiplayer games, custom deck building, and a shop to spend your spoils.','If you are the first player in the lobby, click on "CREATE GAME" to generate a room code. Send the code to your friend!', 'Terra 2042 is a two-player game. Create a game and share the room code with a friend to battle it out.', 'Socket.io provides realtime updates, and save-states as well as in-game chat functions!']
   },
   {
-    images: ['logo01.png', 'logo02.png', 'logo03.png', 'logo04.png', 'logo05.png', 'logo06.png', 'logo07.png', 'logo08.png', 'logo09.png', 'logo10.png', 'logo11.png', 'logo12.png','logo13.png','logo14.png','logo15.png','logo16.png',],
+    images: ['logo01.png', 'logo02.png', 'logo03.png', 'logo04.png', 'logo05.png', 'logo06.png', 'logo07.png', 'logo08.png', 'logo09.png', 'logo10.png'],
+    nestedImages: [
+      ['blkcat_01.png','blkcat_02.png','blkcat_03.png',],
+      ['rudick_01.png',],
+      ['cici_01.png','cici_02.png','cici_03.png',],
+      ['moose_01.png','moose_02.png',],
+      ['bando_01.png',],
+      ['wine_01.png',],
+      ['roosevelt_01.png','roosevelt_02.png',],
+      ['csc_01.png','csc_02.png',],
+      ['sheba_01.png','sheba_02.png',],
+      ['eic_print_01.png','eic_print_02.png','eic_print_03.png','eic_print_04.png','eic_03.png','eic_07.png',]],
     name: 'Logos and Branding',
     skills: ['Illustrator','Photoshop'],
-    type: 'galleryOne',
+    type: 'galleryTwo',
+    titles: ['Black Cat LES', 'Samuel Rudick DDS & Associates', 'Cici Chu', 'Lil Moose','Biggz Bando','Wine Investment Cellars', 'Roosevelt High School', 'Creative Sports Concepts', 'Queen of Sheba', 'EIC Agency'],
     gallery: true,
     alt:"",
-    bulletPoints: ['Terra 2042 is a web-based post-apocalyptic tabletop card game. It features live multiplayer games, custom deck building, and a shop to spend your spoils.','If you are the first player in the lobby, click on "CREATE GAME" to generate a room code. Send the code to your friend!', 'Terra 2042 is a two-player game. Create a game and share the room code with a friend to battle it out.', 'Socket.io provides realtime updates, and save-states as well as in-game chat functions!']
+    bulletPoints: ['I recently got the privilege of conceptualizing the branding and menu package for a lovely coffee shop on the LES. Designed as a “third space,” a place to relax in public, encounter familiar faces and make new acquaintances - Black Cat LES is family owned homely break from the downtown mono-culture and the food is great too.','Some time ago I got the chance to work with the dental practice of Samuel Rudick & Associates on their branding. As a Manhattan based dentist they needed to convey a certain marketable professionalism however, a lot of people (adults included) are scared of the dentist. With that in mind Samuel and I realized they wanted their branding to convey a approachable friendliness so folks don’t have so much anxiety about their appointments.','This client, the lovely Cici Chu is a talented young filmmaker who’s always got the best shot in mind. Being that a lot of filmmakers branding can be heavy on the references to slates,cameras, and typewriters we decided to go for something that conveyed a similar technical proficiency while still being primarily typographic. To that end this aperture inspired logo was what we created.','While in the employ of EIC Agency LLC I had the opportunity to create stationery and branding for a few external client facing projects. In this case I created a rack and business card set for a Long Island based pizzeria to promote the launch of their gluten-free line of pizza dough.', 'Being that New York has a pretty big underground hip-hop scene its fairly easy to get looped into working with the rappers who make it happen. This one happened to be a childhood friend who needed to take his branding to the next level. His music, being gritty and rough around the edges really informed the style of the typography and really came together to create an interesting design for t-shirts.','These young entrepreneurs were starting a curated wine subscription service and needed some branding. Their clientele was high end, as was the wines they were selecting so they wanted their logo to convey a certain rustic and aged feel while still having a touch of modernity. With that in mind I created this logo and the accompanying postcard to help them create a mailing list to promote their product.', 'I’m a sucker for local projects. I grew up in Long Island, and went to public schools so hearing that a one of the high school teams in my area needed a rebrand was music to the ears. They wanted a fairly traditional varsity logo and I like to think I delivered. Try and tell me that cap isn’t fly. I dare ya!','To commemorate the launch of their website these folks wanted a really complete corporate identity package. Being an arena flooring service, incorporating sports related iconography was a must - but the cohesiveness of design across a wide variety of medium was what really drew me to this project.','When I first began working as a designer I got the opportunity to work with a lovely restaurant on the Upper West Side specializing in Ethiopian cuisine. Their logo was already in place when we met and it set the tone for the great imagery present in both the tri-fold menu and the catering card shown below.','You ever have an internship from hell that you don’t realize was a mess until you leave it? For me EIC Agency was that place. I was a wet behind the ears sophomore in college looking to cut my teeth at an agency, any agency and boy did I get more than I bargained for. 40 hour work weeks without pay, books to be read (and tested upon) weekly, and a hostile work environment to boot. In the end though, I got my college credits, a salaried position and some portfolio quality work. That’s gotta count for something right? A lot of what I did for them was in-house branding and printed material as well as logos for SEO websites, the best examples are shown below.']
   },
   {
     images: ['clip_1.gif','clip_2.gif','clip_3.gif','clip_4.gif','clip_5.gif'],
     name: 'Animation',
     skills: ['Illustrator','After Effects', 'Cinema 4D', 'Pen & Pencil'],
     type: 'galleryTwo',
+    titles: ['Night', 'Velours Rouge', 'Google Earth', 'Monogram','Showreel'],
     links: ['https://vimeo.com/205266320','https://vimeo.com/124885748','https://vimeo.com/126264203','https://vimeo.com/206336705','https://vimeo.com/131496372'],
     gallery: true,
     alt:"",

@@ -17,8 +17,7 @@ export default function Flipbook(props) {
 
   if(props.title === 'Water Your Plants Medicinal Coloring Book'){
     return (
-      <div id='book'
-      >
+      <div id='book'>
         <Motion
 		defaultStyle={{opacity: 0}}
 		style={{opacity: spring(!props.isVisible ? 0 : 1)}}>

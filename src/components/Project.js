@@ -2,19 +2,33 @@ import React, { useState, useEffect } from 'react'
 import Button from "./Button";
 import Flipbook from './Flipbook'
 import { ArrowCircleLeftIcon, ArrowCircleRightIcon } from '@heroicons/react/solid';
+import { Motion, spring} from 'react-motion'
+
 
 export default function Project(props) {
-  useEffect(() => {
-    console.log(props.type === 'galleryTwo')
-  }, []);
 
   const projectHandleVisible = () => {
     props.handleVisible()
   }
 
+  const sliceIntoChunks = (arr, chunkSize) => {
+    const res = [];
+    for (let i = 0; i < arr.length; i += chunkSize) {
+      const chunk = arr.slice(i, i + chunkSize);
+      res.push(chunk);
+    }
+    return res;
+  }
+
+  useEffect(() => {
+    if(props.nestedImages){console.log('nestedImages chunks',sliceIntoChunks(props.nestedImages[9], 3))}
+    // if(props.nestedImages){console.log(props.nestedImages[9])}
+  }, []);
+
   const [selected, setSelected] = useState(0)
   const numArr = [0,4,8,12]
-  const numArr2 = [0,2]
+
+  const img = document.querySelector("#currImg");
 
   const handleClickLeft = () => {
       setSelected(selected-1)
@@ -23,7 +37,7 @@ export default function Project(props) {
   const handleClickRight = () => {
       setSelected(selected+1)
   }
-  const titlesArr = ['Night', 'Velours Rouge', 'Google Earth', 'Monogram','Showreel']
+
   return (
     <div>
     <div className="flex mx-40">
@@ -31,7 +45,7 @@ export default function Project(props) {
       <div className="mr-5 flex w-1/2">
         <div >
             <img
-              className="rounded-md w-[14rem] h-auto"
+              className="w-[14rem] h-auto"
               src={props.images[0]}
               onClick={() => props.handleClick(props.images[0], props.images.index)}
               alt={props.alt}/>
@@ -82,23 +96,65 @@ export default function Project(props) {
         })
         }
     </div>
+
+
     </div>
         : ''}
 
         {props.type === 'galleryTwo' ?
-      <div className="flex w-1/2">
+      <div className="flex w-2/3 flex-col">
 
-      <div className="flex flex-col w-full">
-        <img
+      <div className="flex justify-center w-full">
+
+      <img
           onClick={props.handleClick}
-          className="rounded-md object-center object-cover mb-2 mx-auto w-72 h-72"
+          className="object-center object-cover mb-2 w-72 h-72"
           src={props.images[selected]}
           />
-        <div className='flex justify-center w-full'>
-        { selected > 0 ? <ArrowCircleLeftIcon  onClick={handleClickLeft} className="w-4 h-4 ml-1 inline-block text-forest-green -mt-1"/> : <ArrowCircleLeftIcon className="w-4 h-4 ml-1 inline-block text-laurel-green-100 -mt-1"/>}
-        { selected < props.images.length-1 ?<ArrowCircleRightIcon onClick={handleClickRight} className="w-4 h-4 ml-1 inline-block text-forest-green -mt-1"/> : <ArrowCircleRightIcon className="w-4 h-4 ml-1 inline-block text-laurel-green-100 -mt-1"/>}
+
+    {props.nestedImages ? <div className='flex flex-col flex-wrap justify-start ml-4'>
+            {props.nestedImages[selected].length <= 3
+            ? props.nestedImages[selected].map((image, index)=>{
+              return (
+                <img
+                key={index}
+                onClick={props.handleClick}
+                alt = {props.alt}
+                className="rounded-sm mb-2 object-center object-cover w-20 h-20"
+                src={image}
+                />
+                )
+              })
+              :
+              <div className="flex w-full">
+              {sliceIntoChunks(props.nestedImages[selected], 3).map((imageArray, index) => {
+                return (
+                  <div key={index} className={index > 0 ? 'ml-2' : ''}>
+                    {imageArray.map((image, index)=>{
+                      return (
+                        <img
+                        key={index}
+                        onClick={props.handleClick}
+                        alt = {props.alt}
+                        className="rounded-sm mb-2 object-center object-cover w-20 h-20"
+                        src={image}
+                        />
+                        )
+                      })}
+                  </div>
+                )
+              })}
+              </div>
+              }
+          </div> : ''}
+      </div>
+
+      <div className='flex w-full justify-center'>
+      <div className='flex justify-evenly pt-5 w-72'>
+        { selected > 0 ? <ArrowCircleLeftIcon  onClick={handleClickLeft} className="w-8 h-8 ml-1 inline-block text-forest-green -mt-1"/> : <ArrowCircleLeftIcon className="w-8 h-8 ml-1 inline-block text-laurel-green-100 -mt-1"/>}
+        { selected < props.images.length-1 ?<ArrowCircleRightIcon onClick={handleClickRight} className="w-8 h-8 ml-1 inline-block text-forest-green -mt-1"/> : <ArrowCircleRightIcon className="w-8 h-8 ml-1 inline-block text-laurel-green-100 -mt-1"/>}
         </div>
-    </div>
+        </div>
     </div>
         : ''}
 
@@ -156,10 +212,10 @@ export default function Project(props) {
         : ''}
     </div>
     :
-    <div className="w-1/2">
+    <div className="w-1/2 pl-4">
       <h1 className="text-left">{props.name}</h1>
 
-      <p className="text-md text-forest-green text-left font-semibold">{titlesArr[selected]}</p>
+      <p className="text-md text-forest-green text-left font-semibold">{props.titles[selected]}</p>
       <div className="flex my-2 mb-3 items-center ">
         {props.skills.map((skill, index) => {
           return (
@@ -177,9 +233,9 @@ export default function Project(props) {
             className="text-base text-left mb-5 inline-block w-full">
             <span className="h-1 w-1 mx-1 self-center inline-block bg-forest-green rounded-full"></span>{props.bulletPoints[selected]}</p>
 
-        {props.type === "galleryTwo"
+        {props.type === "galleryTwo" && props.name === "Animation"
         ? <div className="flex mt-5 justify-center items-center">
-        <Button type={'Watch'} link={props.links[0]}/>
+        <Button type={'Watch'} link={props.links[selected]}/>
         </div>
         : ''}
     </div>
@@ -193,6 +249,19 @@ export default function Project(props) {
         </div>
         : ''}
 
+          {/* {props.nestedImages ? <div className='flex pt-8 justify-center rounded-lg overflow-hidden'>
+            {props.nestedImages[selected].map((image, index)=>{
+            return (
+                <img
+                  key={index}
+                  onClick={props.handleClick}
+                  alt = {props.alt}
+                  className="rounded-sm mb-2 object-center object-cover w-20 h-20"
+                  src={image}
+                  />
+            )
+        })}
+          </div> : ''} */}
     </div>
   )
 }
