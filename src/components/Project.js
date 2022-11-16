@@ -2,8 +2,6 @@ import React, { useState, useEffect } from 'react'
 import Button from "./Button";
 import Flipbook from './Flipbook'
 import { ArrowCircleLeftIcon, ArrowCircleRightIcon } from '@heroicons/react/solid';
-import { Motion, spring} from 'react-motion'
-
 
 export default function Project(props) {
 

@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react'
+import React from 'react'
 import HTMLFlipBook from 'react-pageflip';
 import { ProjectData } from './ProjectData'
 import './anim.css'

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import About from "./components/About";
 import Contact from "./components/Contact";
 import Navbar from "./components/Navbar";
@@ -38,10 +38,7 @@ export default function App() {
       {clickedImg && (
           <Modal
             clickedImg={clickedImg}
-            // handelRotationRight={handelRotationRight}
-
             handleClick={handleClick}
-            // handelRotationLeft={handelRotationLeft}
           />
         )}
     </main>

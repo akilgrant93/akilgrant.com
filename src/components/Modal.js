@@ -1,7 +1,5 @@
 import React, {useEffect} from "react";
 import './modal.css'
-import Flipbook from './Flipbook'
-
 
 export default function Modal(props){
   useEffect(() => {
