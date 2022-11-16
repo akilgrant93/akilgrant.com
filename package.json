@@ -14,15 +14,15 @@
     "react-icons": "^4.4.0",
     "react-motion": "^0.5.2",
     "react-pageflip": "^2.0.3",
-    "react-scripts": "^1.1.5",
+    "react-scripts": "^2.0.0",
     "react-switch": "^7.0.0",
     "sass": "^1.55.0"
   },
   "scripts": {
     "start": "craco start",
     "build": "craco build",
-    "predeploy" : "npm run build",
-    "deploy" : "gh-pages -d build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "test": "craco test",
     "eject": "react-scripts eject"
   },
@@ -37,5 +37,11 @@
     "gh-pages": "^4.0.0",
     "postcss": "^7.0.36",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.0.2"
-  }
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
 }
