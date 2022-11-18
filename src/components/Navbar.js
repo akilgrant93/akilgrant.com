@@ -3,14 +3,14 @@ import React from "react";
 
 export default function Navbar() {
   return (
-    <header className="bg-forest-green md:sticky top-0 z-20">
-      <div className="container mx-auto flex flex-wrap p-7 flex-col md:flex-row items-center">
+    <header className="bg-forest-green sticky top-0 z-20 w-screen">
+      <div className="container mt-0 flex md:p-7 flex-col md:flex-row justify-start items-center pb-3">
         <span className="title-font font-medium text-white mb-4 md:mb-0">
-          <a href="#home" className="ml-3 text-lg flex flex-column">
+          <a href="#home" className="ml-3 text-lg flex hidden sm:block flex-col">
           <HomeIcon className="w-4 h-4 ml-1 text-white hover:text-laurel-green-200" />
           </a>
         </span>
-        <nav className="md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-gray-700	flex flex-wrap items-center text-white justify-center">
+        <nav className="md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-gray-700	flex flex-wrap items-center text-white text-sm md:text-base justify-center">
           <a href="#projects" className="mr-5 font-semibold hover:text-laurel-green-200">
             Work
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4 ml-1 -mt-1 inline-block">
@@ -37,7 +37,7 @@ export default function Navbar() {
         </nav>
         <a
           href="#contact"
-          className="inline-flex items-center bg-gray-800 border-0 py-1 px-3 focus:outline-none hover:bg-gray-700 font-semibold rounded text-white mt-4 md:mt-0 hover:text-laurel-green-200">
+          className="inline-flex items-center bg-gray-800 border-0 py-1 px-3 focus:outline-none hover:bg-gray-700 font-semibold rounded text-white mt-0 text-sm md:text-base hover:text-laurel-green-200">
           Hire Me
           <ArrowRightIcon className="w-4 h-4 ml-1" />
         </a>

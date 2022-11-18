@@ -2,7 +2,11 @@ module.exports = {
   purge: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
   darkMode: false, // or 'media' or 'class'
   theme: {
-    extend: {},
+    extend: {
+      height: {
+        '128': '100vh',
+      }
+    },
     colors: {
       transparent: 'transparent',
       current: 'currentColor',
@@ -30,8 +34,9 @@ module.exports = {
     },
     fontSize: {
       sm: '0.8rem',
-      base: '0.9rem',
+      base: '1rem',
       lg: '1.25rem',
+      halfxl: '1.9rem',
       xl: '2.25rem',
       twoxl: '6.5rem',
 

@@ -19,8 +19,7 @@ export default function Project(props) {
   }
 
   useEffect(() => {
-    if(props.nestedImages){console.log('nestedImages chunks',sliceIntoChunks(props.nestedImages[9], 3))}
-    // if(props.nestedImages){console.log(props.nestedImages[9])}
+    console.log(props.name)
   }, []);
 
   const [selected, setSelected] = useState(0)
@@ -38,18 +37,18 @@ export default function Project(props) {
 
   return (
     <div>
-    <div className="flex mx-40">
+    <div className="flex flex-col md:flex-row items-center md-items:start md:mx-40">
         {!props.gallery ?
-      <div className="mr-5 flex w-1/2">
+      <div className="md:mr-5 flex flex-col md:flex-row md:w-1/2">
         <div >
             <img
-              className="w-[14rem] h-auto"
+              className="w-full"
               src={props.images[0]}
               onClick={() => props.handleClick(props.images[0], props.images.index)}
               alt={props.alt}/>
         </div>
 
-      <div className="flex flex-col w-full">
+      <div className="flex pt-2 md:pt-0 justify-center md:justify-start  md:flex-nowrap md:flex-col w-full md:w-1/2">
         {props.images.map((image, index)=>{
           if(index > 0){
             return (
@@ -59,8 +58,8 @@ export default function Project(props) {
                   alt = {props.alt}
                   className={
                   index === 1
-                    ? "rounded-md ml-2"
-                    : "rounded-md ml-2 mt-2"
+                    ? "rounded-md object-contain md:ml-2 w-1/4 md:w-full"
+                    : "rounded-md object-contain  w-1/4 md:w-full ml-2 md:mt-2 self-start"
                   }
                   src={image}/>
             )
@@ -74,20 +73,16 @@ export default function Project(props) {
         : ''}
 
         {props.type === 'galleryOne' ?
-      <div className="flex w-1/2">
+      <div className="flex flex-col md:flex-row md:w-1/2 justify-end">
 
-      <div className="flex flex-wrap w-full">
+      <div className="flex flex-wrap w-full md:w-4/5">
         {props.images.map((image, index)=>{
             return (
                 <img
                   key={index}
                   onClick={props.handleClick}
                   alt = {props.alt}
-                  className={
-                    numArr.includes(index)
-                    ? "rounded-sm mb-2 object-center object-cover w-20 h-20"
-                    : "rounded-sm mb-2 object-center object-cover ml-2 w-20 h-20"
-                  }
+                  className={props.name === 'Illustration' ? "rounded-sm md:mb-2 object-center object-cover md:ml-2 w-1/4 h-48 md:w-20 md:h-20" : "rounded-sm md:mb-2 object-center object-cover md:ml-2 w-1/4 h-1/4 md:w-20 md:h-20"}
                   src={image}
                   />
             )

@@ -10,13 +10,13 @@ class ImageSlider extends Component {
   }
 
 animateSequence() {
-  var a = document.getElementsByClassName('sequence');
-  for (var i = 0; i < a.length; i++) {
-      var $this = a[i];
-      var letter = $this.innerHTML;
+  let a = document.getElementsByClassName('sequence');
+  for (let i = 0; i < a.length; i++) {
+      let $this = a[i];
+      let letter = $this.innerHTML;
       letter = letter.trim();
-      var str = '';
-      var delay = 100;
+      let str = '';
+      let delay = 100;
       for (let l = 0; l < letter.length; l++) {
           if (letter[l] !== ' ') {
               str += '<span style="animation-delay:' + delay + 'ms; -moz-animation-delay:' + delay + 'ms; -webkit-animation-delay:' + delay + 'ms; ">' + letter[l] + '</span>';
@@ -49,10 +49,11 @@ animateSequence() {
 
   render() {
     return (
-        <div className="min-w-screen flex relative">
+        <div className="min-w-screen -ml-1/2 flex relative">
             <div className="cssanimation">
-              <span className="absolute z-10 mt-[25vh] left-1/4 text-white w-1/2 top-1/3 text-center font-extrabold text-twoxl uppercase select-none cursor-pointer sequence">Akil Grant</span>
+              <span className="absolute z-10 mt-[25vh] left-1/4 text-white w-1/2 top-1/3 text-center font-extrabold text-halfxl lg:text-twoxl uppercase select-none cursor-pointer sequence">Akil Grant</span>
             </div>
+            <div className="">
             {this.props.slides.map((slide, index) => {
               return (
                 <img
@@ -61,7 +62,7 @@ animateSequence() {
                   key={index}
                   className={
                     index === this.state.currentSlide
-                      ? "block min-w-full  h-auto object-contain"
+                      ? "block min-w-full  h-auto object-right"
                       : "hidden"
                   }
                   onMouseEnter={() => {
@@ -73,6 +74,7 @@ animateSequence() {
                 />
               );
             })}
+            </div>
         </div>
     );
   }

@@ -4,7 +4,6 @@
 }
 
 .cssanimation span {
-  display: inline-block;
   animation-name: rotate-zoom;
  }
 

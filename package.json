@@ -16,7 +16,8 @@
     "react-pageflip": "^2.0.3",
     "react-scripts": "^2.0.0",
     "react-switch": "^7.0.0",
-    "sass": "^1.55.0"
+    "sass": "^1.55.0",
+    "tailwindcss-rtl": "^0.9.0"
   },
   "scripts": {
     "start": "craco start",
