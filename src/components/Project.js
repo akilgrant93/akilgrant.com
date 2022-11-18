@@ -35,20 +35,35 @@ export default function Project(props) {
       setSelected(selected+1)
   }
 
+  const handleColor = (name) => {
+    if(name === 'Water Your Plants Medicinal Coloring Book'){
+      return 'bg-new-green'
+    }
+    else if(name === 'Durian'){
+      return 'bg-mountbatten-pink'
+    }
+    else if (name ==='Terra 2042'){
+      return 'bg-light-salmon'
+    }
+  }
+
   return (
     <div>
-    <div className="flex flex-col md:flex-row items-center md-items:start md:mx-40">
+    <div className="flex flex-col md:flex-row sm:items-start md:mx-20 lg:mx-40">
         {!props.gallery ?
-      <div className="md:mr-5 flex flex-col md:flex-row md:w-1/2">
-        <div >
+      <div className="md:mr-5 flex justify-center md:w-1/2">
+        <div className={`w-3/5 ${handleColor(props.name)} md:w-full flex flex-col`}>
             <img
               className="w-full"
               src={props.images[0]}
               onClick={() => props.handleClick(props.images[0], props.images.index)}
               alt={props.alt}/>
+              <div  className='h-full text-sm text-white font-bold flex flex-col justify-center'>
+              <p>Click to Expand</p>
+              </div>
         </div>
 
-      <div className="flex pt-2 md:pt-0 justify-center md:justify-start  md:flex-nowrap md:flex-col w-full md:w-1/2">
+      <div className="flex md:pt-0 flex-wrap w-2/5 md:flex-nowrap md:flex-col md:w-1/2">
         {props.images.map((image, index)=>{
           if(index > 0){
             return (
@@ -58,8 +73,8 @@ export default function Project(props) {
                   alt = {props.alt}
                   className={
                   index === 1
-                    ? "rounded-md object-contain md:ml-2 w-1/4 md:w-full"
-                    : "rounded-md object-contain  w-1/4 md:w-full ml-2 md:mt-2 self-start"
+                    ? "md:rounded-md object-contain md:ml-2 w-full md:w-full"
+                    : "md:rounded-md object-contain w-full md:w-full md:ml-2 md:mt-2"
                   }
                   src={image}/>
             )
@@ -75,7 +90,7 @@ export default function Project(props) {
         {props.type === 'galleryOne' ?
       <div className="flex flex-col md:flex-row md:w-1/2 justify-end">
 
-      <div className="flex flex-wrap w-full md:w-4/5">
+      <div className="flex flex-wrap w-full lg:w-4/5">
         {props.images.map((image, index)=>{
             return (
                 <img
@@ -88,6 +103,9 @@ export default function Project(props) {
             )
         })
         }
+        <div className='w-200 sm:w-22 md:w-4/5 lg:w-21 md:ml-2 text-sm text-white font-bold flex flex-col justify-center bg-new-green'>
+              <p>Click to Expand</p>
+              </div>
     </div>
 
 
@@ -101,7 +119,7 @@ export default function Project(props) {
 
       <img
           onClick={props.handleClick}
-          className="object-center object-cover mb-2 w-72 h-72"
+          className="object-center object-cover mb-2 w-48 h-48 sm:w-72 sm:h-72"
           src={props.images[selected]}
           />
 

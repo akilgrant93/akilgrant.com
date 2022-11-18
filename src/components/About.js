@@ -7,9 +7,8 @@ export default function About() {
     <section id="about">
       <div className="container mx-auto flex px-10 py-16 md:py-0 md:flex-row flex-col items-center">
         <div className="lg:flex-grow w-8/10 flex flex-col items-center text-center">
-          <div className="text-lg md:text-xl text-forest-green flex items-center inline-block font-black">
-            Akil |
-          <h2 className="text-base inline-block ml-1 text-forest-green  font-black">
+          <div className="flex items-center inline-block">
+          <h2 className="text-base inline-block ml-1 text-forest-green font-black">
             UX Designer & Art Director.
           </h2>
           </div>

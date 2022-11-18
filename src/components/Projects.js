@@ -39,7 +39,7 @@ export default function Projects(props) {
       <div className="mx-auto text-center">
         <div className="flex flex-wrap">
         <div className="w-full">
-		<ul className="header md:mb-10">
+		<ul className="header md:mb-2 lg:mb-10">
 			{/* might want to refactor this into a map function or something */}
 			{/* <li className="tab-active"><img alt="Colorful green logo reading Growr." className="icon" src="https://images.squarespace-cdn.com/content/v1/5363e3d1e4b0b6dbd37bcdd6/1584439666648-WC21M3H2FTNH0GSFAVSH/growr-01.png?format=1000w"/></li> */}
 			<li className=''><img alt="A book titled Water Your Plants Medicinal Herbs Coloring Book lies on a bed of green grass."  className="icon" src="https://images.squarespace-cdn.com/content/v1/5363e3d1e4b0b6dbd37bcdd6/1f3c779c-23bc-4bba-927d-7982cc66a105/IMG_4330.png?format=500w"/></li>
