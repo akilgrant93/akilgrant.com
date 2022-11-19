@@ -34,7 +34,7 @@ module.exports = {
         100: '#bec5ad',
         200: '#a4b494',
       },
-      'new-green': 'rgba(20, 83, 45, .5)',
+      'new-green': 'rgba(20, 83, 45, .25)',
       'light-salmon': 'rgba(255, 169, 135, .5)',
       'mountbatten-pink': 'rgba(156, 122, 151, .5)',
       'black-coral': '#696d7d',

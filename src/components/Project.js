@@ -9,15 +9,6 @@ export default function Project(props) {
     props.handleVisible()
   }
 
-  const sliceIntoChunks = (arr, chunkSize) => {
-    const res = [];
-    for (let i = 0; i < arr.length; i += chunkSize) {
-      const chunk = arr.slice(i, i + chunkSize);
-      res.push(chunk);
-    }
-    return res;
-  }
-
   useEffect(() => {
     console.log(props.name)
   }, []);
@@ -75,8 +66,8 @@ export default function Project(props) {
                   alt = {props.alt}
                   className={
                   index === 1
-                    ? "md:rounded-md object-contain md:ml-2 w-full md:w-full"
-                    : "md:rounded-md object-contain w-full md:w-full md:ml-2 md:mt-2"
+                    ? "md:rounded-md object-contain md:ml-2 w-full"
+                    : "md:rounded-md object-contain w-full md:ml-2 md:mt-2"
                   }
                   src={image}/>
             )
@@ -115,70 +106,40 @@ export default function Project(props) {
         : ''}
 
         {props.type === 'galleryTwo' ?
-      <div className="flex w-2/5 flex-col">
+      <div className="flex md:w-2/5 flex-col">
 
-      <div className="flex flex-col sm:flex-row justify-end">
+      <div className="flex sm:flex-row justify-center md:justify-end">
       <div className='w-full flex flex-col items-end'>
       <img
           onClick={props.handleClick}
           className="object-center object-cover bg-new-green w-full h-full"
           src={props.images[selected]}
           />
-          <div className='w-full text-sm text-white font-semibold flex flex-col justify-center bg-new-green'>
+          <div className='w-full h-full text-sm text-white font-semibold flex flex-col justify-center bg-new-green'>
               <p>Click to Expand</p>
               </div>
         </div>
 
-    {props.nestedImages ? <div className=' w-1/2 h-1/2 md:ml-2 justify-start lg:ml-4 mr-5'>
-            {props.nestedImages[selected].length <= 3
-            ? props.nestedImages[selected].map((image, index)=>{
+    {props.nestedImages ? <div className=' w-2/5 h-full lg:w-1/2 lg:h-1/2 md:ml-2 justify-start lg:ml-4 lg:mr-5'>
+           {props.nestedImages[selected].map((image, index)=>{
               return (
                 <img
                 key={index}
                 onClick={props.handleClick}
                 alt = {props.alt}
-                className="rounded-lg md:mb-2 object-center w-full object-cover"
+                className="md:rounded-lg md:mb-2 object-center w-full object-cover"
                 src={image}
                 />
                 )
-              })
-              :
-              <div className="flex w-full">
-              {sliceIntoChunks(props.nestedImages[selected], 3).map((imageArray, index) => {
-                return (
-                  <div key={index}
-                  // className={index > 0 ? 'ml-2' : ''}
-                  className='w-full'
-                  >
-                    {imageArray.map((image, index)=>{
-                      return (
-                        <img
-                        key={index}
-                        onClick={props.handleClick}
-                        alt = {props.alt}
-                        className="rounded-sm mb-2 object-center object-cover w-full h-1/2"
-                        src={image}
-                        />
-                        )
-                      })}
-                  </div>
-                )
               })}
-              </div>
-              }
           </div> : ''}
       </div>
 
-              {/* <div className='w-full flex flex-col justify-end items-end lg:items-start'>
-      <div className='w-8/12 lg:ml-2 text-sm text-white click bg-new-green'>
-              <p>Click to Expand</p>
-              </div>
-              </div> */}
-      <div className='flex w-full justify-end md:justify-center pt-2'>
+      <div className='flex w-full justify-center pt-3'>
       <div className='flex w-8/12 lg:w-full justify-end lg:justify-center pt-'>
         <div className='flex justify-center w-full'>
-        { selected > 0 ? <ArrowCircleLeftIcon  onClick={handleClickLeft} className="w-9 h-9 ml-1 inline-block text-forest-green -mt-1"/> : <ArrowCircleLeftIcon className="w-9 h-9 ml-1 inline-block text-laurel-green-100 -mt-1"/>}
-        { selected < props.images.length-1 ?<ArrowCircleRightIcon onClick={handleClickRight} className="w-9 h-9 ml-1 inline-block text-forest-green -mt-1"/> : <ArrowCircleRightIcon className="w-9 h-9 ml-1 inline-block text-laurel-green-100 -mt-1"/>}
+        { selected > 0 ? <ArrowCircleLeftIcon  onClick={handleClickLeft} className="w-4 h-4 md:w-9 md:h-9 ml-1 inline-block text-forest-green -mt-1"/> : <ArrowCircleLeftIcon className="w-4 h-4 md:w-9 md:h-9 ml-1 inline-block text-laurel-green-100 -mt-1"/>}
+        { selected < props.images.length-1 ?<ArrowCircleRightIcon onClick={handleClickRight} className="w-4 h-4 md:w-9 md:h-9 ml-1 inline-block text-forest-green -mt-1"/> : <ArrowCircleRightIcon className="w-4 h-4 md:w-9 md:h-9 ml-1 inline-block text-laurel-green-100 -mt-1"/>}
         </div>
         </div>
         </div>
@@ -186,15 +147,15 @@ export default function Project(props) {
         : ''}
 
     {props.type !== "galleryTwo"
-    ? <div className="w-10/12 my-10 sm:my-0 mx-auto pt-2 lg:pt-0 lg:w-1/2">
-      <p className="text-left text-forest-green text-base lg:text-xl font-bold ">{props.name}</p>
+    ? <div className="w-9/12 self-center mx-auto pt-5 md:pt-0 lg:w-1/2">
+      <p className={props.type === 'galleryOne' ? "pl-5 text-left text-forest-green text-base lg:text-xl font-bold pb-0 sm:pb-10 lg:pb-0" : "text-left pb-5 text-forest-green text-base lg:text-xl font-bold"}>{props.name}</p>
 
-      <div className="flex my-2 mb-3 items-center ">
+      <div className={props.type === 'galleryOne' ? "flex pb-3 sm:pb-5 lg:pb-3 items-center" : 'flex pb-3 sm:pb-5 lg:pb-3'}>
         {props.skills.map((skill, index) => {
           return (
             <p
             key={index}
-            className="flex text-sm font-semibold inline-block">
+            className={props.type === 'galleryOne' ? "pl-5 flex text-sm font-semibold inline-block" : "flex text-sm font-semibold inline-block"}>
             {index > 0
             ? <span className="h-1 w-1 mx-2 self-center inline-block bg-forest-green rounded-full"></span>
             : ''}{skill}</p>
@@ -206,7 +167,9 @@ export default function Project(props) {
           return (
             <p
             key={index}
-            className="text-sm md:text-base text-left mb-5 inline-block w-full">
+            className={props.type === "galleryOne"
+            ? "pl-5 text-sm md:text-base text-left inline-block w-full"
+            : "text-sm md:text-base text-left inline-block w-full"}>
             <span className="h-1 w-1 mx-1 self-center inline-block bg-forest-green rounded-full"></span>{bulletpoint}</p>
           );
         })}
@@ -239,10 +202,10 @@ export default function Project(props) {
         : ''}
     </div>
     :
-    <div className="w-3/5 pl-5">
-      <h1 className="text-left">{props.name}</h1>
+    <div className="w-10/12 pt-2 md:pt-0 mx-auto md:w-3/5 md:pl-5">
+      <p className="text-left text-forest-green text-base lg:text-xl font-bold ">{props.name}</p>
 
-      <p className="text-md text-forest-green text-left font-semibold">{props.titles[selected]}</p>
+      <p className="text-sm md:text-base text-forest-green text-left font-semibold">{props.titles[selected]}</p>
       <div className="flex my-2 mb-3 items-center ">
         {props.skills.map((skill, index) => {
           return (
@@ -257,7 +220,7 @@ export default function Project(props) {
       </div>
 
             <p
-            className="text-base text-left mb-5 inline-block w-full">
+            className="text-sm md:text-base text-left mb-5 inline-block w-full">
             <span className="h-1 w-1 mx-1 self-center inline-block bg-forest-green rounded-full"></span>{props.bulletPoints[selected]}</p>
 
         {props.type === "galleryTwo" && props.name === "Animation"

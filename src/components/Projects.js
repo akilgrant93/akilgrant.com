@@ -11,10 +11,23 @@ export default function Projects(props) {
 		winHeight: window.innerHeight,
 	})
 	const [selected, setSelected] = useState('waterYourPlants')
-	const [height, setHeight] = useState(500)
+	const calculateDefaultHeight = () => {
+		if(window.innerWidth <= 640){
+			return 500
+		}
+		if(window.innerWidth <= 768){
+			return 250
+		}
+		if(window.innerWidth <= 1024){
+			return 200
+		}
+		if(window.innerWidth > 1024){
+			return 200
+		}
+	}
+	const [height, setHeight] = useState(calculateDefaultHeight())
   const handleVisible = (data) => {
 		const tabs = document.querySelector(".content");
-
     if(isVisible){
       setIsVisible(false)
     } else {
@@ -22,14 +35,12 @@ export default function Projects(props) {
     }
   }
 
-
   const detectSize = () => {
     detectHW({
       winWidth: window.innerWidth,
       winHeight: window.innerHeight,
     })
   }
-
 
   useEffect(() => {
     const header = document.querySelector(".header");
@@ -59,11 +70,11 @@ export default function Projects(props) {
 			setHeight(50)
 		}
 		else if(width >= 768 && name === 'waterYourPlants'){
-			setHeight(400)
+			setHeight(250)
 
 		}
 		else if(width >= 640 && name === 'waterYourPlants'){
-			setHeight(450)
+			setHeight(300)
 
 		}
 		else if(width < 640 && name === 'waterYourPlants'){
@@ -75,7 +86,7 @@ export default function Projects(props) {
 
 		}
 		else if(width >= 768 && name === 'durian'){
-			setHeight(400)
+			setHeight(375)
 
 		}
 		else if(width >= 640 && name === 'durian'){
@@ -91,7 +102,7 @@ export default function Projects(props) {
 
 		}
 		else if(width >= 768 && name === 'terra2042'){
-			setHeight(400)
+			setHeight(300)
 
 		}
 		else if(width >= 640 && name === 'terra2042'){
@@ -106,8 +117,12 @@ export default function Projects(props) {
 			setHeight(50)
 
 		}
-		else if(width >= 768 && name === 'engraving'){
+		else if(width >= 820 && name === 'engraving'){
 			setHeight(400)
+
+		}
+		else if(width >= 768 && name === 'engraving'){
+			setHeight(580)
 
 		}
 		else if(width >= 640 && name === 'engraving'){
@@ -122,8 +137,12 @@ export default function Projects(props) {
 			setHeight(50)
 
 		}
-		else if(width >= 768 && name === 'illustration'){
+		else if(width >= 820 && name === 'illustration'){
 			setHeight(400)
+
+		}
+		else if(width >= 768 && name === 'illustration'){
+			setHeight(580)
 
 		}
 		else if(width >= 640 && name === 'illustration'){
@@ -138,7 +157,7 @@ export default function Projects(props) {
 			setHeight(50)
 		}
 		else if(width >= 768 && name === 'branding'){
-			setHeight(400)
+			setHeight(150)
 
 		}
 		else if(width >= 640 && name === 'branding'){
@@ -146,7 +165,7 @@ export default function Projects(props) {
 
 		}
 		else if(width < 640 && name === 'branding'){
-			setHeight(500)
+			setHeight(450)
 
 		}
 		else if(width >= 1024 && name === 'animation'){
