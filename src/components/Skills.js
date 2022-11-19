@@ -24,17 +24,26 @@ export default function Skills() {
     <section id="" className='pt-16'>
       <div className="container mt-24 mx-auto">
         <div className="flex flex-col sm:flex-row items-center lg:w-4/5 sm:mx-auto justify-evenly sm:mb-2 -mx-2">
-        <div className="list w-64">
-		<div className="head">
-			<div className="title">Skills & Tech</div>
+        <div className="list py-8 w-8/12 md:w-1/4">
+		<div className="head mb-2">
+			<div className="text-forest-green align-center text-center font-bold text-lg md:text-halfxl">Skills & Tech</div>
 		</div>
-		<ul>
+		<ul className='flex text-forest-green justify-center text-sm flex-wrap'>
 			{skillsArr.map((skill, index) => {
 				return (
-					<div key={index} >
-						<input type="radio" id={`item-${index+1}`} onClick={handleClick} value={`item-${index+1}`} name="items"/>
-						<label htmlFor={`item-${index+1}`} className="text skillsRadio font-medium">{skill}</label>
-						<label htmlFor={`item-${index+1}`} className="button"></label>
+					<div key={index} className='w-1/2 sm:w-9/12 flex pt-2 items-center text-center sm:text-left'>
+						<input
+						type="radio"
+						id={`item-${index+1}`}
+						onClick={handleClick}
+						value={`item-${index+1}`}
+						name="items"/>
+						<label
+						htmlFor={`item-${index+1}`}
+						className="skillsRadio font-medium mx-auto w-full h-full">
+							{skill}
+						</label>
+						<label htmlFor={`item-${index+1}`} className="invisible md:visible button"></label>
 					</div>
 				)
 			})}
@@ -43,10 +52,11 @@ export default function Skills() {
 				</div>
 				{selected === null
 				? <div>
-						<img className='max-w-2xl' src='standard-01.png'/>
+						<p id='skillTxt' className="skillsAnim text-xs md:text-sm py-5 sm:pt-0 font-semibold text-forest-green relative text-center w-1/2 md:w-11/12 mx-auto">The multi-hyphenate designers toolkit comes with many supplies, click one to see how they look!</p>
+						<img className='max-w-sm md:max-w-2xl' src='standard-01.png'/>
 					</div>
 					: <div className="max-w-2xl" >
-					<p id='skillTxt' className="skillsAnim text-sm font-semibold text-forest-green relative text-center w-11/12 mx-auto">{skillDesc[parseInt(selected)-1]}</p>
+					<p id='skillTxt' className="skillsAnim text-xs md:text-sm pt-5 sm:pt-0 font-semibold text-forest-green relative text-center w-8/12 md:w-11/12 mx-auto">{skillDesc[parseInt(selected)-1]}</p>
 					<Lottie loop={false} animationData={lottieArr[parseInt(selected)-1]} />
 					</div>
 

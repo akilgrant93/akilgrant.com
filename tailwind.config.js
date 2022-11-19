@@ -41,13 +41,13 @@ module.exports = {
       'auburn': '#9e2a2b',
     },
     fontSize: {
+      xs: '0.6rem',
       sm: '0.8rem',
       base: '1rem',
       lg: '1.25rem',
       halfxl: '1.9rem',
       xl: '2.25rem',
       twoxl: '6.5rem',
-
     }
   },
   variants: {

@@ -19,10 +19,10 @@ export default function Projects(props) {
 			return 250
 		}
 		if(window.innerWidth <= 1024){
-			return 200
+			return 250
 		}
 		if(window.innerWidth > 1024){
-			return 200
+			return 250
 		}
 	}
 	const [height, setHeight] = useState(calculateDefaultHeight())
@@ -67,7 +67,7 @@ export default function Projects(props) {
 	const heightCalculator = (width, name) => {
 		console.log('calculating!')
     if(width >= 1024 && name === 'waterYourPlants'){
-			setHeight(50)
+			setHeight(250)
 		}
 		else if(width >= 768 && name === 'waterYourPlants'){
 			setHeight(250)
@@ -82,7 +82,7 @@ export default function Projects(props) {
 
 		}
 		else if(width >= 1024 && name === 'durian'){
-			setHeight(50)
+			setHeight(265)
 
 		}
 		else if(width >= 768 && name === 'durian'){
@@ -98,7 +98,7 @@ export default function Projects(props) {
 
 		}
 		else if(width >= 1024 && name === 'terra2042'){
-			setHeight(50)
+			setHeight(250)
 
 		}
 		else if(width >= 768 && name === 'terra2042'){
@@ -114,7 +114,7 @@ export default function Projects(props) {
 
 		}
 		 else if(width >= 1024 && name === 'engraving'){
-			setHeight(50)
+			setHeight(250)
 
 		}
 		else if(width >= 820 && name === 'engraving'){
@@ -134,7 +134,7 @@ export default function Projects(props) {
 
 		}
 		else if(width >= 1024 && name === 'illustration'){
-			setHeight(50)
+			setHeight(250)
 
 		}
 		else if(width >= 820 && name === 'illustration'){
@@ -154,22 +154,22 @@ export default function Projects(props) {
 
 		}
 		else if(width >= 1024 && name === 'branding'){
-			setHeight(50)
+			setHeight(150)
 		}
 		else if(width >= 768 && name === 'branding'){
 			setHeight(150)
 
 		}
 		else if(width >= 640 && name === 'branding'){
-			setHeight(450)
+			setHeight(400)
 
 		}
 		else if(width < 640 && name === 'branding'){
-			setHeight(450)
+			setHeight(400)
 
 		}
 		else if(width >= 1024 && name === 'animation'){
-			setHeight(50)
+			setHeight(210)
 		}
 		else if(width >= 768 && name === 'animation'){
 			setHeight(400)
