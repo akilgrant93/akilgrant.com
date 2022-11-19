@@ -170,8 +170,8 @@ export default function Project(props) {
         : ''}
 
     {props.type !== "galleryTwo"
-    ? <div className="w-1/2">
-      <h1 className="text-left">{props.name}</h1>
+    ? <div className="w-10/12 my-10 sm:my-0 mx-auto pt-2 lg:pt-0 lg:w-1/2">
+      <p className="text-left text-forest-green text-base lg:text-xl font-bold ">{props.name}</p>
 
       <div className="flex my-2 mb-3 items-center ">
         {props.skills.map((skill, index) => {
@@ -190,7 +190,7 @@ export default function Project(props) {
           return (
             <p
             key={index}
-            className="text-base text-left mb-5 inline-block w-full">
+            className="text-sm md:text-base text-left mb-5 inline-block w-full">
             <span className="h-1 w-1 mx-1 self-center inline-block bg-forest-green rounded-full"></span>{bulletpoint}</p>
           );
         })}

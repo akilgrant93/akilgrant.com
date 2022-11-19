@@ -1,11 +1,3 @@
-.minHeight {
-  height: 350px;
-}
-
-.maxHeight {
-  height: 850px;
-}
-
 .header {
   display: flex;
   list-style: none;

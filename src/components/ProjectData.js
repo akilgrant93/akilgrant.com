@@ -16,7 +16,7 @@ export const ProjectData = [
     pages: ['coloringbook-01.png','coloringbook-02.png','coloringbook-03.png','coloringbook-04.png','coloringbook-05.png','coloringbook-06.png','coloringbook-07.png','coloringbook-08.png','coloringbook-09.png','coloringbook-10.png','coloringbook-11.png','coloringbook-12.png'],
     links: ['https://www.amazon.com/Water-Plants-Medicinal-Herbs-Coloring/dp/B08KJP5H6K'],
     alt:`A white coloring book with a drawing of a herb on its cover lies upon a bed of fresh green grass. The title reads "Water Your Plants Medicinal Coloring Book."`,
-    bulletPoints: ['A coloring book focused on medicinal herbs to help folks with wild plant identification as a nice way to spend quarantine downtime.','Contains 30 illustrations along with along with a daily prompt for relaxation techniques.']
+    bulletPoints: ['This coloring book is part of a series focused on medicinal herbs and mushrooms meant to help folks with wild plant identification as a nice way to spend quarantine downtime.','Contains 30 illustrations along with along with a daily prompt for relaxation techniques. It was a pleasure to find the specimens and references to create this.']
   },
   {
     name: 'Durian',
@@ -34,7 +34,7 @@ export const ProjectData = [
     type: 'code',
     alt:"",
     links:["https://terra-2042.herokuapp.com/","https://github.com/MADE-Game/TERRA2042"],
-    bulletPoints: ['Terra 2042 is a web-based post-apocalyptic tabletop card game. It features live multiplayer games, custom deck building, and a shop to spend your spoils.','If you are the first player in the lobby, click on "CREATE GAME" to generate a room code. Send the code to your friend!', 'Terra 2042 is a two-player game. Create a game and share the room code with a friend to battle it out.', 'Socket.io provides realtime updates, and save-states as well as in-game chat functions!']
+    bulletPoints: ['Terra 2042 is a web-based post-apocalyptic tabletop card game. It features live multiplayer games, custom deck building, and a shop to spend your spoils. If you are the first player in the lobby, click on "CREATE GAME" to generate a room code. Send the code to your friend!', 'Terra 2042 is a two-player game. Create a game and share the room code with a friend to battle it out. We used socket.io to provide realtime updates, and save-states as well as in-game chat functions!']
   },
   {
     images: ['image-asset01.png','image-asset02.png','image-asset03.png','image-asset05.png','image-asset06.png','image-asset07.png','image-asset11.png', 'image-asset12.png','image-asset08.png','image-asset09.png','image-asset10.png','image-asset04.png', 'image-asset13.png', 'image-asset14.png', 'image-asset15.png', 'image-asset16.png'],
@@ -52,7 +52,7 @@ export const ProjectData = [
     type: 'galleryOne',
     gallery: true,
     alt:"",
-    bulletPoints: ['Illustration was my initial gateways into creative work. As a kid I started off making my own trading card games, and worked my way up from there to adding my own skins, maps, and mods to my favorite video games. But never lost that grounding in the foundation that working with pen and paper gave me. This collection spans the breath of my creative past from high school, through college and up to the present, including some preliminary sketches for storyboards, animations, and conceptual art.`']
+    bulletPoints: ['Illustration was my initial gateways into creative work. As a kid I started off making my own trading card games, and worked my way up from there to adding my own skins, maps, and mods to my favorite video games. But never lost that grounding in the foundation that working with pen and paper gave me. This collection spans the breath of my creative past from high school, through college and up to the present, including some preliminary sketches for storyboards, animations, and conceptual art.']
   },
   {
     images: ['logo01.png', 'logo02.png', 'logo03.png', 'logo04.png', 'logo05.png', 'logo06.png', 'logo07.png', 'logo08.png', 'logo09.png', 'logo10.png'],

@@ -24,7 +24,7 @@ export default function Button(props) {
   if(props.type === 'Link'){
     return (
           <a
-          className="button-style mr-5"
+          className="button-style md:mr-5"
           target="_blank"
           rel="noopener noreferrer"
           href={props.link}
@@ -39,7 +39,7 @@ export default function Button(props) {
   if(props.type === 'Watch'){
     return (
           <a
-          className="button-style mr-5"
+          className="button-style md:mr-5"
           target="_blank"
           rel="noopener noreferrer"
           href={props.link}
@@ -55,10 +55,10 @@ export default function Button(props) {
   }
   if(props.type === 'Read'){
     return (
-      // <div className="button-style mr-5"
+      // <div className="button-style md:mr-5"
       // onClick={props.onClick}>
       //     <div >
-          <button className="button-style mr-5" onClick={props.onClick} id={`${props.title}`}>
+          <button className="button-style md:mr-5" onClick={props.onClick} id={`${props.title}`}>
             {props.type}
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 inline-block h-6 ml-1 -mt-1">
           <path strokeLinecap="round" strokeLinejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
@@ -71,7 +71,7 @@ export default function Button(props) {
   if(props.type === 'Buy'){
     return (
           <a
-          className="button-style mr-5"
+          className="button-style md:mr-5"
           target="_blank"
           rel="noopener noreferrer"
           href={props.link}
