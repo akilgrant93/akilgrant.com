@@ -49,7 +49,9 @@ export default function Project(props) {
 
   return (
     <div>
-    <div className="flex flex-col md:flex-row sm:items-start md:mx-20 lg:mx-40">
+    <div className={props.type === 'galleryTwo'
+    ? "flex flex-col md:flex-row sm:items-start md:mx-20 lg:mx-40 "
+    : 'flex flex-col md:flex-row sm:items-start md:mx-20 lg:mx-40'}>
         {!props.gallery ?
       <div className="md:mr-5 flex justify-center md:w-1/2">
         <div className={`w-3/5 ${handleColor(props.name)} md:w-full flex flex-col`}>
@@ -58,7 +60,7 @@ export default function Project(props) {
               src={props.images[0]}
               onClick={() => props.handleClick(props.images[0], props.images.index)}
               alt={props.alt}/>
-              <div  className='h-full text-sm text-white font-bold flex flex-col justify-center'>
+              <div  className='h-full text-sm text-white font-semibold flex flex-col justify-center'>
               <p>Click to Expand</p>
               </div>
         </div>
@@ -103,7 +105,7 @@ export default function Project(props) {
             )
         })
         }
-        <div className='w-200 sm:w-22 md:w-4/5 lg:w-21 md:ml-2 text-sm text-white font-bold flex flex-col justify-center bg-new-green'>
+        <div className='w-200 sm:w-22 md:w-4/5 lg:w-21 md:ml-2 text-sm text-white font-semibold flex flex-col justify-center bg-new-green'>
               <p>Click to Expand</p>
               </div>
     </div>
@@ -113,17 +115,21 @@ export default function Project(props) {
         : ''}
 
         {props.type === 'galleryTwo' ?
-      <div className="flex w-2/3 flex-col">
+      <div className="flex w-2/5 flex-col">
 
-      <div className="flex justify-center w-full">
-
+      <div className="flex flex-col sm:flex-row justify-end">
+      <div className='w-full flex flex-col items-end'>
       <img
           onClick={props.handleClick}
-          className="object-center object-cover mb-2 w-48 h-48 sm:w-72 sm:h-72"
+          className="object-center object-cover bg-new-green w-full h-full"
           src={props.images[selected]}
           />
+          <div className='w-full text-sm text-white font-semibold flex flex-col justify-center bg-new-green'>
+              <p>Click to Expand</p>
+              </div>
+        </div>
 
-    {props.nestedImages ? <div className='flex flex-col flex-wrap justify-start ml-4'>
+    {props.nestedImages ? <div className=' w-1/2 h-1/2 md:ml-2 justify-start lg:ml-4 mr-5'>
             {props.nestedImages[selected].length <= 3
             ? props.nestedImages[selected].map((image, index)=>{
               return (
@@ -131,7 +137,7 @@ export default function Project(props) {
                 key={index}
                 onClick={props.handleClick}
                 alt = {props.alt}
-                className="rounded-sm mb-2 object-center object-cover w-20 h-20"
+                className="rounded-lg md:mb-2 object-center w-full object-cover"
                 src={image}
                 />
                 )
@@ -140,14 +146,17 @@ export default function Project(props) {
               <div className="flex w-full">
               {sliceIntoChunks(props.nestedImages[selected], 3).map((imageArray, index) => {
                 return (
-                  <div key={index} className={index > 0 ? 'ml-2' : ''}>
+                  <div key={index}
+                  // className={index > 0 ? 'ml-2' : ''}
+                  className='w-full'
+                  >
                     {imageArray.map((image, index)=>{
                       return (
                         <img
                         key={index}
                         onClick={props.handleClick}
                         alt = {props.alt}
-                        className="rounded-sm mb-2 object-center object-cover w-20 h-20"
+                        className="rounded-sm mb-2 object-center object-cover w-full h-1/2"
                         src={image}
                         />
                         )
@@ -160,10 +169,17 @@ export default function Project(props) {
           </div> : ''}
       </div>
 
-      <div className='flex w-full justify-center'>
-      <div className='flex justify-evenly pt-5 w-72'>
-        { selected > 0 ? <ArrowCircleLeftIcon  onClick={handleClickLeft} className="w-8 h-8 ml-1 inline-block text-forest-green -mt-1"/> : <ArrowCircleLeftIcon className="w-8 h-8 ml-1 inline-block text-laurel-green-100 -mt-1"/>}
-        { selected < props.images.length-1 ?<ArrowCircleRightIcon onClick={handleClickRight} className="w-8 h-8 ml-1 inline-block text-forest-green -mt-1"/> : <ArrowCircleRightIcon className="w-8 h-8 ml-1 inline-block text-laurel-green-100 -mt-1"/>}
+              {/* <div className='w-full flex flex-col justify-end items-end lg:items-start'>
+      <div className='w-8/12 lg:ml-2 text-sm text-white click bg-new-green'>
+              <p>Click to Expand</p>
+              </div>
+              </div> */}
+      <div className='flex w-full justify-end md:justify-center pt-2'>
+      <div className='flex w-8/12 lg:w-full justify-end lg:justify-center pt-'>
+        <div className='flex justify-center w-full'>
+        { selected > 0 ? <ArrowCircleLeftIcon  onClick={handleClickLeft} className="w-9 h-9 ml-1 inline-block text-forest-green -mt-1"/> : <ArrowCircleLeftIcon className="w-9 h-9 ml-1 inline-block text-laurel-green-100 -mt-1"/>}
+        { selected < props.images.length-1 ?<ArrowCircleRightIcon onClick={handleClickRight} className="w-9 h-9 ml-1 inline-block text-forest-green -mt-1"/> : <ArrowCircleRightIcon className="w-9 h-9 ml-1 inline-block text-laurel-green-100 -mt-1"/>}
+        </div>
         </div>
         </div>
     </div>
@@ -223,7 +239,7 @@ export default function Project(props) {
         : ''}
     </div>
     :
-    <div className="w-1/2 pl-4">
+    <div className="w-3/5 pl-5">
       <h1 className="text-left">{props.name}</h1>
 
       <p className="text-md text-forest-green text-left font-semibold">{props.titles[selected]}</p>
