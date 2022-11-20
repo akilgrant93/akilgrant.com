@@ -24,7 +24,7 @@ export default function Flipbook(props) {
       {(style) => (
       <div style={{opacity: style.opacity}}>
       <div className="flex">
-            <span className="text-xl text-forest-green dismiss" onClick={props.handleVisible}>
+            <span className="text-lg sm:text-xl text-forest-green dismiss ml-2" onClick={props.handleVisible}>
               X
           </span>
           </div>
@@ -34,7 +34,7 @@ export default function Flipbook(props) {
       width={306}
       height={396}
       size={'stretch'}>
-      {ProjectData[1].pages.map((page, index) => {
+      {ProjectData[0].pages.map((page, index) => {
         return (
         <div key={index}>
           <Page number={index+1} src={page}/>

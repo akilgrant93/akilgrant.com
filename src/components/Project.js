@@ -234,7 +234,7 @@ export default function Project(props) {
     </div>
 
         {props.isVisible && props.type === "book"
-        ? <div className="w-8/12 mx-auto mt-10">
+        ? <div className="w-full sm:w-8/12 mx-auto lg:mt-10">
           {props.isVisible ? <Flipbook handleVisible={projectHandleVisible} isVisible={props.isVisible} title={props.name}/> : ''}
         </div>
         : ''}

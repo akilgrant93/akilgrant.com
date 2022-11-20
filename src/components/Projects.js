@@ -11,6 +11,7 @@ export default function Projects(props) {
 		winHeight: window.innerHeight,
 	})
 	const [selected, setSelected] = useState('waterYourPlants')
+
 	const calculateDefaultHeight = () => {
 		if(window.innerWidth <= 640){
 			return 500
@@ -25,7 +26,24 @@ export default function Projects(props) {
 			return 250
 		}
 	}
+
+	const calculateBooktHeight = () => {
+		if(window.innerWidth <= 640){
+			return 775
+		}
+		if(window.innerWidth <= 768){
+			return 675
+		}
+		if(window.innerWidth <= 1024){
+			return 950
+		}
+		if(window.innerWidth > 1024){
+			return 950
+		}
+	}
 	const [height, setHeight] = useState(calculateDefaultHeight())
+	const [bookHeight, setBookHeight] = useState(calculateBooktHeight())
+
   const handleVisible = (data) => {
 		const tabs = document.querySelector(".content");
     if(isVisible){
@@ -219,7 +237,7 @@ export default function Projects(props) {
 		style={{height: spring(
 			!isVisible
 			? height
-			: 900)
+			: bookHeight)
 		}}
 		>
 			{(style) => (
