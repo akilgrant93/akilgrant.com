@@ -14,8 +14,6 @@ export default function Project(props) {
   }, []);
 
   const [selected, setSelected] = useState(0)
-  const numArr = [0,4,8,12]
-
   const img = document.querySelector("#currImg");
 
   const handleClickLeft = () => {

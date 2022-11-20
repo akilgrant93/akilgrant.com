@@ -10,7 +10,6 @@ export default function Projects(props) {
 		winWidth: window.innerWidth,
 		winHeight: window.innerHeight,
 	})
-	const [selected, setSelected] = useState('waterYourPlants')
 
 	const calculateDefaultHeight = () => {
 		if(window.innerWidth <= 640){
@@ -42,10 +41,9 @@ export default function Projects(props) {
 		}
 	}
 	const [height, setHeight] = useState(calculateDefaultHeight())
-	const [bookHeight, setBookHeight] = useState(calculateBooktHeight())
+	const [bookHeight] = useState(calculateBooktHeight())
 
   const handleVisible = (data) => {
-		const tabs = document.querySelector(".content");
     if(isVisible){
       setIsVisible(false)
     } else {
@@ -205,7 +203,6 @@ export default function Projects(props) {
 
 	const handleEvent = (event) => {
 		heightCalculator(windowDimension.winWidth, event.target.classList[event.target.classList.length-1])
-		setSelected(event.target.classList[event.target.classList.length-1])
 	}
 
   return (

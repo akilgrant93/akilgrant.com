@@ -10,9 +10,8 @@ import Modal from './components/Modal'
 
 export default function App() {
   const [clickedImg, setClickedImg] = useState(null);
-  const [currentIndex, setCurrentIndex] = useState(null);
 
-  const handleClick = (item, index) => {
+  const handleClick = (item) => {
     if(typeof item === 'string'){
       setClickedImg(item);
     } else if(typeof item === 'object' && item.target.localName === "img"){
@@ -22,7 +21,6 @@ export default function App() {
     } else {
       setClickedImg(item.target.currentSrc)
     }
-    setCurrentIndex(index);
   };
 
   return (
