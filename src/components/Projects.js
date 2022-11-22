@@ -67,8 +67,6 @@ export default function Projects(props) {
 		tabs.pop();
 		window.addEventListener('resize', detectSize)
 
-		console.log(windowDimension.winWidth)
-
 		for (let i in tabs) {
 			tabs[i].addEventListener("click", () => {
 				for (let i in tabs) tabs[i].removeAttribute("class");
@@ -82,7 +80,6 @@ export default function Projects(props) {
   }, []);
 
 	const heightCalculator = (width, name) => {
-		console.log('calculating!')
     if(width >= 1024 && name === 'waterYourPlants'){
 			setHeight(250)
 		}

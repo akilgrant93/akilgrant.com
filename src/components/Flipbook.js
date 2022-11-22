@@ -5,7 +5,6 @@ import './anim.css'
 import { Motion, spring} from 'react-motion'
 
 const Page = React.forwardRef((props, ref) => {
-  // console.log(props)
   return (
       <div className="demoPage" ref={ref}>
           <img src={`./${props.src}`}/>

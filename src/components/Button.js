@@ -2,10 +2,6 @@ import React from 'react'
 import './button.css'
 
 export default function Button(props) {
-  // useEffect(() => {
-  //   console.log(props)
-  // }, []);
-
   if(props.type === 'Code') {
     return (
       <a
