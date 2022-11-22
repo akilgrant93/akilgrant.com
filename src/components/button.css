@@ -63,16 +63,15 @@
   line-height: 1.5;
   outline: none;
   overflow: hidden;
-  padding: 13px 15px;
+  /* padding: 13px 15px; */
   position: relative;
-  text-align: center;
   text-decoration: none;
   transform: translate3d(0, 0, 0);
   transition: all .3s;
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
-  vertical-align: top;
+  /* vertical-align: top; */
   white-space: nowrap;
 }
 
