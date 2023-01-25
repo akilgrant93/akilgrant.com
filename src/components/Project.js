@@ -165,6 +165,7 @@ export default function Project(props) {
           return (
             <p
             key={index}
+            style={index > 0 ? {marginTop: 15} : null }
             className={props.type === "galleryOne"
             ? "pl-5 text-sm md:text-base text-left inline-block w-full"
             : "text-sm md:text-base text-left inline-block w-full"}>

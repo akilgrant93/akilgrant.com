@@ -1,13 +1,13 @@
 export const ProjectData = [
-  // {
-  //   images: ['https://images.squarespace-cdn.com/content/v1/5363e3d1e4b0b6dbd37bcdd6/336faf2a-b6bd-4f37-a6a8-8481083f0226/01.jpg?format=2500w',],
-  //   name: 'Growr',
-  //   skills: ['Firebase', 'React Native', 'Lottie', 'Illustrator','After Effects'],
-  //   type: "code",
-  //   alt:"",
-  //   links:["","https://github.com/akilgrant93/Growr"],
-  //   bulletPoints: ['What started off as a simple ToDo app that became a behemoth of a passion project. Once the minimum viable product of an app that gave the user reminders to water their plants was created, layer after layer upon functionality that was needed to make it really practical just called out for me to build them. You could, no joke, manage a nice farm with this app. I know I have!']
-  // },
+  {
+    images: [require('../media/growr_mockup_sq_sm.jpg'),],
+    name: 'Growr',
+    skills: ['Firebase', 'React Native', 'Lottie', 'Illustrator','After Effects'],
+    type: "code",
+    alt:"",
+    links:["","https://github.com/akilgrant93/Growr"],
+    bulletPoints: ['Are you a gardening novice trying to make sure you don’t kill your first succulent? An experienced gardener who specializes in hydroponics? Look no further - Growr is the app for you.', 'Growr is a garden tracking app that uses Expo-Notifications, Firebase and OpenWeatherApi to give users realtime data to help them water their plants at the appropriate time.']
+  },
   {
     name: 'Water Your Plants Medicinal Coloring Book',
     skills: ['Illustrator','Photography'],
