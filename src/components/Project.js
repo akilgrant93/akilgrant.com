@@ -24,18 +24,6 @@ export default function Project(props) {
       setSelected(selected+1)
   }
 
-  const handleColor = (name) => {
-    if(name === 'Water Your Plants Medicinal Coloring Book'){
-      return 'bg-new-green'
-    }
-    else if(name === 'Durian'){
-      return 'bg-mountbatten-pink'
-    }
-    else if (name ==='Terra 2042'){
-      return 'bg-light-salmon'
-    }
-  }
-
   return (
     <div>
     <div className={props.type === 'galleryTwo'
@@ -43,15 +31,12 @@ export default function Project(props) {
     : 'flex flex-col md:flex-row sm:items-start md:mx-20 lg:mx-40'}>
         {!props.gallery ?
       <div className="md:mr-5 flex justify-center md:w-1/2">
-        <div className={`w-3/5 ${handleColor(props.name)} md:w-full flex flex-col`}>
+        <div className={`w-3/5 md:w-full flex flex-col`}>
             <img
               className="w-full"
               src={props.images[0]}
               onClick={() => props.handleClick(props.images[0], props.images.index)}
               alt={props.alt}/>
-              <div  className='h-full text-sm text-white font-semibold flex flex-col justify-center'>
-              <p>Click to Expand</p>
-              </div>
         </div>
 
       <div className="flex md:pt-0 flex-wrap w-2/5 md:flex-nowrap md:flex-col md:w-1/2">
@@ -94,9 +79,6 @@ export default function Project(props) {
             )
         })
         }
-        <div className='w-200 sm:w-22 md:w-4/5 lg:w-21 md:ml-2 text-sm text-white font-semibold flex flex-col justify-center bg-new-green'>
-              <p>Click to Expand</p>
-              </div>
     </div>
 
 
@@ -113,9 +95,6 @@ export default function Project(props) {
           className="object-center object-cover bg-new-green w-full h-full"
           src={props.images[selected]}
           />
-          <div className='w-full h-full text-sm text-white font-semibold flex flex-col justify-center bg-new-green'>
-              <p>Click to Expand</p>
-              </div>
         </div>
 
     {props.nestedImages ? <div className=' w-2/5 h-full lg:w-1/2 lg:h-1/2 md:ml-2 justify-start lg:ml-4 lg:mr-5'>

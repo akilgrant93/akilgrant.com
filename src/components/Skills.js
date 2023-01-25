@@ -26,7 +26,9 @@ export default function Skills() {
         <div className="flex flex-col sm:flex-row items-center lg:w-4/5 sm:mx-auto justify-evenly sm:mb-2 -mx-2">
         <div className="list py-8 w-8/12 md:w-1/4">
 		<div className="head mb-2">
-			<div className="text-forest-green align-center text-center font-bold text-lg md:text-halfxl">Skills & Tech</div>
+			<div className="align-center text-center pb-5 text-forest-green text-base lg:text-xl font-bold
+
+			">Skills & Tech</div>
 		</div>
 		<ul className='flex text-forest-green justify-center text-sm flex-wrap'>
 			{skillsArr.map((skill, index) => {
@@ -55,7 +57,7 @@ export default function Skills() {
 				? <div>
 						<p id='skillTxt'
 						className="text-xs md:text-sm py-5 sm:pt-0 font-semibold text-forest-green relative text-center w-1/2 md:w-11/12 mx-auto">The multi-hyphenate designers toolkit comes with many supplies, click one to see how they look!</p>
-						<img className='max-w-sm md:max-w-lg mx-auto lg:max-w-2xl' src='standard-01.png'/>
+						<img className='max-w-sm md:max-w-lg mx-auto lg:max-w-xl' src='standard-01.png'/>
 					</div>
 					: <div className="max-w-2xl" >
 					<p id='skillTxt' className="skillsAnim text-xs md:text-sm pt-5 sm:pt-0 font-semibold text-forest-green relative text-center w-8/12 md:w-11/12 mx-auto">{skillDesc[parseInt(selected)-1]}</p>
