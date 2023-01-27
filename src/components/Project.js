@@ -107,7 +107,7 @@ export default function Project(props) {
 
     {props.type !== "galleryTwo"
     ? <div className="w-9/12 self-center mx-auto pt-5 md:pt-0 lg:w-1/2">
-      <p className={props.type === 'galleryOne' ? "pl-5 text-left text-forest-green text-base lg:text-xl font-bold pb-0 sm:pb-10 lg:pb-0" : "text-left pb-5 text-forest-green text-base lg:text-xl font-bold"}>{props.name}</p>
+      <p className={props.type === 'galleryOne' ? "pl-5 text-left text-forest-green text-sm lg:text-lg font-bold pb-0 sm:pb-10 lg:pb-0" : "text-left pb-5 text-forest-green text-sm lg:text-lg font-bold"}>{props.name}</p>
 
       <div className={props.type === 'galleryOne' ? "flex pb-3 sm:pb-5 lg:pb-3 items-center" : 'flex pb-3 sm:pb-5 lg:pb-3'}>
         {props.skills.map((skill, index) => {
@@ -128,15 +128,15 @@ export default function Project(props) {
             key={index}
             style={index > 0 ? {marginTop: 15} : null }
             className={props.type === "galleryOne"
-            ? "pl-5 text-sm md:text-base text-left inline-block w-full"
-            : "text-sm md:text-base text-left inline-block w-full"}>
+            ? "pl-5 text-sm md:text-sm text-left inline-block w-full"
+            : "text-sm md:text-sm text-left inline-block w-full"}>
             <span className="h-1 w-1 mx-1 self-center inline-block bg-forest-green rounded-full"></span>{bulletpoint}</p>
           );
         })}
 
         {props.type === 'galleryTwo' ?
             <p
-            className="text-base text-left mb-5 inline-block w-full">
+            className="text-sm text-left mb-5 inline-block w-full">
             <span className="h-1 w-1 mx-1 self-center inline-block bg-forest-green rounded-full"></span>{props.bulletPoints[selected]}</p>
           : ''}
 
@@ -163,9 +163,9 @@ export default function Project(props) {
     </div>
     :
     <div className="w-10/12 pt-2 md:pt-0 mx-auto md:w-3/5 md:pl-5">
-      <p className="text-left text-forest-green text-base lg:text-xl font-bold ">{props.name}</p>
+      <p className="text-left text-forest-green text-sm lg:text-lg font-bold ">{props.name}</p>
 
-      <p className="text-sm md:text-base text-forest-green text-left font-semibold">{props.titles[selected]}</p>
+      <p className="text-sm md:text-sm text-forest-green text-left font-semibold">{props.titles[selected]}</p>
       <div className="flex my-2 mb-3 items-center ">
         {props.skills.map((skill, index) => {
           return (
@@ -180,7 +180,7 @@ export default function Project(props) {
       </div>
 
             <p
-            className="text-sm md:text-base text-left mb-5 inline-block w-full">
+            className="text-sm md:text-sm text-left mb-5 inline-block w-full">
             <span className="h-1 w-1 mx-1 self-center inline-block bg-forest-green rounded-full"></span>{props.bulletPoints[selected]}</p>
 
         {props.type === "galleryTwo" && props.name === "Animation"
