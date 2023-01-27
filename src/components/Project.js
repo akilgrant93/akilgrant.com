@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import Button from "./Button";
 import Flipbook from './Flipbook'
 import { ArrowCircleLeftIcon, ArrowCircleRightIcon } from '@heroicons/react/solid';
+import ImgWrapper from './ImgWrapper';
 
 export default function Project(props) {
 
@@ -24,6 +25,14 @@ export default function Project(props) {
       setSelected(selected+1)
   }
 
+  const indexSolver = (index) => {
+   if (index === 2){
+      return 'mt-20'
+    } else if (index === 3){
+      return 'mt-40'
+    }
+  }
+
   return (
     <div>
     <div className={props.type === 'galleryTwo'
@@ -32,27 +41,16 @@ export default function Project(props) {
         {!props.gallery ?
       <div className="md:mr-5 flex justify-center md:w-1/2">
         <div className={`w-3/5 md:w-full flex flex-col`}>
-            <img
-              className="w-full"
-              src={props.images[0]}
-              onClick={() => props.handleClick(props.images[0], props.images.index)}
-              alt={props.alt}/>
+            <ImgWrapper onClick={props.handleClick} index={0} imgSrc={props.images[0]}/>
         </div>
 
       <div className="flex md:pt-0 flex-wrap w-2/5 md:flex-nowrap md:flex-col md:w-1/2">
         {props.images.map((image, index)=>{
           if(index > 0){
             return (
-                <img
-                  key={index}
-                  onClick={props.handleClick}
-                  alt = {props.alt}
-                  className={
-                  index === 1
-                    ? "md:rounded-md object-contain md:ml-2 w-full"
-                    : "md:rounded-md object-contain w-full md:ml-2 md:mt-2"
-                  }
-                  src={image}/>
+            <div className='relative' key={index}>
+                <ImgWrapper onClick={props.handleClick} index={index} imgSrc={image}/>
+            </div>
             )
           } else {
             return ''
@@ -69,13 +67,7 @@ export default function Project(props) {
       <div className="flex flex-wrap w-full lg:w-4/5">
         {props.images.map((image, index)=>{
             return (
-                <img
-                  key={index}
-                  onClick={props.handleClick}
-                  alt = {props.alt}
-                  className={props.name === 'Illustration' ? "rounded-sm md:mb-2 object-center object-cover md:ml-2 w-1/4 h-48 md:w-20 md:h-20" : "rounded-sm md:mb-2 object-center object-cover md:ml-2 w-1/4 h-1/4 md:w-20 md:h-20"}
-                  src={image}
-                  />
+                <ImgWrapper key={index} imgSrc={image} onClick={props.handleClick} style={'lgGallery'}/>
             )
         })
         }
@@ -90,23 +82,25 @@ export default function Project(props) {
 
       <div className="flex sm:flex-row justify-center md:justify-end">
       <div className='w-full flex flex-col items-end'>
-      <img
+      {/* <img
           onClick={props.handleClick}
           className="object-center object-cover bg-new-green w-full h-full"
           src={props.images[selected]}
-          />
+          /> */}
+          <ImgWrapper onClick={props.handleClick} imgSrc={props.images[selected]} />
         </div>
 
     {props.nestedImages ? <div className=' w-2/5 h-full lg:w-1/2 lg:h-1/2 md:ml-2 justify-start lg:ml-4 lg:mr-5'>
            {props.nestedImages[selected].map((image, index)=>{
               return (
-                <img
-                key={index}
-                onClick={props.handleClick}
-                alt = {props.alt}
-                className="md:rounded-lg md:mb-2 object-center w-full object-cover"
-                src={image}
-                />
+                // <img
+                // key={index}
+                // onClick={props.handleClick}
+                // alt = {props.alt}
+                // className="md:rounded-lg md:mb-2 object-center w-full object-cover"
+                // src={image}
+                // />
+                <ImgWrapper onClick={props.handleClick} imgSrc={image} index={index+1}/>
                 )
               })}
           </div> : ''}
