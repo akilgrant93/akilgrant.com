@@ -67,7 +67,7 @@ export default function Project(props) {
       <div className="flex flex-wrap w-full lg:w-4/5">
         {props.images.map((image, index)=>{
             return (
-                <ImgWrapper key={index} imgSrc={image} onClick={props.handleClick} style={'lgGallery'}/>
+                <ImgWrapper key={index} index={index} imgSrc={image} onClick={props.handleClick} style={'lgGallery'}/>
             )
         })
         }
@@ -82,25 +82,13 @@ export default function Project(props) {
 
       <div className="flex sm:flex-row justify-center md:justify-end">
       <div className='w-full flex flex-col items-end'>
-      {/* <img
-          onClick={props.handleClick}
-          className="object-center object-cover bg-new-green w-full h-full"
-          src={props.images[selected]}
-          /> */}
-          <ImgWrapper onClick={props.handleClick} imgSrc={props.images[selected]} />
+          <ImgWrapper onClick={props.handleClick} index={0} imgSrc={props.images[selected]} />
         </div>
 
     {props.nestedImages ? <div className=' w-2/5 h-full lg:w-1/2 lg:h-1/2 md:ml-2 justify-start lg:ml-4 lg:mr-5'>
            {props.nestedImages[selected].map((image, index)=>{
               return (
-                // <img
-                // key={index}
-                // onClick={props.handleClick}
-                // alt = {props.alt}
-                // className="md:rounded-lg md:mb-2 object-center w-full object-cover"
-                // src={image}
-                // />
-                <ImgWrapper onClick={props.handleClick} imgSrc={image} index={index+1}/>
+                <ImgWrapper key={index} onClick={props.handleClick} imgSrc={image} index={index+1}/>
                 )
               })}
           </div> : ''}
