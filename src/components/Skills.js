@@ -24,13 +24,12 @@ export default function Skills() {
     <section id="" className='pt-24'>
       <div className="container mt-24 mx-auto">
         <div className="flex flex-col sm:flex-row items-center lg:w-4/5 sm:mx-auto justify-evenly sm:mb-2 -mx-2">
-        <div className="list py-8 w-8/12 md:w-1/4">
-		<div className="head mb-2">
-			<div className="align-center text-center pb-5 text-forest-green text-base lg:text-xl font-bold
-
+        <div className="list py-16 w-8/12 md:w-1/4">
+		<div className="head">
+			<div className="align-center text-center pb-2 text-forest-green text-base lg:text-lg font-bold
 			">Skills & Tech</div>
 		</div>
-		<ul className='flex text-forest-green justify-center text-sm flex-wrap'>
+		<ul className='flex text-forest-green justify-center text-sm flex-wrap mt-3'>
 			{skillsArr.map((skill, index) => {
 				return (
 					<div key={index} className='w-1/2 sm:w-9/12 flex pt-2 items-center text-center sm:text-left'>
