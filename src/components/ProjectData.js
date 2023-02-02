@@ -1,6 +1,6 @@
 export const ProjectData = [
   {
-    images: [require('../media/growr_mockup_sq_sm.jpg'),],
+    images: [require('../media/shoelala_01.png'),require('../media/shoelala_02.png'), require('../media/shoelala_03.png')],
     name: 'Shoelala',
     skills: ['Firebase', 'React', 'Stripe', 'NextJS'],
     type: "code",
