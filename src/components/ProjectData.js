@@ -1,6 +1,15 @@
 export const ProjectData = [
   {
     images: [require('../media/growr_mockup_sq_sm.jpg'),],
+    name: 'Shoelala',
+    skills: ['Firebase', 'React', 'Stripe', 'NextJS'],
+    type: "code",
+    alt:"",
+    links:["https://shoelala-3fxh.vercel.app/","https://github.com/akilgrant93/shoelala"],
+    bulletPoints: ['An e-commerce platform for the savvy high end sneaker snob.', 'The vault goes deep at Shoelala. Shop for new releases from must-have names like Air Jordan, Nike, New Balance and Yeezy, along with the latest collaborations from brands like Vans, Reebok, Converse, ASICS, and more.']
+  },
+  {
+    images: [require('../media/growr_mockup_sq_sm.jpg'),],
     name: 'Growr',
     skills: ['Firebase', 'React Native', 'Lottie', 'Illustrator','After Effects'],
     type: "code",

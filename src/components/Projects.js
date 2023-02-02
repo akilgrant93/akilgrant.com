@@ -185,7 +185,7 @@ export default function Projects(props) {
 		<ul onClick={handleEvent} className="header md:mb-2 lg:mb-10">
 			{/* might want to refactor this into a map function that outputs components or something */}
 			{/* <li className="tab-active"><img alt="Colorful green logo reading Growr." className="icon" src="https://images.squarespace-cdn.com/content/v1/5363e3d1e4b0b6dbd37bcdd6/1584439666648-WC21M3H2FTNH0GSFAVSH/growr-01.png?format=1000w"/></li> */}
-
+			<li><img alt="A number of computer screens displaying the UI layout of the shoelala e-commerce platform" className="icon" src={require('../media/growr_mockup_sq_sm.jpg')} /></li>
 			<li><img alt="Colorful green logo reading Growr." className="icon" src={require('../media/growr_mockup_sq_sm.jpg')} /></li>
 			<li><img alt="A book titled Water Your Plants Medicinal Herbs Coloring Book lies on a bed of green grass."  className="icon waterYourPlants" src="https://images.squarespace-cdn.com/content/v1/5363e3d1e4b0b6dbd37bcdd6/1f3c779c-23bc-4bba-927d-7982cc66a105/IMG_4330.png?format=500w"/></li>
 			<li><img alt="A Golden lettered logo reading Durian overlaid atop a bed of flower petals." className="icon durian" src="https://images.squarespace-cdn.com/content/v1/5363e3d1e4b0b6dbd37bcdd6/be225f8f-fdba-4e60-a62f-3ee93c5dce66/durianlogo.png?format=500w"/></li>
