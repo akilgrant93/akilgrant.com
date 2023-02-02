@@ -34,17 +34,17 @@ export default function Project(props) {
   }
 
   return (
-    <div>
-    <div className={props.type === 'galleryTwo'
-    ? "flex flex-col md:flex-row sm:items-start md:mx-20 lg:mx-40 "
-    : 'flex flex-col md:flex-row sm:items-start md:mx-20 lg:mx-40'}>
+    <div className='flex'>
+    <div style={{justifyContent:'center'}} className={props.type === 'galleryTwo'
+    ? "flex flex-col md:flex-row sm:items-start md:mx-20 lg:mx-40 self-center"
+    : 'flex flex-col md:flex-row sm:items-start md:mx-20 lg:mx-40 self-center'}>
         {!props.gallery ?
       <div className="md:mr-5 flex justify-center md:w-1/2">
         <div className={`w-3/5 md:w-full flex flex-col`}>
             <ImgWrapper onClick={props.handleClick} index={0} imgSrc={props.images[0]}/>
         </div>
 
-      <div className="flex md:pt-0 flex-wrap w-2/5 md:flex-nowrap md:flex-col md:w-1/2">
+      <div className="flex md:pt-0 flex-wrap w-2/5 md:flex-nowrap md:flex-col md:w-1/2 md:ml-2">
         {props.images.map((image, index)=>{
           if(index > 0){
             return (

@@ -3,7 +3,7 @@ import React from "react";
 
 export default function Navbar() {
   return (
-    <header className="bg-forest-green sticky top-0 z-20 w-screen">
+    <header className="bg-forest-green fixed top-0 z-20 w-screen shadow-md">
       <div className="container mt-0 flex md:p-7 flex-col md:flex-row justify-start items-center pb-3">
         <span className="title-font font-medium text-white mb-4 md:mb-0">
           <a href="#home" className="ml-3 text-lg flex hidden sm:block flex-col">

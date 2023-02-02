@@ -145,20 +145,20 @@ animation-direction: alternate;
 @media (max-width: 1024px) {
   /* … */
   .header {
-    height: 60px;
+    height: 40px;
     /* width: 75px; */
   }
   .header li {
-    height: 60px;
-    width: 60px;
+    height: 40px;
+    width: 40px;
   }
   .header li img {
-    height: 60px;
-    width: 60px;
+    height: 40px;
+    width: 40px;
   }
   #slideShow, #slideShow0, #slideShow2{
-    height: 60px;
-    width: 60px;
+    height: 40px;
+    width: 40px;
   }
 }
 

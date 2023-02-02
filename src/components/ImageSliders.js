@@ -49,9 +49,9 @@ animateSequence() {
 
   render() {
     return (
-        <div className="min-w-screen -ml-1/2 flex relative">
+        <div className="min-w-screen -ml-1/2 flex relative pt-16 lg:pt-20">
             <div className="cssanimation">
-              <span className="absolute z-10 mt-[25vh] left-1/4 text-white w-1/2 top-1/3 text-center font-extrabold text-halfxl lg:text-twoxl uppercase select-none cursor-pointer sequence">Akil Grant</span>
+              <span className="absolute z-10 mt-[23vh] left-1/4 text-white w-1/2 top-1/2 md:top-1/3 text-center font-extrabold text-halfxl lg:text-twoxl uppercase select-none cursor-pointer sequence">Akil Grant</span>
             </div>
             <div className="">
             {this.props.slides.map((slide, index) => {
