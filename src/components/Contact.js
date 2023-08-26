@@ -42,7 +42,7 @@ export default function Contact() {
       </label>
       </div>
 			</div>
-      <div className="w-10/12 mx-auto sm:mx-0 sm:w-1/3 px-5 sm:py-20 text-sm sm:text-base">
+      <div className="w-10/12 mx-auto sm:mx-0 sm:w-1/3 px-5 sm:py-20 text-sm">
       {checked
       ? <p>
         I'm a UX Designer, and full stack developer with extensive experience in motion graphics and front end

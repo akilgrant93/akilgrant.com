@@ -21,7 +21,7 @@ export default function Skills() {
 	}
 
   return (
-    <section id="" className='pt-24'>
+    <section>
       <div className="container mt-24 mx-auto">
         <div className="flex flex-col sm:flex-row items-center lg:w-4/5 sm:mx-auto justify-evenly sm:mb-2 -mx-2">
         <div className="list py-16 w-8/12 md:w-1/4">

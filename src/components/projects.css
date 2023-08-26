@@ -23,12 +23,11 @@
 }
 
 .header li:hover, li.tab-active{
-  background: #62ab49;
-  color: #fff;
+  /* color: #fff; */
 }
 
 .icon:hover{
-  opacity: 0.75;
+  opacity: 0.25;
   transition-duration: .25s;
 }
 
@@ -107,27 +106,23 @@
 }
 
 #slideShow {
-  position: absolute;
-  opacity: 1;
-  margin-left: 0;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
   animation-name: bgSlides;
-  animation-duration: 8s;
-  animation-direction: alternate;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
 }
 
 #slideShow0 {
-  position: absolute;
+  animation-name: bgSlides0;
+}
+
+#slideShow2 {
+  animation-name: bgSlides2;
+  background-position: center center;
+}
+
+#slideShow, #slideShow0, #slideShow2 {
   opacity: 1;
   margin-left: 0;
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center center;
-  animation-name: bgSlides0;
   animation-duration: 8s;
   animation-direction: alternate;
   animation-timing-function: linear;
@@ -156,10 +151,6 @@ animation-direction: alternate;
     height: 40px;
     width: 40px;
   }
-  #slideShow, #slideShow0, #slideShow2{
-    height: 40px;
-    width: 40px;
-  }
 }
 
 @media (min-width: 1024px) {
@@ -173,10 +164,6 @@ animation-direction: alternate;
     width: 100px;
   }
   .header li img {
-    height: 100px;
-    width: 100px;
-  }
-  #slideShow, #slideShow0, #slideShow2{
     height: 100px;
     width: 100px;
   }
@@ -235,20 +222,6 @@ opacity:1;
   100% {
     background-image: url(../media/queen-of-sheba.png);
   }
-}
-
-#slideShow2 {
-  position: absolute;
-  opacity: 1;
-  margin-left: 0;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-  animation-name: bgSlides2;
-  animation-duration: 8s;
-  animation-direction: alternate;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
 }
 
 @keyframes bgSlides2 {

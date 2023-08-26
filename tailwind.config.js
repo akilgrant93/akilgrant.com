@@ -24,6 +24,9 @@ module.exports = {
       'silver': '#ecebff',
       'bubble-gum': '#ff77e9',
       'bermuda': '#78dcca',
+      'slate': {
+        500: 'rgb(203 213 225)'
+      },
       'green':{
         50: '#EFFBF4',
         100: '#DEF7E9',

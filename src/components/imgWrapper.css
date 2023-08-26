@@ -4,12 +4,6 @@
   overflow: hidden;
 }
 
-.container2 {
-  position: relative;
-  overflow: hidden;
-  width: 25%;
-}
-
 .image {
   display: block;
   width: 100%;
@@ -17,14 +11,7 @@
   height: auto;
 }
 
-.image2 {
-  display: block;
-  width: 100%;
-  object-fit: cover;
-  height: 100px;
-}
-
-.overlay2 {
+.overlay {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -37,11 +24,7 @@
   background-color: rgba(0,0,0,.5);
 }
 
-.container:hover .overlay2 {
-  opacity: 1;
-}
-
-.container2:hover .overlay2 {
+.container:hover .overlay {
   opacity: 1;
 }
 

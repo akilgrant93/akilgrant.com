@@ -17,7 +17,7 @@ export default function About() {
           </p>
 
         </div>
-        <div className="w-full pt-9 md:pt-0 md:w-3/5">
+        <div id='projects' className="w-full pt-9 md:pt-0 md:w-3/5">
           <Lottie className="object-cover object-center rounded" animationData={meAnimated} />
         </div>
       </div>

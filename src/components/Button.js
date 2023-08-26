@@ -49,7 +49,7 @@ export default function Button(props) {
           </a>
     )
   }
-  if(props.type === 'Read'){
+  if(props.type === 'Read' || props.type === 'Logos'){
     return (
       // <div className="button-style md:mr-5"
       // onClick={props.onClick}>
