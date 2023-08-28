@@ -7,7 +7,7 @@ const AnimationTabNavItem = ({ id, activeAnimationTab, setActiveAnimationTab, ic
    setActiveAnimationTab(id);
  };
 
-const stateVals = {icon, activeAnimationTab}
+
 return (
    <li onClick={handleClick} className={activeAnimationTab === id ? "active" : ""}>
      <img src={icon}/>

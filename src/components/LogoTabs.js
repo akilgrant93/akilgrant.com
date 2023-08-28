@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-import TabNavItem from "./V2/TabNavItem";
+import React from "react";
 import './tabs2.css'
 import { ProjectData } from './ProjectData'
 import LogoTabNavItem from "./V2/LogoTabNavItem";

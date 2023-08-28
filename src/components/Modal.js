@@ -1,10 +1,8 @@
-import React, {useEffect} from "react";
+import React from "react";
 import './modal.css'
 
 export default function Modal(props){
-  // useEffect(() => {
 
-  // }, []);
   return (
       <div className="overlay dismiss" onClick={props.handleClick}>
         {typeof props.clickedImg === "string" ?
@@ -47,5 +45,3 @@ export default function Modal(props){
       </div>
   );
 };
-
-// export default Modal;

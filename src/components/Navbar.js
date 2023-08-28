@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 import { useLocation } from 'react-router-dom';
 
 export default function Navbar(props) {
-  console.log(useLocation())
   return (
     <header className="bg-forest-green fixed top-0 z-20 w-screen shadow-md h-24">
       <div className="mt-0 pt-3 flex md:p-7 flex-col md:flex-row justify-start items-center pb-3">

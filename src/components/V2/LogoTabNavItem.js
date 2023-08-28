@@ -9,7 +9,6 @@ const LogoTabNavItem = ({ id, activeLogoTab, setActiveLogoTab, icon, setClicked 
   setActiveLogoTab(id);
  };
 
-const stateVals = {icon, activeLogoTab}
 return (
    <li onClick={handleClick} className={activeLogoTab === id ? "active" : ""}>
      <img src={icon}/>

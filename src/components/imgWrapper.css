@@ -1,6 +1,5 @@
 .container {
   position: relative;
-  border-radius: 10px;
   overflow: hidden;
 }
 
@@ -11,7 +10,7 @@
   height: auto;
 }
 
-.overlay {
+.overlay2 {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -24,7 +23,7 @@
   background-color: rgba(0,0,0,.5);
 }
 
-.container:hover .overlay {
+.container:hover .overlay2 {
   opacity: 1;
 }
 

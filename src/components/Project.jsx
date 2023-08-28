@@ -1,10 +1,10 @@
-import React, { useState, useRef, useEffect } from 'react'
-import { flushSync } from 'react-dom';
+import React, { useState } from 'react'
 import { useLocation } from "react-router-dom"
 import AnimationTabs from './AnimationTabs';
 import Book from './Book';
 import Button from './Button';
 import Contact from './Contact';
+import ImgWrapper from './ImgWrapper';
 import LogoTabs from './LogoTabs';
 import './project.css';
 import Tabs from './tabs';
@@ -19,11 +19,9 @@ function Project(props) {
 
 
 
-  const handleClick = (book) => {
+  const handleBookClick = (book) => {
     setClicked(!clicked)
   }
-
-  // console.log(data.project)
 
   return (
     <div className='projectPage mt-24'>
@@ -50,12 +48,12 @@ function Project(props) {
           {name === 'Laser Engraving' || name === 'Illustration'
           ? <div className='flex w-1/2'>
               <ul className='w-1/2'>
-                <li><img src={images[1]}/></li>
-                <li><img src={images[2]}/></li>
+                <li><ImgWrapper onClick={props.handleClick} imgSrc={images[1]}/></li>
+                <li><ImgWrapper onClick={props.handleClick} imgSrc={images[2]}/></li>
              </ul>
               <ul className='w-1/2'>
-                <li><img src={images[3]}/></li>
-                <li><img src={images[4]}/></li>
+                <li><ImgWrapper onClick={props.handleClick} imgSrc={images[3]}/></li>
+                <li><ImgWrapper onClick={props.handleClick} imgSrc={images[4]}/></li>
              </ul>
           </div>
         : null}
@@ -64,16 +62,16 @@ function Project(props) {
         {name === 'Laser Engraving' || name === 'Illustration'
           ? <div>
               <ul id='square' className='flex'>
-                <li className='w-1/4 h-1/4'><img src={images[5]}/></li>
-                <li className='w-1/4 h-1/4'><img src={images[6]}/></li>
-                <li className='w-1/4 h-1/4'><img src={images[7]}/></li>
-                <li className='w-1/4 h-1/4'><img src={images[8]}/></li>
+                <li className='w-1/4 h-1/4'><ImgWrapper onClick={props.handleClick} imgSrc={images[5]}/></li>
+                <li className='w-1/4 h-1/4'><ImgWrapper onClick={props.handleClick} imgSrc={images[6]}/></li>
+                <li className='w-1/4 h-1/4'><ImgWrapper onClick={props.handleClick} imgSrc={images[7]}/></li>
+                <li className='w-1/4 h-1/4'><ImgWrapper onClick={props.handleClick} imgSrc={images[8]}/></li>
              </ul>
               <ul className='flex'>
-                <li className='w-1/4 h-1/4'><img src={images[9]}/></li>
-                <li className='w-1/4 h-1/4'><img src={images[10]}/></li>
-                <li className='w-1/4 h-1/4'><img src={images[11]}/></li>
-                <li className='w-1/4 h-1/4'><img src={images[12]}/></li>
+                <li className='w-1/4 h-1/4'><ImgWrapper onClick={props.handleClick} imgSrc={images[9]}/></li>
+                <li className='w-1/4 h-1/4'><ImgWrapper onClick={props.handleClick} imgSrc={images[10]}/></li>
+                <li className='w-1/4 h-1/4'><ImgWrapper onClick={props.handleClick} imgSrc={images[11]}/></li>
+                <li className='w-1/4 h-1/4'><ImgWrapper onClick={props.handleClick} imgSrc={images[12]}/></li>
               </ul>
            </div>
         : null}
@@ -115,7 +113,7 @@ function Project(props) {
            return <li key={idx} className={images.length > 3
             ?'w-1/3 shadow-md rounded-lg mx-2 overflow-hidden'
             :'w-1/2 shadow-md rounded-md mx-2 overflow-hidden'
-          }><img src={image}/></li>
+          }><ImgWrapper onClick={props.handleClick} imgSrc={image}/></li>
         })}
       </ul>
       : name !== 'Animation'
@@ -126,15 +124,16 @@ function Project(props) {
               return <li key={idx} className={images.length > 3
                 ?'w-1/3 shadow-md rounded-lg mx-2 overflow-hidden'
                 :'w-1/2 shadow-md rounded-md mx-2 overflow-hidden'
-              }><img src={image}/></li>
+              }><ImgWrapper onClick={props.handleClick} imgSrc={image}/></li>
             }
           }
           else {
               if(idx > 0){return <li key={idx} className={images.length > 3
                 ?'w-1/3 shadow-md rounded-md mx-2 overflow-hidden'
                 :'w-1/2 shadow-md rounded-md mx-2 overflow-hidden'
-              }><img src={image}/></li>}
+              }><ImgWrapper onClick={props.handleClick} imgSrc={image}/></li>}
           }
+          return null
         })}
       </ul>
       :null}
@@ -148,7 +147,7 @@ function Project(props) {
 
       {type === 'book'
       ? <div className="flex mt-5 justify-center items-center">
-          <Button type={'Read'} onClick={handleClick}/>
+          <Button type={'Read'} onClick={handleBookClick}/>
           <Button type={'Buy'} link={links[0]}/>
       </div>
       : null}
@@ -156,7 +155,7 @@ function Project(props) {
 
       {titles !== undefined && titles[0] === 'EIC Agency' && activeLogoTab === 'tab1'
       ? <div className="flex mt-5 justify-center items-center">
-          <Button type={'Logos'} onClick={handleClick}/>
+          <Button type={'Logos'} onClick={handleBookClick}/>
       </div>
       : null}
 
