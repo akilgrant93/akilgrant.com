@@ -14,7 +14,7 @@ const TabNavItem = ({ id, title, activeTab, setActiveTab, icon, project, index, 
 const stateVals = {project, activeTab}
 return (
    <li onClick={handleClick} className={activeTab === id ? "active" : ""}>
-      <Link to={`/project/:${project.name}`} state={stateVals}>
+      <Link to={`/project/:${project.name.replace(/\s/g, "_")}`} state={stateVals}>
      <div id={
       title === 'Illustration'
       ? 'slideShow0'

@@ -48,7 +48,7 @@ function Project(props) {
            ? 'w-1/2' : ''} src={name === 'Logos and Branding' || name === 'Animation' ? images[parseInt(name === 'Logos and Branding' ?activeLogoTab.slice(3):activeAnimationTab.slice(3))-1] : images[0]
           }/>
           {name === 'Laser Engraving' || name === 'Illustration'
-          ? <div className='flex'>
+          ? <div className='flex w-1/2'>
               <ul className='w-1/2'>
                 <li><img src={images[1]}/></li>
                 <li><img src={images[2]}/></li>

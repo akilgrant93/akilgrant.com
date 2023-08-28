@@ -31,7 +31,6 @@ ul.nav li {
   text-align: center;
   cursor: pointer;
   transition: all 0.7s;
-  opacity: 50%
   /* @media (max-width: 768px) {
     width: 90%;
   } */
@@ -50,11 +49,11 @@ ul.nav li:last-child {
 }
 
 ul.nav li:hover {
-  opacity: 100%;
+  opacity: 25%;
 }
 
 ul.nav li.active {
-  opacity: 100%;
+  opacity: 25%;
 }
 
 /* Tab Content Styles */
