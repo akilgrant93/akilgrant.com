@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from "react";
 import Navbar from "./components/Navbar";
 import './app.css';
-import { BrowserRouter as Router, Routes, Route, useLocation }
+import { HashRouter as Router, Routes, Route, useLocation, Navigate }
     from 'react-router-dom';
 import Project from "./components/Project.jsx";
 import Home from "./Home";
@@ -37,8 +37,9 @@ export default function App() {
       <Router>
             <Navbar />
             <Routes>
-                <Route exact path='/' element={<Home />} />
+                <Route path='/' element={<Home />} />
                 <Route path='/project/:name' element={<Project handleClick={handleClick}/>} />
+                <Route path="*" element={<Navigate to="/" />} />
             </Routes>
             {clickedImg && (
               <Modal

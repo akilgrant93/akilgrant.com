@@ -21,10 +21,10 @@ function Project(props) {
   const [activeAnimationTab, setActiveAnimationTab] = useState(props.activeAnimationTab ? props.activeAnimationTab : "tab1");
   const [clicked, setClicked] = useState(false)
 
-console.log(ProjectData[location.pathname.slice(10).replace(/[_-]/g, "")].data.idx)
+// console.log(ProjectData[location.pathname.slice(10).replace(/[_-]/g, "")].data.idx)
 
 
-  const handleBookClick = (book) => {
+  const handleBookClick = () => {
     setClicked(!clicked)
   }
 
