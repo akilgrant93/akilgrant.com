@@ -6,9 +6,9 @@ import { useLocation } from 'react-router-dom';
 export default function Navbar(props) {
   return (
     <header className="bg-forest-green fixed top-0 z-20 w-screen shadow-md h-24">
-      <div className="mt-0 pt-3 flex md:p-7 flex-col md:flex-row justify-start items-center pb-3">
-        <span className="title-font font-medium text-white mb-4 md:mb-0">
-        <Link to={`/`} className="ml-3 text-lg flex hidden sm:block flex-col">
+      <div className="pt-8 md:p-7 flex justify-center md:justify-start items-center pb-3 self-center">
+        <span className="title-font font-medium text-white mr-5 md:mr-0">
+        <Link to={`/`} className="ml-3 text-lg flex flex-col">
           <HomeIcon className="w-4 h-4 ml-1 text-white hover:text-laurel-green-200" />
         </Link>
         </span>

@@ -10,7 +10,6 @@ import './project.css';
 import Tabs from './tabs';
 import { ProjectData } from './ProjectData'
 
-
 function Project(props) {
   const location = useLocation();
 
@@ -20,9 +19,6 @@ function Project(props) {
   const [activeLogoTab, setActiveLogoTab] = useState(props.activeLogoTab ? props.activeLogoTab : "tab1");
   const [activeAnimationTab, setActiveAnimationTab] = useState(props.activeAnimationTab ? props.activeAnimationTab : "tab1");
   const [clicked, setClicked] = useState(false)
-
-// console.log(ProjectData[location.pathname.slice(10).replace(/[_-]/g, "")].data.idx)
-
 
   const handleBookClick = () => {
     setClicked(!clicked)
@@ -42,10 +38,10 @@ function Project(props) {
         <AnimationTabs activeAnimationTab={activeAnimationTab} setActiveAnimationTab={setActiveAnimationTab}/>
         : null
         }
-      <div className='flex'>
+      <div className='md:flex'>
       <div className={name === 'Logos and Branding' || name === 'Animation'
-      ? 'w-1/3'
-      : 'w-1/2'}>
+      ? 'w-2/3 mx-auto md:w-1/3'
+      : 'px-20 md:px-0 md:w-1/2'} id='iconBG'>
         <div className='flex'>
           <img className={name === 'Laser Engraving' || name === 'Illustration'
            ? 'w-1/2' : ''} src={name === 'Logos and Branding' || name === 'Animation' ? images[parseInt(name === 'Logos and Branding' ?activeLogoTab.slice(3):activeAnimationTab.slice(3))-1] : images[0]
@@ -83,8 +79,8 @@ function Project(props) {
       </div>
 
       <div className={`${name === 'Logos and Branding' || name ==='Animation'
-      ?'w-2/3'
-      :'w-1/2'} px-5 py-5 lg:mx-20 self-center`}>
+      ?'md:w-2/3'
+      :'w-full md:w-1/2'} px-10 lg:px-20 py-5 self-center`}>
       <h1 className='pl-5 text-left text-forest-green text-md lg:text-lg font-bold'>{name}</h1>
 
       {name === 'Logos and Branding' || name === 'Animation'
@@ -113,7 +109,7 @@ function Project(props) {
       </ul>
 
       {name === 'Logos and Branding'
-      ? <ul className='flex w-2/3 mx-auto justify-center pt-2'>
+      ? <ul className='flex w-full md:w-2/3 mx-auto justify-center pt-2'>
         {nestedImages[parseInt(activeLogoTab.slice(3))-1].map((image, idx) => {
            return <li key={idx} className={images.length > 3
             ?'w-1/3 shadow-md rounded-lg mx-2 overflow-hidden'

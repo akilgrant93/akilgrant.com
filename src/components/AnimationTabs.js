@@ -5,7 +5,7 @@ import AnimationTabNavItem from "./V2/AnimationTabNavItem";
 
 export default function AnimationTabs({ activeAnimationTab, setActiveAnimationTab }){
   return (
-    <div className="LogoTabs">
+    <div className="AnimationTabs">
       <div className="w-full">
       <ul className="nav">
         {Object.entries(ProjectData)[8][1].data.images.map((image, index) => {
