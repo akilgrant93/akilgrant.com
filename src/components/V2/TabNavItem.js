@@ -5,9 +5,6 @@ import { Link } from "react-router-dom";
 const TabNavItem = ({ id, title, activeTab, setActiveTab, icon, project, index, setClicked }) => {
 
  const handleClick = () => {
-   if(title !== 'Growr'){
-    setClicked(false)
-   }
     setActiveTab(id)
  };
 

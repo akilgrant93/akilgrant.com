@@ -56,7 +56,7 @@ export default function Skills() {
 				? <div>
 						<p id='skillTxt'
 						className="text-xs md:text-sm py-5 sm:pt-0 font-semibold text-forest-green relative text-center w-1/2 md:w-11/12 mx-auto">The multi-hyphenate designers toolkit comes with many supplies, click one to see how they look!</p>
-						<img className='max-w-sm md:max-w-lg mx-auto lg:max-w-xl' src='standard-01.png'/>
+						<img className='max-w-sm md:max-w-lg mx-auto lg:max-w-xl' src={require('../media/standard-01.png')}/>
 					</div>
 					: <div className="max-w-2xl" >
 					<p id='skillTxt' className="skillsAnim text-xs md:text-sm pt-5 sm:pt-0 font-semibold text-forest-green relative text-center w-8/12 md:w-11/12 mx-auto">{skillDesc[parseInt(selected)-1]}</p>

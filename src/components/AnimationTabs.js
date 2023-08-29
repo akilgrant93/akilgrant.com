@@ -8,7 +8,7 @@ export default function AnimationTabs({ activeAnimationTab, setActiveAnimationTa
     <div className="LogoTabs">
       <div className="w-full">
       <ul className="nav">
-        {ProjectData[8].images.map((image, index) => {
+        {Object.entries(ProjectData)[8][1].data.images.map((image, index) => {
               return (
                 <AnimationTabNavItem icon={image} key={index} id={`tab${index+1}`} activeAnimationTab={activeAnimationTab} setActiveAnimationTab={setActiveAnimationTab}/>
               )

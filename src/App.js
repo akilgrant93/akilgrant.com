@@ -1,7 +1,7 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import Navbar from "./components/Navbar";
 import './app.css';
-import { BrowserRouter as Router, Routes, Route }
+import { BrowserRouter as Router, Routes, Route, useLocation }
     from 'react-router-dom';
 import Project from "./components/Project.jsx";
 import Home from "./Home";
@@ -9,6 +9,16 @@ import Modal from './components/Modal'
 
 export default function App() {
   const [clickedImg, setClickedImg] = useState(null)
+
+  //closes modal when the users clicks outside it
+  useEffect(() => {
+    let handler = (e) => {
+      if(e.target.id !== 'modalImg'){
+        setClickedImg(null)
+      }
+    }
+    document.addEventListener("mousedown", handler)
+  })
 
   const handleClick = (item) => {
     if(typeof item === 'string'){
@@ -31,10 +41,10 @@ export default function App() {
                 <Route path='/project/:name' element={<Project handleClick={handleClick}/>} />
             </Routes>
             {clickedImg && (
-          <Modal
-            clickedImg={clickedImg}
-            handleClick={handleClick}
-          />
+              <Modal
+                clickedImg={clickedImg}
+                handleClick={handleClick}
+              />
         )}
         </Router>
     </main>

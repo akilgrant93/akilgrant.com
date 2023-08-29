@@ -3,9 +3,6 @@ import '../projects.css'
 const LogoTabNavItem = ({ id, activeLogoTab, setActiveLogoTab, icon, setClicked }) => {
 
  const handleClick = () => {
-  if(activeLogoTab !== 'tab1'){
-    setClicked(false)
-  }
   setActiveLogoTab(id);
  };
 

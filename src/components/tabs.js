@@ -9,9 +9,10 @@ export default function Tabs(props){
     <div className="Tabs">
       <div className="w-full">
       <ul className="nav">
-        {ProjectData.map((project, index) => {
+        {}
+        {Object.entries(ProjectData).map((project, index) => {
               return (
-                  <TabNavItem index={index} title={project.name} id={`tab${index+1}`} icon={project.images[0]} activeTab={activeTab} project={project} setActiveTab={setActiveTab} key={index} setClicked={props.setClicked}/>
+                  <TabNavItem index={index} title={project[1].data.name} id={`tab${index+1}`} icon={project[1].data.images[0]} activeTab={activeTab} project={project[1].data} setActiveTab={setActiveTab} key={index} setClicked={props.setClicked}/>
               )
             })}
       </ul>

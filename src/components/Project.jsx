@@ -8,15 +8,20 @@ import ImgWrapper from './ImgWrapper';
 import LogoTabs from './LogoTabs';
 import './project.css';
 import Tabs from './tabs';
+import { ProjectData } from './ProjectData'
+
 
 function Project(props) {
   const location = useLocation();
-  const data = location.state;
-  const {name, skills, images, type, alt, links, bulletPoints, nestedImages, titles, pages} = data.project
+
+  const currProjectData = ProjectData[location.pathname.slice(10).replace(/[_-]/g, "")].data
+
+  const {name, skills, images, type, alt, links, bulletPoints, nestedImages, titles, pages} = currProjectData
   const [activeLogoTab, setActiveLogoTab] = useState(props.activeLogoTab ? props.activeLogoTab : "tab1");
   const [activeAnimationTab, setActiveAnimationTab] = useState(props.activeAnimationTab ? props.activeAnimationTab : "tab1");
   const [clicked, setClicked] = useState(false)
 
+console.log(ProjectData[location.pathname.slice(10).replace(/[_-]/g, "")].data.idx)
 
 
   const handleBookClick = (book) => {
@@ -25,7 +30,7 @@ function Project(props) {
 
   return (
     <div className='projectPage mt-24'>
-      <Tabs setClicked={setClicked} activeTab={data.activeTab} activeLogoTab={activeLogoTab}/>
+      <Tabs setClicked={setClicked} activeTab={`tab${ProjectData[location.pathname.slice(10).replace(/[_-]/g, "")].data.idx}`} activeLogoTab={activeLogoTab}/>
       <div className='flex-column'>
         { name === 'Logos and Branding'
         ?
