@@ -54,7 +54,7 @@ export const gridItems = [
         title: "Lets Build!",
         className: "lg:col-span-2 md:col-span-3 md:row-span-2",
         imgClassName: "",
-        titleClassName: "justify-center",
+        titleClassName: "justify-center text-center",
         img: "",
         spareImg: "",
       },
